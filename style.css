@@ -1,0 +1,435 @@
+/* ==========================================================================
+   THE BOLD INCLUSIVITY - STYLESHEET
+   WCAG 2.1 AA / AAA Compliant
+   Color Palette:
+     - Background: Deep Navy (#0A192F)
+     - Text Primary: Pure White (#FFFFFF)
+     - Text Secondary: Light Gray / Slate (#E6F1FF)
+     - Surface / Card: #112240
+     - Border: #233554
+     - Accent & CTA: Vibrant Yellow (#F5A623)
+   ========================================================================== */
+
+/* 1. Global Reset & Tokens */
+:root {
+  --color-bg: #0A192F;
+  --color-surface: #112240;
+  --color-border: #233554;
+  --color-text-primary: #FFFFFF;
+  --color-text-secondary: #E6F1FF;
+  --color-accent: #F5A623;
+  --color-accent-hover: #FFAF38;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  html {
+    scroll-behavior: smooth;
+  }
+}
+
+body {
+  background-color: var(--color-bg);
+  color: var(--color-text-primary);
+  font-family: 'Inter', system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, sans-serif;
+  line-height: 1.6;
+  margin: 0;
+  padding: 0;
+  min-height: 100vh;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+/* 2. Skip to Main Content Link (WCAG 2.4.1) */
+.skip-link {
+  position: fixed;
+  top: -100px;
+  left: 1.5rem;
+  z-index: 99999;
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  padding: 0.875rem 1.5rem;
+  background-color: var(--color-accent);
+  color: #0A192F;
+  font-weight: 800;
+  font-size: 1rem;
+  text-decoration: none;
+  border: 3px solid #FFFFFF;
+  border-radius: 0.5rem;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.7);
+  transition: top 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.skip-link:focus,
+.skip-link:focus-visible {
+  top: 1.25rem;
+  outline: 4px solid #FFFFFF !important;
+  outline-offset: 3px !important;
+}
+
+/* 3. High-Contrast Focus Ring (WCAG 2.4.7 & 2.4.11) */
+:where(a, button, input, select, textarea, [tabindex="0"]):focus-visible {
+  outline: 3.5px solid var(--color-accent) !important;
+  outline-offset: 3.5px !important;
+  border-radius: 4px;
+}
+
+#main-content:focus {
+  outline: none;
+}
+
+/* 4. Screen Reader Only Utility */
+.sr-only:where(:not(:focus-within, :active)) {
+  position: absolute !important;
+  width: 1px !important;
+  height: 1px !important;
+  padding: 0 !important;
+  margin: -1px !important;
+  overflow: hidden !important;
+  clip-path: inset(50%) !important;
+  white-space: nowrap !important;
+  border: 0 !important;
+}
+
+/* 5. Hero Background & Overlay (Strict WCAG 2.1 AA Contrast) */
+.hero-banner {
+  position: relative;
+  background-color: #0A192F;
+  background-image: 
+    linear-gradient(to right, rgba(10, 25, 47, 0.95), rgba(10, 25, 47, 0.55)),
+    url('kegiatan 1.jpeg');
+  background-size: cover;
+  background-position: center center;
+  background-repeat: no-repeat;
+}
+
+.hero-overlay {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to right, rgba(10, 25, 47, 0.95), rgba(10, 25, 47, 0.55));
+  pointer-events: none;
+}
+
+@media (max-width: 768px) {
+  .hero-banner {
+    background-image: 
+      linear-gradient(to bottom, rgba(10, 25, 47, 0.96) 65%, rgba(10, 25, 47, 0.75) 100%),
+      url('kegiatan 1.jpeg');
+  }
+
+  .hero-overlay {
+    background: linear-gradient(to bottom, rgba(10, 25, 47, 0.96) 65%, rgba(10, 25, 47, 0.75) 100%);
+  }
+}
+
+/* 6. Button Styles */
+.btn-primary {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  background-color: var(--color-accent);
+  color: #0A192F;
+  font-weight: 800;
+  font-size: 1.125rem;
+  padding: 0.95rem 2rem;
+  border-radius: 0.75rem;
+  border: 3px solid var(--color-accent);
+  text-decoration: none;
+  cursor: pointer;
+  min-height: 3.25rem;
+  box-shadow: 0 4px 14px rgba(245, 166, 35, 0.35);
+  transition: transform 0.15s ease, background-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-primary:hover {
+  background-color: var(--color-accent-hover);
+  border-color: var(--color-accent-hover);
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(245, 166, 35, 0.5);
+}
+
+.btn-hero-outline {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.625rem;
+  background-color: rgba(10, 25, 47, 0.5);
+  color: #FFFFFF;
+  font-weight: 800;
+  font-size: 1.125rem;
+  padding: 0.95rem 2rem;
+  border-radius: 0.75rem;
+  border: 3px solid #FFFFFF;
+  text-decoration: none;
+  cursor: pointer;
+  min-height: 3.25rem;
+  backdrop-filter: blur(4px);
+  transition: transform 0.15s ease, background-color 0.15s ease, color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.btn-hero-outline:hover {
+  background-color: #FFFFFF;
+  color: #0A192F;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 20px rgba(255, 255, 255, 0.3);
+}
+
+/* 6b. Language Switcher Pill Button (The Bold Inclusivity Palette) */
+.lang-pill-btn {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  background-color: #FFFFFF;
+  color: #0A192F;
+  border: 1.5px solid rgba(226, 232, 240, 0.95);
+  border-radius: 9999px;
+  padding: 0.42rem 0.95rem;
+  font-weight: 800;
+  font-size: 0.875rem;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.12);
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  user-select: none;
+}
+
+/* Globe Icon: uses currentColor via CSS for effortless theme customization */
+/* Default: Vibrant Yellow (#F5A623). Ubah nilai di bawah ke #0A192F jika ingin warna Deep Navy default. */
+.lang-globe-icon {
+  color: var(--color-accent); /* Vibrant Yellow (#F5A623) */
+  transition: color 0.2s ease, transform 0.2s ease;
+}
+
+.lang-pill-btn:hover {
+  background-color: #F8FAFC;
+  transform: translateY(-1.5px);
+  box-shadow: 0 4px 14px rgba(245, 166, 35, 0.35);
+  border-color: var(--color-accent); /* Vibrant Yellow (#F5A623) */
+}
+
+.lang-pill-btn:hover .lang-globe-icon {
+  color: #0A192F; /* Berubah kontras ke Deep Navy saat hover */
+  transform: rotate(15deg);
+}
+
+.lang-pill-btn:active {
+  transform: translateY(0);
+}
+
+.lang-pill-btn:focus-visible {
+  outline: 3.5px solid var(--color-accent) !important;
+  outline-offset: 3px !important;
+}
+
+/* 7. Pillar & Impact Card Styles */
+.card-pillar {
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: 1rem;
+  padding: 2.25rem;
+  display: flex;
+  flex-direction: column;
+  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+}
+
+.card-pillar:hover,
+.card-pillar:focus-within {
+  border-color: var(--color-accent);
+  transform: translateY(-4px);
+  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--color-accent);
+}
+
+.icon-box {
+  width: 4.25rem;
+  height: 4.25rem;
+  border-radius: 0.75rem;
+  background-color: rgba(245, 166, 35, 0.12);
+  border: 2px solid var(--color-accent);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: var(--color-accent);
+  margin-bottom: 1.5rem;
+  flex-shrink: 0;
+}
+
+.card-impact {
+  background-color: var(--color-surface);
+  border: 2px solid var(--color-border);
+  border-radius: 1rem;
+  padding: 2.25rem 1.5rem;
+  text-align: center;
+  transition: transform 0.2s ease, border-color 0.2s ease;
+}
+
+.card-impact:hover,
+.card-impact:focus-within {
+  border-color: var(--color-accent);
+  transform: translateY(-3px);
+}
+
+/* 7b. Partners Marquee Carousel (Accessible Running Logos) */
+.marquee-container {
+  overflow: hidden;
+  position: relative;
+  width: 100%;
+  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+}
+
+.marquee-track {
+  display: flex;
+  width: max-content;
+  gap: 1.5rem;
+  animation: marquee-scroll 35s linear infinite;
+  align-items: center;
+}
+
+.marquee-track:hover,
+.marquee-track:focus-within {
+  animation-play-state: paused !important;
+}
+
+@keyframes marquee-scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-50%);
+  }
+}
+
+.partner-card {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 5.5rem;
+  min-width: 11.5rem;
+  padding: 0.75rem 1.25rem;
+  background-color: #FFFFFF;
+  border-radius: 0.75rem;
+  border: 2px solid #233554;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
+  transition: transform 0.2s ease, border-color 0.2s ease;
+  flex-shrink: 0;
+}
+
+.partner-card:hover {
+  transform: translateY(-3px);
+  border-color: var(--color-accent);
+}
+
+.partner-card-dark {
+  background-color: #0A192F !important;
+  border-color: #3B82F6 !important;
+}
+
+.partner-card img {
+  max-height: 3.5rem;
+  max-width: 9.5rem;
+  object-fit: contain;
+}
+
+/* 8. Forced Colors Mode (Windows High Contrast Support) */
+@media (forced-colors: active) {
+  :where(a, button, input, select, textarea, [tabindex="0"]):focus-visible {
+    outline: 4px solid Highlight !important;
+    outline-offset: 4px !important;
+  }
+
+  .btn-primary,
+  .btn-hero-outline,
+  .lang-pill-btn,
+  .card-pillar,
+  .card-impact,
+  .gallery-card,
+  .gallery-action-btn,
+  dialog#privacy-modal,
+  dialog#terms-modal {
+    border: 2px solid ButtonText !important;
+  }
+}
+
+/* 9. Reduced Motion Support */
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    animation-duration: 0.001ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: 0.001ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* 10. Privacy Policy & Terms Modal Dialogs */
+dialog#privacy-modal,
+dialog#terms-modal {
+  margin: auto;
+  border: 2px solid var(--color-border);
+  box-shadow: 0 25px 50px -12px rgba(0, 0, 0, 0.75);
+}
+
+dialog#privacy-modal::backdrop,
+dialog#terms-modal::backdrop {
+  background: rgba(10, 25, 47, 0.85);
+  backdrop-filter: blur(4px);
+}
+
+/* 11. Gallery Cards & Interactive Grid */
+.gallery-card {
+  background-color: #0F233D;
+  border: 1px solid #233554;
+  border-radius: 12px;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  transition: transform 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 6px -1px rgba(0, 0, 0, 0.2), 0 2px 4px -2px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-card:hover {
+  border-color: #F5A623;
+  transform: translateY(-4px);
+  box-shadow: 0 12px 24px -4px rgba(245, 166, 35, 0.15), 0 4px 6px -2px rgba(0, 0, 0, 0.2);
+}
+
+.gallery-action-btn {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  gap: 0.5rem;
+  width: 100%;
+  margin-top: 1.25rem;
+  padding: 0.75rem 1rem;
+  background-color: #F5A623;
+  color: #0A192F;
+  font-weight: 800;
+  font-size: 0.875rem;
+  letter-spacing: 0.025em;
+  border-radius: 0.5rem;
+  border: 2px solid #F5A623;
+  text-decoration: none;
+  cursor: pointer;
+  transition: all 0.2s cubic-bezier(0.16, 1, 0.3, 1);
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.15);
+}
+
+.gallery-action-btn:hover {
+  background-color: #ffffff;
+  color: #0A192F;
+  border-color: #F5A623;
+  transform: translateY(-2px);
+  box-shadow: 0 6px 16px rgba(245, 166, 35, 0.25);
+}
+
+.gallery-action-btn:active {
+  transform: translateY(0);
+}
+
+.gallery-action-btn:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px #0F233D, 0 0 0 5px #F5A623;
+}
+

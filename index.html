@@ -1,0 +1,953 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>The Bold Inclusivity | FKM BKA YWU</title>
+  <meta name="description" content="Landing page resmi FKM BKA YWU bertema The Bold Inclusivity. Berfokus pada aksesibilitas tinggi (WCAG 2.1 AA) dan pemenuhan hak penyandang disabilitas.">
+  <meta name="theme-color" content="#0A192F">
+
+  <!-- Favicon & Touch Icons Resmi FKM BKA YWU -->
+  <link rel="icon" type="image/png" href="logo-fkm-bka-ywu.png">
+  <link rel="apple-touch-icon" href="logo-fkm-bka-ywu.png">
+
+  <!-- Google Fonts: Inter (Sans-Serif Tebal, Jelas & Terbaca) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600;700;800;900&display=swap" rel="stylesheet">
+
+  <!-- Tailwind CSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
+  <script>
+    tailwind.config = {
+      theme: {
+        extend: {
+          colors: {
+            'deep-navy': '#0A192F',
+            'surface-navy': '#112240',
+            'border-navy': '#233554',
+            'vibrant-yellow': '#F5A623',
+            'vibrant-yellow-hover': '#FFAF38',
+            'text-light': '#E6F1FF',
+          },
+          fontFamily: {
+            sans: ['"Inter"', 'system-ui', 'sans-serif'],
+          }
+        }
+      }
+    }
+  </script>
+
+  <!-- Custom Stylesheet (WCAG Focus, Skip-Link, Overlay) -->
+  <link rel="stylesheet" href="style.css">
+</head>
+<body class="bg-[#0A192F] text-white font-sans antialiased selection:bg-[#F5A623] selection:text-[#0A192F]">
+
+  <!-- ==========================================================================
+       WCAG COMPLIANCE: SKIP TO MAIN CONTENT LINK
+       Tautan pertama yang dapat difokuskan keyboard saat membuka halaman
+       ========================================================================== -->
+  <a href="#main-content" class="skip-link">
+    <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+      <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M19 14l-7 7m0 0l-7-7m7 7V3"></path>
+    </svg>
+    <span data-i18n="skipLink">Lewati ke Konten Utama (Tekan Enter)</span>
+  </a>
+
+  <!-- ==========================================================================
+       HEADER / NAVIGATION BAR
+       ========================================================================== -->
+  <header role="banner" class="sticky top-0 z-50 bg-[#0A192F]/95 backdrop-blur-md border-b-2 border-[#233554]">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3.5 flex items-center justify-between gap-4">
+      
+      <!-- Brand Logo Program (Icon Only): FKM BKA YWU -->
+      <a href="#hero" class="flex items-center group focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F5A623] rounded-xl p-0.5 flex-shrink-0 transition-transform hover:scale-105" aria-label="Beranda FKM BKA YWU">
+        <div class="relative w-12 h-12 sm:w-[50px] sm:h-[50px] rounded-xl bg-white flex items-center justify-center border-2 border-[#F5A623] shadow-md flex-shrink-0 overflow-hidden">
+          <img src="Logo Baru.jpg" alt="Logo FKM BKA YWU" class="w-full h-full object-cover" style="clip-path: inset(0 0 18% 0);" />
+        </div>
+      </a>
+
+      <!-- Right Header Actions (Desktop Nav Menu + Language Switcher + Mobile Toggle) -->
+      <div class="flex items-center gap-2 sm:gap-3.5">
+        
+        <!-- Desktop Smooth Scroll Navigation Menu -->
+        <nav id="desktop-nav" aria-label="Navigasi Utama Situs" class="hidden md:flex items-center gap-1 lg:gap-2">
+          <a href="#hero" data-i18n="navHome" class="px-3 py-2 text-base font-bold text-white hover:text-[#F5A623] transition-colors rounded-lg">Beranda</a>
+          <a href="#tentang" data-i18n="navAbout" class="px-3 py-2 text-base font-bold text-white hover:text-[#F5A623] transition-colors rounded-lg">Tentang Kami</a>
+          <a href="#galeri" data-i18n="navGallery" class="px-3 py-2 text-base font-bold text-white hover:text-[#F5A623] transition-colors rounded-lg">Galeri</a>
+          <a href="#dampak" data-i18n="navImpact" class="px-3 py-2 text-base font-bold text-white hover:text-[#F5A623] transition-colors rounded-lg">Dampak</a>
+          <a href="#mitra" data-i18n="navPartners" class="px-3 py-2 text-base font-bold text-white hover:text-[#F5A623] transition-colors rounded-lg">Mitra</a>
+          <a href="#kontak" data-i18n="navContact" class="px-3 py-2 text-base font-bold text-white hover:text-[#F5A623] transition-colors rounded-lg">Kontak</a>
+        </nav>
+
+        <!-- Language Switcher Pill Button (Theme-Aligned: Vibrant Yellow / Deep Navy) -->
+        <button id="lang-switcher" 
+                type="button" 
+                class="lang-pill-btn" 
+                aria-label="Pilih Bahasa / Change Language"
+                title="Ganti ke Bahasa Inggris">
+          <!-- Globe Icon (Customizable via CSS with stroke="currentColor") -->
+          <svg class="lang-globe-icon w-5 h-5 flex-shrink-0" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.2" stroke-linecap="round" stroke-linejoin="round" aria-hidden="true">
+            <circle cx="12" cy="12" r="10"></circle>
+            <line x1="2" y1="12" x2="22" y2="12"></line>
+            <path d="M12 2a15.3 15.3 0 0 1 4 10 15.3 15.3 0 0 1-4 10 15.3 15.3 0 0 1-4-10 15.3 15.3 0 0 1 4-10z"></path>
+          </svg>
+          <span id="lang-code" class="text-xs sm:text-sm font-black text-[#0A192F] tracking-wider uppercase">ID</span>
+        </button>
+
+        <!-- Mobile Hamburger Button -->
+        <button id="menu-toggle" type="button" class="md:hidden p-2.5 rounded-lg border-2 border-[#233554] text-white hover:text-[#F5A623] hover:border-[#F5A623] transition-colors" aria-expanded="false" aria-controls="mobile-nav" aria-label="Buka menu navigasi">
+          <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4 6h16M4 12h16M4 18h16"></path>
+          </svg>
+        </button>
+
+      </div>
+
+    </div>
+
+    <!-- Mobile Navigation Drawer -->
+    <nav id="mobile-nav" aria-label="Navigasi Seluler" class="hidden md:hidden flex-col bg-[#112240] border-b-2 border-[#233554] px-4 py-4 gap-2">
+      <a href="#hero" data-i18n="navHome" class="px-4 py-3 rounded-lg text-lg font-bold text-white hover:bg-[#0A192F] hover:text-[#F5A623]">Beranda</a>
+      <a href="#tentang" data-i18n="navAbout" class="px-4 py-3 rounded-lg text-lg font-bold text-white hover:bg-[#0A192F] hover:text-[#F5A623]">Tentang Kami</a>
+      <a href="#galeri" data-i18n="navGallery" class="px-4 py-3 rounded-lg text-lg font-bold text-white hover:bg-[#0A192F] hover:text-[#F5A623]">Galeri</a>
+      <a href="#dampak" data-i18n="navImpact" class="px-4 py-3 rounded-lg text-lg font-bold text-white hover:bg-[#0A192F] hover:text-[#F5A623]">Dampak</a>
+      <a href="#mitra" data-i18n="navPartners" class="px-4 py-3 rounded-lg text-lg font-bold text-white hover:bg-[#0A192F] hover:text-[#F5A623]">Mitra</a>
+      <a href="#kontak" data-i18n="navContact" class="px-4 py-3 rounded-lg text-lg font-bold text-white hover:bg-[#0A192F] hover:text-[#F5A623]">Kontak</a>
+    </nav>
+  </header>
+
+  <!-- ==========================================================================
+       MAIN CONTENT (Accessibility Landmark: <main id="main-content">)
+       ========================================================================== -->
+  <main id="main-content" tabindex="-1">
+
+    <!-- ========================================================================
+         HERO SECTION (Single Background Image dengan Dark Gradient Overlay)
+         ======================================================================== -->
+    <section id="hero" 
+             aria-labelledby="hero-title"
+             aria-label="Bagian Hero FKM BKA YWU: Menampilkan foto suasana kebersamaan dan aksi saling bantu para perempuan berhijab dalam kegiatan inklusi"
+             class="hero-banner relative min-h-[85vh] lg:min-h-[92vh] flex items-center border-b-2 border-[#233554] bg-[#0A192F] overflow-hidden">
+      
+      <!-- Single Background Image Layer -->
+      <div class="absolute inset-0 z-0 overflow-hidden">
+        <img src="kegiatan 1.jpeg" 
+             alt="Aksi kebersamaan dan saling bantu para perempuan berhijab dalam kegiatan inklusi dan pemberdayaan FKM BKA YWU" 
+             data-i18n-attr="alt:heroImgAlt"
+             class="w-full h-full object-cover object-center" 
+             loading="eager" />
+        
+        <!-- Pure Dark Gradient Overlay: linear-gradient(to right, rgba(10, 25, 47, 0.95), rgba(10, 25, 47, 0.55)) -->
+        <div class="absolute inset-0 hero-overlay" aria-hidden="true"></div>
+      </div>
+
+      <!-- Hero Content Layer -->
+      <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-20 sm:py-28 lg:py-36 w-full">
+        <div class="max-w-3xl">
+          
+          <!-- Tagline Kecil (Warna Kuning #F5A623) -->
+          <div class="inline-flex items-center gap-2.5 px-4 py-1.5 rounded-full bg-[#0A192F]/80 border-2 border-[#F5A623] text-[#F5A623] text-xs sm:text-sm font-black uppercase tracking-widest mb-6 backdrop-blur-sm shadow-md">
+            <span class="w-2.5 h-2.5 rounded-full bg-[#F5A623] animate-pulse" aria-hidden="true"></span>
+            <span data-i18n="heroTagline">MISI KITA, KEKUATAN BERSAMA</span>
+          </div>
+
+          <!-- Judul Misi Utama (Kapital, Putih, Tebal) -->
+          <h1 id="hero-title" data-i18n="heroTitle" class="text-3xl sm:text-5xl lg:text-6xl font-black text-white uppercase tracking-tight leading-[1.15] mb-6 drop-shadow-md">
+            MENEMBUS BATAS, MEWUJUDKAN AKSES SETARA UNTUK SEMUA
+          </h1>
+
+          <!-- Sub-deskripsi Singkat -->
+          <p data-i18n="heroDesc" class="text-lg sm:text-xl lg:text-2xl text-[#E6F1FF] font-medium leading-relaxed mb-10 max-w-2xl drop-shadow">
+            Membangun ruang inklusif di mana setiap individu memiliki kesempatan yang sama untuk bertumbuh, berkarya, dan berdaya tanpa sekat.
+          </p>
+
+          <!-- 2 Tombol CTA Utama -->
+          <div class="flex flex-col sm:flex-row items-stretch sm:items-center gap-4 sm:gap-6">
+            <!-- CTA 1: Gabung Komunitas (Kuning, Tebal) -->
+            <a href="#kontak" class="btn-primary" aria-label="Gabung dengan komunitas FKM BKA YWU" data-i18n-attr="aria-label:heroCtaJoin">
+              <span data-i18n="heroCtaJoin">Gabung Komunitas</span>
+              <svg class="w-6 h-6" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path>
+              </svg>
+            </a>
+
+            <!-- CTA 2: Dukung Kami (Border Putih) -->
+            <a href="#dampak" class="btn-hero-outline" aria-label="Dukung program inklusif FKM BKA YWU" data-i18n-attr="aria-label:heroCtaSupport">
+              <span data-i18n="heroCtaSupport">Dukung Kami</span>
+              <svg class="w-6 h-6 text-white" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M4.318 6.318a4.5 4.5 0 000 6.364L12 20.364l7.682-7.682a4.5 4.5 0 00-6.364-6.364L12 7.636l-1.318-1.318a4.5 4.5 0 00-6.364 0z"></path>
+              </svg>
+            </a>
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         ABOUT QUICK SNAPSHOT (3 PILAR UTAMA: FKM, BKA, YWU)
+         ======================================================================== -->
+    <section id="tentang" aria-labelledby="tentang-title" class="py-20 md:py-28 bg-[#0A192F] border-b-2 border-[#233554]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div data-i18n="aboutBadge" class="inline-block px-3 py-1 rounded bg-[#112240] border border-[#F5A623] text-[#F5A623] font-black text-xs uppercase tracking-widest mb-3">
+            Fondasi Gerakan
+          </div>
+          <h2 id="tentang-title" data-i18n="aboutTitle" class="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight mb-4">
+            3 Pilar Utama Kami
+          </h2>
+          <p data-i18n="aboutDesc" class="text-base sm:text-lg text-[#E6F1FF] leading-relaxed">
+            Tiga pilar strategis yang menggerakkan seluruh program FKM BKA YWU dalam mewujudkan kesetaraan hak, kapabilitas vokasi, dan kemandirian wirausaha disabilitas.
+          </p>
+        </div>
+
+        <!-- 3 Columns / Cards Grid -->
+        <div class="grid grid-cols-1 md:grid-cols-3 gap-8">
+          
+          <!-- Pilar 1: FKM -->
+          <article class="card-pillar" aria-labelledby="pilar-fkm-title">
+            <div class="icon-box">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" role="img" aria-label="Ikon Pilar Forum Komunikasi Masyarakat">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
+              </svg>
+            </div>
+            
+            <div class="mb-3">
+              <span data-i18n="pilar1Badge" class="inline-block px-2.5 py-0.5 rounded text-xs font-black uppercase tracking-wider bg-[#F5A623]/20 text-[#F5A623] border border-[#F5A623]/40 mb-2">
+                Pilar 01
+              </span>
+              <h3 id="pilar-fkm-title" data-i18n="pilar1Title" class="text-2xl font-black text-white tracking-tight">
+                FKM (Forum Komunikasi Masyarakat)
+              </h3>
+            </div>
+            
+            <p data-i18n="pilar1Desc" class="text-base text-[#E6F1FF] leading-relaxed flex-grow">
+              Wadah advokasi dan konsolidasi hak-hak penyandang disabilitas. Mengawal implementasi regulasi pemenuhan hak disabilitas, audit aksesibilitas ruang publik, serta mengedukasi masyarakat luas tentang kesetaraan hakiki.
+            </p>
+          </article>
+
+          <!-- Pilar 2: BKA -->
+          <article class="card-pillar" aria-labelledby="pilar-bka-title">
+            <div class="icon-box">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" role="img" aria-label="Ikon Pilar Bina Karya Adaptif">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
+              </svg>
+            </div>
+
+            <div class="mb-3">
+              <span data-i18n="pilar2Badge" class="inline-block px-2.5 py-0.5 rounded text-xs font-black uppercase tracking-wider bg-[#F5A623]/20 text-[#F5A623] border border-[#F5A623]/40 mb-2">
+                Pilar 02
+              </span>
+              <h3 id="pilar-bka-title" data-i18n="pilar2Title" class="text-2xl font-black text-white tracking-tight">
+                BKA (Bina Karya Adaptif)
+              </h3>
+            </div>
+
+            <p data-i18n="pilar2Desc" class="text-base text-[#E6F1FF] leading-relaxed flex-grow">
+              Pusat pelatihan vokasi adaptif dan penguatan kapabilitas keahlian kerja berbasis teknologi asistif. Menyelenggarakan simulasi evakuasi kebencanaan mandiri serta workshop ergonomis yang ramah ragam disabilitas.
+            </p>
+          </article>
+
+          <!-- Pilar 3: YWU -->
+          <article class="card-pillar" aria-labelledby="pilar-ywu-title">
+            <div class="icon-box">
+              <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24" role="img" aria-label="Ikon Pilar Yayasan Wirausaha Unggul">
+                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
+              </svg>
+            </div>
+
+            <div class="mb-3">
+              <span data-i18n="pilar3Badge" class="inline-block px-2.5 py-0.5 rounded text-xs font-black uppercase tracking-wider bg-[#F5A623]/20 text-[#F5A623] border border-[#F5A623]/40 mb-2">
+                Pilar 03
+              </span>
+              <h3 id="pilar-ywu-title" data-i18n="pilar3Title" class="text-2xl font-black text-white tracking-tight">
+                YWU (Yayasan Wirausaha Unggul)
+              </h3>
+            </div>
+
+            <p data-i18n="pilar3Desc" class="text-base text-[#E6F1FF] leading-relaxed flex-grow">
+              Inkubasi bisnis sosial dan pembinaan wirausaha mandiri disabilitas. Memfasilitasi produksi kerajinan bernilai komersial, pendampingan legalitas izin usaha, serta menghubungkan karya teman disabilitas ke pasar digital.
+            </p>
+          </article>
+
+        </div>
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         GALLERY / INSTAGRAM SECTION (#galeri)
+         ======================================================================== -->
+    <section id="galeri" aria-labelledby="galeri-title" class="py-20 md:py-28 bg-[#0A192F] border-b-2 border-[#233554]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-14 md:mb-16">
+          <div data-i18n="galleryBadge" class="inline-block px-3 py-1 rounded bg-[#112240] border border-[#F5A623] text-[#F5A623] font-black text-xs uppercase tracking-widest mb-3">
+            Galeri Kegiatan
+          </div>
+          <h2 id="galeri-title" data-i18n="galleryTitle" class="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight mb-4">
+            Dokumentasi &amp; Kegiatan Terbaru
+          </h2>
+          <p data-i18n="galleryDesc" class="text-base sm:text-lg text-[#E6F1FF] leading-relaxed">
+            Ikuti momen keseruan dan wawasan terbaru dari kegiatan kami langsung di Instagram.
+          </p>
+        </div>
+
+        <!-- Responsive Custom Interactive Grid (3 cols desktop, 2 cols tablet, 1 col mobile) -->
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
+          
+          <!-- Kartu 1 (Postingan Foto) -->
+          <article class="gallery-card group">
+            <div>
+              <!-- Visual / Thumbnail Container (1:1 Aspect Ratio) -->
+              <div class="relative aspect-square w-full rounded-lg overflow-hidden bg-[#112240] border border-[#233554] mb-4">
+                <img src="instagram_1.jpg" alt="Panggilan untuk Ibu dan Guru SLB - Program Pendampingan Anak Autisme FKM BKA YWU" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0A192F]/80 via-transparent to-black/30 pointer-events-none"></div>
+                
+                <!-- Badge Penanda Jenis Konten -->
+                <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-black uppercase tracking-wider bg-[#F5A623] text-[#0A192F] shadow-md flex items-center gap-1.5 z-10">
+                  <svg class="w-3.5 h-3.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 4h3l2-2h6l2 2h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm8 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/>
+                  </svg>
+                  <span data-i18n="galleryBadgePost">Postingan</span>
+                </span>
+              </div>
+
+              <!-- Caption Singkat -->
+              <p data-i18n="galleryCard1Caption" class="text-sm text-[#E6F1FF] leading-relaxed flex-grow">
+                Program Pendampingan &amp; Penguatan Kapasitas secara GRATIS bagi orang tua, keluarga, dan guru SLB yang mendampingi anak dengan autisme di Medan.
+              </p>
+            </div>
+
+            <!-- Tombol Aksi -->
+            <a href="https://www.instagram.com/p/Dbf9ZLAk0va/" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="gallery-action-btn" 
+               aria-label="Buka postingan program pendampingan autisme FKM BKA YWU di Instagram pada tab baru">
+              <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+              <span data-i18n="galleryBtnView">Lihat di Instagram</span>
+            </a>
+          </article>
+
+          <!-- Kartu 2 (Video Reels) -->
+          <article class="gallery-card group">
+            <div>
+              <!-- Visual / Thumbnail Container (1:1 Aspect Ratio) -->
+              <div class="relative aspect-square w-full rounded-lg overflow-hidden bg-[#112240] border border-[#233554] mb-4">
+                <img src="instagram_2.jpg" alt="Penyampaian aspirasi penyandang disabilitas oleh Syifa Turrahma dalam RDPU DPRK Banda Aceh" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0A192F]/80 via-transparent to-black/30 pointer-events-none"></div>
+                
+                <!-- Badge Penanda Jenis Konten -->
+                <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-black uppercase tracking-wider bg-[#F5A623] text-[#0A192F] shadow-md flex items-center gap-1.5 z-10">
+                  <svg class="w-3.5 h-3.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H4zm6 5.5l6 3.5-6 3.5v-7z"/>
+                  </svg>
+                  <span data-i18n="galleryBadgeReels">Reels Video</span>
+                </span>
+
+                <!-- Center Play Icon Overlay -->
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none" aria-hidden="true">
+                  <div class="w-12 h-12 rounded-full bg-black/60 backdrop-blur-sm border-2 border-white/80 flex items-center justify-center text-white transition-transform duration-300 group-hover:scale-110">
+                    <svg class="w-6 h-6 ml-0.5 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Caption Singkat -->
+              <p data-i18n="galleryCard2Caption" class="text-sm text-[#E6F1FF] leading-relaxed flex-grow">
+                Aspirasi Syifa Turrahma (Guru BK ASN SLB) dalam RDPU DPRK Banda Aceh: Menyerukan kesempatan kerja nyata dan akses pendidikan inklusif bagi penyandang disabilitas.
+              </p>
+            </div>
+
+            <!-- Tombol Aksi -->
+            <a href="https://www.instagram.com/reel/DZSFuiszwVv/" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="gallery-action-btn" 
+               aria-label="Buka video Reels aspirasi Syifa Turrahma di RDPU DPRK Banda Aceh pada Instagram di tab baru">
+              <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+              <span data-i18n="galleryBtnView">Lihat di Instagram</span>
+            </a>
+          </article>
+
+          <!-- Kartu 3 (Video Reels) -->
+          <article class="gallery-card group">
+            <div>
+              <!-- Visual / Thumbnail Container (1:1 Aspect Ratio) -->
+              <div class="relative aspect-square w-full rounded-lg overflow-hidden bg-[#112240] border border-[#233554] mb-4">
+                <img src="instagram_3.jpg" alt="Konsultasi Publik Dokumen RAD GPI Kota Banda Aceh bersama FKM BKA YWU" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0A192F]/80 via-transparent to-black/30 pointer-events-none"></div>
+                
+                <!-- Badge Penanda Jenis Konten -->
+                <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-black uppercase tracking-wider bg-[#F5A623] text-[#0A192F] shadow-md flex items-center gap-1.5 z-10">
+                  <svg class="w-3.5 h-3.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 3a2 2 0 0 0-2 2v14a2 2 0 0 0 2 2h16a2 2 0 0 0 2-2V5a2 2 0 0 0-2-2H4zm6 5.5l6 3.5-6 3.5v-7z"/>
+                  </svg>
+                  <span data-i18n="galleryBadgeReels">Reels Video</span>
+                </span>
+
+                <!-- Center Play Icon Overlay -->
+                <div class="absolute inset-0 flex items-center justify-center pointer-events-none" aria-hidden="true">
+                  <div class="w-12 h-12 rounded-full bg-black/60 backdrop-blur-sm border-2 border-white/80 flex items-center justify-center text-white transition-transform duration-300 group-hover:scale-110">
+                    <svg class="w-6 h-6 ml-0.5 fill-current" viewBox="0 0 24 24"><path d="M8 5v14l11-7z"/></svg>
+                  </div>
+                </div>
+              </div>
+
+              <!-- Caption Singkat -->
+              <p data-i18n="galleryCard3Caption" class="text-sm text-[#E6F1FF] leading-relaxed flex-grow">
+                Konsultasi Publik Rencana Aksi Daerah Gender &amp; Perubahan Iklim (RAD GPI) Kota Banda Aceh untuk aksi iklim yang inklusif dan responsif gender.
+              </p>
+            </div>
+
+            <!-- Tombol Aksi -->
+            <a href="https://www.instagram.com/reel/Des-dxWTHZN/" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="gallery-action-btn" 
+               aria-label="Buka video Reels Konsultasi Publik Dokumen RAD GPI Banda Aceh pada Instagram di tab baru">
+              <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+              <span data-i18n="galleryBtnView">Lihat di Instagram</span>
+            </a>
+          </article>
+
+          <!-- Kartu 4 (Postingan Foto) -->
+          <article class="gallery-card group">
+            <div>
+              <!-- Visual / Thumbnail Container (1:1 Aspect Ratio) -->
+              <div class="relative aspect-square w-full rounded-lg overflow-hidden bg-[#112240] border border-[#233554] mb-4">
+                <img src="instagram_4.jpg" alt="Feminist Festival of Resistance and Alternatives bersama FKM BKA YWU dan APWLD" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0A192F]/80 via-transparent to-black/30 pointer-events-none"></div>
+                
+                <!-- Badge Penanda Jenis Konten -->
+                <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-black uppercase tracking-wider bg-[#F5A623] text-[#0A192F] shadow-md flex items-center gap-1.5 z-10">
+                  <svg class="w-3.5 h-3.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 4h3l2-2h6l2 2h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm8 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/>
+                  </svg>
+                  <span data-i18n="galleryBadgePost">Postingan</span>
+                </span>
+              </div>
+
+              <!-- Caption Singkat -->
+              <p data-i18n="galleryCard4Caption" class="text-sm text-[#E6F1FF] leading-relaxed flex-grow">
+                Feminist Festival of Resistance &amp; Alternatives: Bersolidaritas memperjuangkan keadilan gender, menentang ketimpangan, dan merajut masa depan inklusif.
+              </p>
+            </div>
+
+            <!-- Tombol Aksi -->
+            <a href="https://www.instagram.com/p/Desz3JPk4Fe/" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="gallery-action-btn" 
+               aria-label="Buka postingan Feminist Festival of Resistance and Alternatives di Instagram pada tab baru">
+              <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+              <span data-i18n="galleryBtnView">Lihat di Instagram</span>
+            </a>
+          </article>
+
+          <!-- Kartu 5 (Postingan Foto) -->
+          <article class="gallery-card group">
+            <div>
+              <!-- Visual / Thumbnail Container (1:1 Aspect Ratio) -->
+              <div class="relative aspect-square w-full rounded-lg overflow-hidden bg-[#112240] border border-[#233554] mb-4">
+                <img src="instagram_5.jpg" alt="Partisipasi FKM BKA YWU dalam sesi dialog internasional ECOSOC dan APWLD" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0A192F]/80 via-transparent to-black/30 pointer-events-none"></div>
+                
+                <!-- Badge Penanda Jenis Konten -->
+                <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-black uppercase tracking-wider bg-[#F5A623] text-[#0A192F] shadow-md flex items-center gap-1.5 z-10">
+                  <svg class="w-3.5 h-3.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 4h3l2-2h6l2 2h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm8 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/>
+                  </svg>
+                  <span data-i18n="galleryBadgePost">Postingan</span>
+                </span>
+              </div>
+
+              <!-- Caption Singkat -->
+              <p data-i18n="galleryCard5Caption" class="text-sm text-[#E6F1FF] leading-relaxed flex-grow">
+                Partisipasi dalam forum global ECOSOC untuk menyuarakan aspirasi komunitas dan memastikan hak-hak perempuan disabilitas terwakili di tingkat internasional.
+              </p>
+            </div>
+
+            <!-- Tombol Aksi -->
+            <a href="https://www.instagram.com/p/DeszzYJEzVe/" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="gallery-action-btn" 
+               aria-label="Buka postingan partisipasi forum global ECOSOC di Instagram pada tab baru">
+              <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+              <span data-i18n="galleryBtnView">Lihat di Instagram</span>
+            </a>
+          </article>
+
+          <!-- Kartu 6 (Postingan Foto) -->
+          <article class="gallery-card group">
+            <div>
+              <!-- Visual / Thumbnail Container (1:1 Aspect Ratio) -->
+              <div class="relative aspect-square w-full rounded-lg overflow-hidden bg-[#112240] border border-[#233554] mb-4">
+                <img src="instagram_6.jpg" alt="Sesi kolaborasi dan penguatan kapasitas daring bersama FKM BKA YWU" class="w-full h-full object-cover transition-transform duration-500 group-hover:scale-105" loading="lazy" />
+                <div class="absolute inset-0 bg-gradient-to-t from-[#0A192F]/80 via-transparent to-black/30 pointer-events-none"></div>
+                
+                <!-- Badge Penanda Jenis Konten -->
+                <span class="absolute top-3 left-3 px-2.5 py-1 rounded-md text-xs font-black uppercase tracking-wider bg-[#F5A623] text-[#0A192F] shadow-md flex items-center gap-1.5 z-10">
+                  <svg class="w-3.5 h-3.5 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                    <path d="M4 4h3l2-2h6l2 2h3a2 2 0 0 1 2 2v12a2 2 0 0 1-2 2H4a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2zm8 3a5 5 0 1 0 0 10 5 5 0 0 0 0-10zm0 2a3 3 0 1 1 0 6 3 3 0 0 1 0-6z"/>
+                  </svg>
+                  <span data-i18n="galleryBadgePost">Postingan</span>
+                </span>
+              </div>
+
+              <!-- Caption Singkat -->
+              <p data-i18n="galleryCard6Caption" class="text-sm text-[#E6F1FF] leading-relaxed flex-grow">
+                Sesi kolaborasi dan penguatan kapasitas daring: Memperluas wawasan dan bertukar gagasan untuk pemberdayaan perempuan serta kesetaraan hakiki.
+              </p>
+            </div>
+
+            <!-- Tombol Aksi -->
+            <a href="https://www.instagram.com/p/DeTrdLUE8SX/" 
+               target="_blank" 
+               rel="noopener noreferrer" 
+               class="gallery-action-btn" 
+               aria-label="Buka postingan kolaborasi dan penguatan kapasitas daring di Instagram pada tab baru">
+              <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+              <span data-i18n="galleryBtnView">Lihat di Instagram</span>
+            </a>
+          </article>
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         IMPACT COUNTER SECTION
+         ======================================================================== -->
+    <section id="dampak" aria-labelledby="dampak-title" class="py-20 md:py-28 bg-[#112240] border-b-2 border-[#233554]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+        
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-16">
+          <div data-i18n="impactBadge" class="inline-block px-3 py-1 rounded bg-[#0A192F] border border-[#F5A623] text-[#F5A623] font-black text-xs uppercase tracking-widest mb-3">
+            Pencapaian Nyata
+          </div>
+          <h2 id="dampak-title" data-i18n="impactTitle" class="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight mb-4">
+            Dampak yang Terus Bertumbuh
+          </h2>
+          <p data-i18n="impactDesc" class="text-base sm:text-lg text-[#E6F1FF] leading-relaxed">
+            Statistik pencapaian program pendampingan, vokasi adaptif, dan pemberdayaan inklusif FKM BKA YWU.
+          </p>
+        </div>
+
+        <!-- Semantic Statistics Grid (Protected with aria-label) -->
+        <div class="grid grid-cols-1 sm:grid-cols-3 gap-8" 
+             role="region" 
+             aria-label="Statistik Pencapaian: 500 lebih UMKM Binaan, 12.000 lebih Anggota Komunitas, dan 150 lebih Program Selesai">
+          
+          <!-- Stat 1: UMKM Binaan -->
+          <div class="card-impact" tabindex="0" aria-label="Jumlah UMKM binaan: 500 lebih usaha mikro mandiri">
+            <div class="text-5xl sm:text-6xl font-black text-[#F5A623] tracking-tight mb-2 counter-val" 
+                 data-target="500" 
+                 data-suffix="+" 
+                 aria-hidden="true">
+              500+
+            </div>
+            <h3 data-i18n="impactStat1Title" class="text-xl font-black text-white mb-2">Jumlah UMKM Binaan</h3>
+            <p data-i18n="impactStat1Desc" class="text-sm text-[#E6F1FF]">
+              Usaha mikro berbasis disabilitas yang berproduksi aktif dan terhubung ke pasar komersial.
+            </p>
+          </div>
+
+          <!-- Stat 2: Anggota Komunitas -->
+          <div class="card-impact" tabindex="0" aria-label="Anggota Komunitas: 12.000 lebih sahabat disabilitas dan relawan">
+            <div class="text-5xl sm:text-6xl font-black text-[#F5A623] tracking-tight mb-2 counter-val" 
+                 data-target="12000" 
+                 data-suffix="+" 
+                 aria-hidden="true">
+              12.000+
+            </div>
+            <h3 data-i18n="impactStat2Title" class="text-xl font-black text-white mb-2">Anggota Komunitas</h3>
+            <p data-i18n="impactStat2Desc" class="text-sm text-[#E6F1FF]">
+              Sahabat disabilitas, pendamping keluarga, dan relawan profesional yang bergerak aktif.
+            </p>
+          </div>
+
+          <!-- Stat 3: Program Selesai -->
+          <div class="card-impact" tabindex="0" aria-label="Program Selesai: 150 lebih program vokasi, advokasi, dan pelatihan">
+            <div class="text-5xl sm:text-6xl font-black text-[#F5A623] tracking-tight mb-2 counter-val" 
+                 data-target="150" 
+                 data-suffix="+" 
+                 aria-hidden="true">
+              150+
+            </div>
+            <h3 data-i18n="impactStat3Title" class="text-xl font-black text-white mb-2">Program Selesai</h3>
+            <p data-i18n="impactStat3Desc" class="text-sm text-[#E6F1FF]">
+              Pelatihan vokasi adaptif, klinik legalitas usaha, audit aksesibilitas, dan advokasi sosial.
+            </p>
+          </div>
+
+        </div>
+
+      </div>
+    </section>
+
+    <!-- ========================================================================
+         PARTNERS & STRATEGIC COLLABORATION SECTION (Accessible Marquee)
+         ======================================================================== -->
+    <section id="mitra" aria-labelledby="mitra-title" class="py-16 md:py-24 bg-[#0A192F] border-b-2 border-[#233554] overflow-hidden">
+      <!-- Section Header (Symmetrical & Centered) -->
+      <div class="text-center max-w-3xl mx-auto mb-12 sm:mb-14 px-4 sm:px-6 lg:px-8">
+        <h2 id="mitra-title" data-i18n="partnersTitle" class="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight mb-4">
+          Mitra & Pendukung Strategis
+        </h2>
+        <p data-i18n="partnersDesc" class="text-base sm:text-lg text-[#E6F1FF] leading-relaxed">
+          Bergerak bersama berbagai lembaga internasional dan nasional dalam mendorong pemenuhan hak, kesetaraan gender, dan kemandirian wirausaha disabilitas.
+        </p>
+      </div>
+
+      <!-- Accessible Running Logos Container -->
+      <div class="marquee-container" aria-label="Daftar logo mitra kolaborasi strategis">
+        <div id="marquee-track" class="marquee-track py-4" role="region" aria-label="Logo mitra berputar kontinu">
+          
+          <!-- Set 1 (10 Mitra Utama) -->
+          <div class="partner-card partner-card-dark" tabindex="0" aria-label="Mitra: Purposeful - Global Resilience Fund">
+            <img src="partners1.jpeg" alt="Purposeful - Global Resilience Fund" loading="lazy" />
+          </div>
+          <div class="partner-card" tabindex="0" aria-label="Mitra: GEDA - Gender + Environment Data Alliance">
+            <img src="partners8.jpeg" alt="GEDA - Gender + Environment Data Alliance" loading="lazy" />
+          </div>
+          <div class="partner-card" tabindex="0" aria-label="Mitra: Zero Project Award Winner 2018">
+            <img src="partners9.jpeg" alt="Zero Project Award Winner 2018" loading="lazy" />
+          </div>
+          <div class="partner-card" tabindex="0" aria-label="Mitra: Partner Logo">
+            <img src="partners10.jpeg" alt="Partner Logo" loading="lazy" />
+          </div>
+          <div class="partner-card" tabindex="0" aria-label="Mitra: Paragon Corp">
+            <img src="partners11.jpeg" alt="Paragon Corp" loading="lazy" />
+          </div>
+          <div class="partner-card" tabindex="0" aria-label="Mitra: Women's Major Group">
+            <img src="partners12.jpeg" alt="Women's Major Group" loading="lazy" />
+          </div>
+          <div class="partner-card" tabindex="0" aria-label="Mitra: Center for Disaster Philanthropy">
+            <img src="partners13.jpeg" alt="Center for Disaster Philanthropy" loading="lazy" />
+          </div>
+          <div class="partner-card" tabindex="0" aria-label="Mitra: ESCAP - Economic and Social Commission for Asia and the Pacific">
+            <img src="partners14.jpeg" alt="ESCAP - Economic and Social Commission for Asia and the Pacific" loading="lazy" />
+          </div>
+          <div class="partner-card" tabindex="0" aria-label="Mitra: #women2030">
+            <img src="partners15.jpeg" alt="#women2030" loading="lazy" />
+          </div>
+          <div class="partner-card" tabindex="0" aria-label="Mitra: Global Call to Action Against Poverty">
+            <img src="partners16.jpeg" alt="Global Call to Action Against Poverty" loading="lazy" />
+          </div>
+
+          <!-- Set 2 (Duplikasi untuk Smooth Infinite Loop) -->
+          <div class="partner-card partner-card-dark" tabindex="0" aria-label="Mitra: Purposeful - Global Resilience Fund">
+            <img src="partners1.jpeg" alt="Purposeful - Global Resilience Fund" loading="lazy" />
+          </div>
+          <div class="partner-card" tabindex="0" aria-label="Mitra: GEDA - Gender + Environment Data Alliance">
+            <img src="partners8.jpeg" alt="GEDA - Gender + Environment Data Alliance" loading="lazy" />
+          </div>
+          <div class="partner-card" tabindex="0" aria-label="Mitra: Zero Project Award Winner 2018">
+            <img src="partners9.jpeg" alt="Zero Project Award Winner 2018" loading="lazy" />
+          </div>
+          <div class="partner-card" tabindex="0" aria-label="Mitra: Partner Logo">
+            <img src="partners10.jpeg" alt="Partner Logo" loading="lazy" />
+          </div>
+          <div class="partner-card" tabindex="0" aria-label="Mitra: Paragon Corp">
+            <img src="partners11.jpeg" alt="Paragon Corp" loading="lazy" />
+          </div>
+          <div class="partner-card" tabindex="0" aria-label="Mitra: Women's Major Group">
+            <img src="partners12.jpeg" alt="Women's Major Group" loading="lazy" />
+          </div>
+          <div class="partner-card" tabindex="0" aria-label="Mitra: Center for Disaster Philanthropy">
+            <img src="partners13.jpeg" alt="Center for Disaster Philanthropy" loading="lazy" />
+          </div>
+          <div class="partner-card" tabindex="0" aria-label="Mitra: ESCAP - Economic and Social Commission for Asia and the Pacific">
+            <img src="partners14.jpeg" alt="ESCAP - Economic and Social Commission for Asia and the Pacific" loading="lazy" />
+          </div>
+          <div class="partner-card" tabindex="0" aria-label="Mitra: #women2030">
+            <img src="partners15.jpeg" alt="#women2030" loading="lazy" />
+          </div>
+          <div class="partner-card" tabindex="0" aria-label="Mitra: Global Call to Action Against Poverty">
+            <img src="partners16.jpeg" alt="Global Call to Action Against Poverty" loading="lazy" />
+          </div>
+
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ==========================================================================
+       FOOTER (Accessibility Landmark: <footer role="contentinfo">)
+       ========================================================================== -->
+  <footer id="kontak" role="contentinfo" class="bg-[#0A192F] text-white border-t-2 border-[#233554] pt-16 pb-12">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      
+      <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-10 pb-12 border-b-2 border-[#233554]">
+        
+        <!-- Kolom 1: Profil Program -->
+        <div class="lg:col-span-1">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="relative w-10 h-10 rounded-lg bg-white flex items-center justify-center border-2 border-[#F5A623] overflow-hidden flex-shrink-0" aria-hidden="true">
+              <img src="Logo Baru.jpg" alt="Logo FKM BKA YWU" class="w-full h-full object-cover" style="clip-path: inset(0 0 18% 0);" />
+            </div>
+            <span class="text-xl font-black text-white tracking-tight">FKM BKA <span class="text-[#F5A623]">YWU</span></span>
+          </div>
+          <p data-i18n="footerDesc" class="text-sm text-[#E6F1FF] leading-relaxed">
+            Gerakan independen yang mewadahi advokasi kesetaraan hak, peningkatan keahlian kerja, dan inkubasi UMKM disabilitas.
+          </p>
+        </div>
+
+        <!-- Kolom 2: Kontak Resmi -->
+        <div>
+          <h3 data-i18n="footerContactTitle" class="text-lg font-black text-white uppercase tracking-wider mb-4 border-b-2 border-[#F5A623] pb-1 inline-block">
+            Kontak Resmi
+          </h3>
+          <ul class="space-y-3.5 text-sm text-[#E6F1FF]">
+            <li class="flex items-start gap-3">
+              <span class="text-[#F5A623] font-bold" aria-hidden="true">✉</span>
+              <div>
+                <span data-i18n="footerEmailLabel" class="block text-xs font-bold text-[#F5A623] uppercase">Email:</span>
+                <a href="mailto:fkmbka@gmail.com" class="text-white hover:text-[#F5A623] font-bold underline transition-colors" aria-label="Kirim email ke fkmbka@gmail.com">
+                  fkmbka@gmail.com
+                </a>
+              </div>
+            </li>
+            <li class="flex items-start gap-3">
+              <span class="text-[#F5A623] font-bold" aria-hidden="true">☎</span>
+              <div>
+                <span data-i18n="footerPhoneLabel" class="block text-xs font-bold text-[#F5A623] uppercase">Telepon / WhatsApp:</span>
+                <a href="https://wa.me/6282274517665" target="_blank" rel="noopener noreferrer" class="text-white hover:text-[#F5A623] font-bold block transition-colors" aria-label="Hubungi WhatsApp di nomor 082274517665 (buka di tab baru)">
+                  082274517665
+                </a>
+              </div>
+            </li>
+          </ul>
+        </div>
+
+        <!-- Kolom 3: Alamat Sekretariat -->
+        <div>
+          <h3 data-i18n="footerAddressTitle" class="text-lg font-black text-white uppercase tracking-wider mb-4 border-b-2 border-[#F5A623] pb-1 inline-block">
+            Alamat
+          </h3>
+          <address class="not-italic text-sm text-[#E6F1FF] leading-relaxed">
+            <span data-i18n="footerAddressText" class="block font-medium text-white mb-1">Jl. Gunung Sibayak Glugu Darat II, Medan Timur</span>
+            <p data-i18n="footerAddressNote" class="mt-2 text-xs text-[#F5A623] font-semibold">
+              *Aksesibel kursi roda dan ramah pemandu taktil.
+            </p>
+          </address>
+        </div>
+
+        <!-- Kolom 4: Tautan Media Sosial Semantic Nav -->
+        <div>
+          <h3 data-i18n="footerSocialTitle" class="text-lg font-black text-white uppercase tracking-wider mb-4 border-b-2 border-[#F5A623] pb-1 inline-block">
+            Media Sosial
+          </h3>
+          <p data-i18n="footerSocialDesc" class="text-sm text-[#E6F1FF] mb-4">
+            Ikuti informasi dan agenda terbaru FKM BKA YWU di kanal resmi kami:
+          </p>
+          <nav aria-label="Tautan Media Sosial FKM BKA YWU" class="flex flex-wrap gap-3">
+            
+            <!-- Instagram -->
+            <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-lg bg-[#112240] border-2 border-[#233554] hover:border-[#F5A623] text-white hover:text-[#F5A623] flex items-center justify-center transition-colors" aria-label="Kunjungi profil Instagram resmi FKM BKA YWU (buka di tab baru)">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M12 2.163c3.204 0 3.584.012 4.85.07 3.252.148 4.771 1.691 4.919 4.919.058 1.265.069 1.645.069 4.849 0 3.205-.012 3.584-.069 4.849-.149 3.225-1.664 4.771-4.919 4.919-1.266.058-1.644.07-4.85.07-3.204 0-3.584-.012-4.849-.07-3.26-.149-4.771-1.699-4.919-4.92-.058-1.265-.07-1.644-.07-4.849 0-3.204.013-3.583.07-4.849.149-3.227 1.664-4.771 4.919-4.919 1.266-.057 1.645-.069 4.849-.069zm0-2.163c-3.259 0-3.667.014-4.947.072-4.358.2-6.78 2.618-6.98 6.98-.059 1.281-.073 1.689-.073 4.948 0 3.259.014 3.668.072 4.948.2 4.358 2.618 6.78 6.98 6.98 1.281.058 1.689.072 4.948.072 3.259 0 3.668-.014 4.948-.072 4.354-.2 6.782-2.618 6.979-6.98.059-1.28.073-1.689.073-4.948 0-3.259-.014-3.667-.072-4.947-.196-4.354-2.617-6.78-6.979-6.98-1.281-.059-1.69-.073-4.949-.073zm0 5.838c-3.403 0-6.162 2.759-6.162 6.162s2.759 6.163 6.162 6.163 6.162-2.759 6.162-6.163c0-3.403-2.759-6.162-6.162-6.162zm0 10.162c-2.209 0-4-1.79-4-4 0-2.209 1.791-4 4-4s4 1.791 4 4c0 2.21-1.791 4-4 4zm6.406-11.845c-.796 0-1.441.645-1.441 1.44s.645 1.44 1.441 1.44c.795 0 1.439-.645 1.439-1.44s-.644-1.44-1.439-1.44z"/>
+              </svg>
+            </a>
+
+            <!-- WhatsApp -->
+            <a href="https://wa.me/6282274517665" target="_blank" rel="noopener noreferrer" class="w-11 h-11 rounded-lg bg-[#112240] border-2 border-[#233554] hover:border-[#F5A623] text-white hover:text-[#F5A623] flex items-center justify-center transition-colors" aria-label="Hubungi FKM BKA YWU melalui WhatsApp">
+              <svg class="w-5 h-5" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+                <path d="M.057 24l1.687-6.163c-1.041-1.804-1.588-3.849-1.587-5.946.003-6.556 5.338-11.891 11.893-11.891 3.181.001 6.167 1.24 8.413 3.488 2.245 2.248 3.481 5.236 3.48 8.414-.003 6.557-5.338 11.892-11.893 11.892-1.99-.001-3.951-.5-5.688-1.448l-6.305 1.654zm6.597-3.807c1.676.995 3.276 1.591 5.392 1.592 5.448 0 9.886-4.434 9.889-9.885.002-5.462-4.415-9.89-9.881-9.892-5.452 0-9.887 4.434-9.889 9.884-.001 2.225.651 3.891 1.746 5.634l-.999 3.648 3.742-.981zm11.387-5.464c-.074-.124-.272-.198-.57-.347-.297-.149-1.758-.868-2.031-.967-.272-.099-.47-.149-.669.149-.198.297-.768.967-.941 1.165-.173.198-.347.223-.644.074-.297-.149-1.255-.462-2.39-1.475-.883-.788-1.48-1.761-1.653-2.059-.173-.297-.018-.458.13-.606.134-.133.297-.347.446-.521.151-.172.2-.296.3-.495.099-.198.05-.372-.025-.521-.075-.148-.669-1.611-.916-2.206-.242-.579-.487-.501-.669-.51l-.57-.01c-.198 0-.52.074-.792.372s-1.04 1.016-1.04 2.479 1.065 2.876 1.213 3.074c.149.198 2.095 3.2 5.076 4.487.709.306 1.263.489 1.694.626.712.226 1.36.194 1.872.118.571-.085 1.758-.719 2.006-1.413.248-.695.248-1.29.173-1.414z"/>
+              </svg>
+            </a>
+
+          </nav>
+        </div>
+
+      </div>
+
+      <!-- Sub-Footer / Bottom Bar -->
+      <div class="pt-8 flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-semibold text-[#E6F1FF]">
+        <p data-i18n="footerCopyright">
+          &copy; 2026 FKM BKA YWU. Seluruh Hak Cipta Dilindungi.
+        </p>
+        <div class="flex items-center gap-2.5 sm:gap-3">
+          <a href="#privacy" 
+             id="privacy-link"
+             data-i18n="footerPrivacy" 
+             class="hover:text-[#F5A623] underline transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F5A623] rounded py-1 px-1.5" 
+             aria-haspopup="dialog"
+             aria-label="Buka Kebijakan Privasi FKM BKA YWU">
+            Kebijakan Privasi
+          </a>
+          <span class="text-[#8892B0]" aria-hidden="true">•</span>
+          <a href="#terms" 
+             id="terms-link"
+             data-i18n="footerTerms" 
+             class="hover:text-[#F5A623] underline transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F5A623] rounded py-1 px-1.5" 
+             aria-haspopup="dialog"
+             aria-label="Buka Syarat & Ketentuan FKM BKA YWU">
+            Syarat & Ketentuan
+          </a>
+        </div>
+      </div>
+
+    </div>
+  </footer>
+
+  <!-- ==========================================================================
+       PRIVACY POLICY ACCESSIBLE MODAL DIALOG (WCAG Compliant)
+       ========================================================================== -->
+  <dialog id="privacy-modal" 
+          aria-labelledby="privacy-modal-title" 
+          aria-modal="true" 
+          class="backdrop:bg-[#0A192F]/80 backdrop:backdrop-blur-sm bg-[#112240] text-white border-2 border-[#233554] rounded-2xl p-0 max-w-2xl w-[92vw] shadow-2xl focus:outline-none focus-visible:ring-4 focus-visible:ring-[#F5A623]">
+    <div class="p-6 sm:p-8 max-h-[82vh] overflow-y-auto">
+      <div class="flex items-center justify-between pb-4 border-b border-[#233554] mb-6">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-[#F5A623] text-[#0A192F] flex items-center justify-center font-black text-lg shadow-sm" aria-hidden="true">
+            🔒
+          </div>
+          <h2 id="privacy-modal-title" data-i18n="privacyModalTitle" class="text-xl sm:text-2xl font-black text-white tracking-tight">
+            Kebijakan Privasi
+          </h2>
+        </div>
+        <button id="close-privacy-modal" 
+                type="button" 
+                class="p-2 rounded-lg bg-[#0A192F] text-white hover:text-[#F5A623] border border-[#233554] hover:border-[#F5A623] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F5A623]" 
+                aria-label="Tutup jendela kebijakan privasi">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <div class="space-y-4 text-sm text-[#E6F1FF] leading-relaxed">
+        <p data-i18n="privacyModalP1">
+          FKM BKA YWU berkomitmen penuh untuk melindungi privasi setiap pengunjung, anggota komunitas, sahabat disabilitas, dan mitra yang mengakses situs web ini.
+        </p>
+        <div class="bg-[#0A192F] p-4 rounded-xl border border-[#233554]">
+          <h3 data-i18n="privacyModalSec1Title" class="text-base font-bold text-white mb-1.5 flex items-center gap-2">
+            <span class="text-[#F5A623]">1.</span> Pengumpulan & Penggunaan Data
+          </h3>
+          <p data-i18n="privacyModalSec1Desc" class="text-xs sm:text-sm text-[#E6F1FF]">
+            Situs ini tidak mengumpulkan data pribadi tanpa persetujuan Anda. Informasi kontak yang Anda kirimkan melalui email/saluran resmi semata-mata digunakan untuk kepentingan program advokasi dan wirausaha inklusif.
+          </p>
+        </div>
+        <div class="bg-[#0A192F] p-4 rounded-xl border border-[#233554]">
+          <h3 data-i18n="privacyModalSec2Title" class="text-base font-bold text-white mb-1.5 flex items-center gap-2">
+            <span class="text-[#F5A623]">2.</span> Penyimpanan Preferensi (Local Storage)
+          </h3>
+          <p data-i18n="privacyModalSec2Desc" class="text-xs sm:text-sm text-[#E6F1FF]">
+            Kami hanya menggunakan penyimpanan lokal peramban (Local Storage) untuk mengingat preferensi bahasa (ID/EN) pilihan Anda demi kenyamanan navigasi.
+          </p>
+        </div>
+        <div class="bg-[#0A192F] p-4 rounded-xl border border-[#233554]">
+          <h3 data-i18n="privacyModalSec3Title" class="text-base font-bold text-white mb-1.5 flex items-center gap-2">
+            <span class="text-[#F5A623]">3.</span> Keamanan & Kerahasiaan Informasi
+          </h3>
+          <p data-i18n="privacyModalSec3Desc" class="text-xs sm:text-sm text-[#E6F1FF]">
+            Seluruh data komunikasi dijaga kerahasiaannya dengan standar keamanan yang ketat dan tidak pernah dialihkan ke pihak ketiga.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-8 pt-4 border-t border-[#233554] flex justify-end">
+        <button id="close-privacy-btn-bottom" 
+                type="button" 
+                class="px-6 py-2.5 rounded-lg bg-[#F5A623] hover:bg-[#FFAF38] text-[#0A192F] font-extrabold text-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white shadow-md" 
+                data-i18n="privacyModalCloseBtn">
+          Tutup
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- ==========================================================================
+       TERMS & CONDITIONS ACCESSIBLE MODAL DIALOG (WCAG Compliant)
+       ========================================================================== -->
+  <dialog id="terms-modal" 
+          aria-labelledby="terms-modal-title" 
+          aria-modal="true" 
+          class="backdrop:bg-[#0A192F]/80 backdrop:backdrop-blur-sm bg-[#112240] text-white border-2 border-[#233554] rounded-2xl p-0 max-w-2xl w-[92vw] shadow-2xl focus:outline-none focus-visible:ring-4 focus-visible:ring-[#F5A623]">
+    <div class="p-6 sm:p-8 max-h-[82vh] overflow-y-auto">
+      <div class="flex items-center justify-between pb-4 border-b border-[#233554] mb-6">
+        <div class="flex items-center gap-3">
+          <div class="w-10 h-10 rounded-lg bg-[#F5A623] text-[#0A192F] flex items-center justify-center font-black text-lg shadow-sm" aria-hidden="true">
+            📋
+          </div>
+          <h2 id="terms-modal-title" data-i18n="termsModalTitle" class="text-xl sm:text-2xl font-black text-white tracking-tight">
+            Syarat & Ketentuan
+          </h2>
+        </div>
+        <button id="close-terms-modal" 
+                type="button" 
+                class="p-2 rounded-lg bg-[#0A192F] text-white hover:text-[#F5A623] border border-[#233554] hover:border-[#F5A623] transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F5A623]" 
+                aria-label="Tutup jendela syarat dan ketentuan">
+          <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
+            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.5" d="M6 18L18 6M6 6l12 12"></path>
+          </svg>
+        </button>
+      </div>
+
+      <div class="space-y-4 text-sm text-[#E6F1FF] leading-relaxed">
+        <p data-i18n="termsModalP1">
+          Selamat datang di situs web resmi FKM BKA YWU. Dengan mengakses situs ini, Anda menyetujui syarat dan ketentuan penggunaan layanan berikut ini demi kenyamanan dan perlindungan bersama.
+        </p>
+        <div class="bg-[#0A192F] p-4 rounded-xl border border-[#233554]">
+          <h3 data-i18n="termsModalSec1Title" class="text-base font-bold text-white mb-1.5 flex items-center gap-2">
+            <span class="text-[#F5A623]">1.</span> Hak Kekayaan Intelektual
+          </h3>
+          <p data-i18n="termsModalSec1Desc" class="text-xs sm:text-sm text-[#E6F1FF]">
+            Seluruh materi publikasi, logo, dan dokumentasi program dilindungi hak cipta. Penggunaan materi untuk edukasi dan advokasi sosial diperkenankan dengan mencantumkan sumber resmi FKM BKA YWU.
+          </p>
+        </div>
+        <div class="bg-[#0A192F] p-4 rounded-xl border border-[#233554]">
+          <h3 data-i18n="termsModalSec2Title" class="text-base font-bold text-white mb-1.5 flex items-center gap-2">
+            <span class="text-[#F5A623]">2.</span> Penggunaan Informasi & Layanan
+          </h3>
+          <p data-i18n="termsModalSec2Desc" class="text-xs sm:text-sm text-[#E6F1FF]">
+            Pengguna diharapkan memanfaatkan saluran informasi dan kontak organisasi secara etis, bertanggung jawab, serta tidak merugikan sahabat disabilitas maupun masyarakat luas.
+          </p>
+        </div>
+        <div class="bg-[#0A192F] p-4 rounded-xl border border-[#233554]">
+          <h3 data-i18n="termsModalSec3Title" class="text-base font-bold text-white mb-1.5 flex items-center gap-2">
+            <span class="text-[#F5A623]">3.</span> Perubahan Ketentuan
+          </h3>
+          <p data-i18n="termsModalSec3Desc" class="text-xs sm:text-sm text-[#E6F1FF]">
+            Ketentuan ini dapat disesuaikan sewaktu-waktu guna peningkatan kualitas layanan, transparansi, serta kepatuhan pada regulasi yang berlaku.
+          </p>
+        </div>
+      </div>
+
+      <div class="mt-8 pt-4 border-t border-[#233554] flex justify-end">
+        <button id="close-terms-btn-bottom" 
+                type="button" 
+                class="px-6 py-2.5 rounded-lg bg-[#F5A623] hover:bg-[#FFAF38] text-[#0A192F] font-extrabold text-sm transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white shadow-md" 
+                data-i18n="termsModalCloseBtn">
+          Tutup
+        </button>
+      </div>
+    </div>
+  </dialog>
+
+  <!-- Modular Accessible Script -->
+  <script src="script.js"></script>
+</body>
+</html>
