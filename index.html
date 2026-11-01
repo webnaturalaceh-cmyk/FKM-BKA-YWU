@@ -202,15 +202,18 @@
                data-i18n-attr="aria-label:introSectionLabel"
                class="intro-section py-16 md:py-24 bg-[#0F233D] border-b-2 border-[#233554]">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div class="grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-center">
+          <div class="intro-grid grid grid-cols-1 md:grid-cols-2 gap-8 md:gap-12 lg:gap-16 items-start">
             
             <!-- Kolom Kiri: Teks Pengenalan -->
-            <div>
+            <div class="intro-text-col">
               <h2 data-i18n="introTitle" class="intro-heading">
                 FKM BKA YWU
               </h2>
               <p data-i18n="introDesc" class="intro-desc">
                 FKM BKA YWU merupakan forum komunikasi masyarakat berkebutuhan khusus yang berfokus pada advokasi hak-hak perempuan muda serta perempuan penyandang disabilitas.
+              </p>
+              <p data-i18n="introPillarDesc" class="intro-desc">
+                Gerakan ini didorong oleh tiga pilar strategis yang menggerakkan seluruh program FKM BKA YWU dalam mewujudkan kesetaraan hak, kapabilitas vokasi, dan kemandirian wirausaha disabilitas.
               </p>
             </div>
 
@@ -319,142 +322,257 @@
       </section>
 
       <!-- ======================================================================
+           STANDALONE FULL-WIDTH SECTION: AREA KERJA OPERASIONAL (#area-kerja)
+           ====================================================================== -->
+      <section id="area-kerja" aria-labelledby="area-kerja-title" class="work-area-section py-20 md:py-24 bg-[#112240] border-b-2 border-[#233554]">
+        <div class="max-w-5xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+
+          <!-- Elemen 1: Judul Utama (Center-Aligned) -->
+          <h2 id="area-kerja-title" data-i18n="introWorkAreaTitle" class="work-area-heading">
+            AREA KERJA OPERASIONAL
+          </h2>
+
+          <!-- Elemen 2: Animasi SVG Peta Indonesia Modern (Center-Aligned) -->
+          <div class="work-area-map-wrapper">
+            <div class="indonesia-map-stage" role="group" aria-label="Peta interaktif 12 provinsi area kerja operasional FKM BKA YWU" data-i18n-attr="aria-label:introMapGroupAria">
+              <svg class="indonesia-map-svg" viewBox="0 0 940 360" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
+                <!-- Garis Grid Kartografi Halus & Garis Khatulistiwa -->
+                <g class="map-grid-lines">
+                  <line x1="0" y1="65" x2="940" y2="65" />
+                  <line x1="0" y1="130" x2="940" y2="130" stroke-dasharray="4 4" />
+                  <line x1="0" y1="210" x2="940" y2="210" />
+                  <line x1="0" y1="290" x2="940" y2="290" />
+                  <line x1="190" y1="0" x2="190" y2="360" />
+                  <line x1="390" y1="0" x2="390" y2="360" />
+                  <line x1="590" y1="0" x2="590" y2="360" />
+                  <line x1="790" y1="0" x2="790" y2="360" />
+                </g>
+
+                <!-- Siluet Kepulauan Indonesia (Skema Navy Gelap Transparan) -->
+                <g class="map-land">
+                  <!-- Sumatera & Kepulauan Sekitarnya -->
+                  <path d="M15,25Q14,18 24,22Q34,26 47,27Q60,28 67,37Q74,46 81,52Q88,58 98,65Q108,72 118,80Q128,88 141,94Q154,100 165,107Q176,114 180,125Q184,136 192,145Q200,154 204,164Q208,174 218,183Q228,192 227,206Q226,220 225,233Q224,246 213,247Q202,248 194,240Q186,232 171,219Q156,206 144,193Q132,180 124,167Q116,154 111,144Q106,134 99,124Q92,114 86,105Q80,96 73,89Q66,82 58,74Q50,66 40,57Q30,48 23,40Q16,32 15,25Z" />
+                  <path d="M25,76Q26,74 33,77Q40,80 38,82Q36,84 30,81Q24,78 25,76Z" />
+                  <path d="M53,105Q52,100 60,104Q68,108 67,113Q66,118 60,114Q54,110 53,105Z" />
+                  <path d="M83,154Q84,150 90,154Q96,158 95,162Q94,166 88,162Q82,158 83,154Z" />
+                  <!-- Kepulauan Riau, Bangka & Belitung -->
+                  <path d="M187,110Q186,106 195,106Q204,106 204,110Q204,114 196,114Q188,114 187,110Z" />
+                  <path d="M194,131Q194,126 201,128Q208,130 207,135Q206,140 200,138Q194,136 194,131Z" />
+                  <path d="M267,50Q268,46 273,48Q278,50 277,54Q276,58 271,56Q266,54 267,50Z" />
+                  <path d="M214,167Q214,162 224,164Q234,166 239,173Q244,180 242,185Q240,190 233,187Q226,184 220,178Q214,172 214,167Z" />
+                  <path d="M260,187Q260,182 268,183Q276,184 275,189Q274,194 267,193Q260,192 260,187Z" />
+                  <!-- Jawa & Madura -->
+                  <path d="M216,266Q214,264 222,256Q230,248 239,249Q248,250 257,252Q266,254 274,259Q282,264 293,265Q304,266 312,263Q320,260 328,262Q336,264 349,266Q362,268 371,276Q380,284 389,285Q398,286 399,294Q400,302 390,301Q380,300 367,298Q354,296 341,295Q328,294 314,290Q300,286 290,285Q280,284 267,282Q254,280 245,278Q236,276 227,272Q218,268 216,266Z" />
+                  <path d="M364,271Q364,268 378,268Q392,268 392,271Q392,274 378,274Q364,274 364,271Z" />
+                  <!-- Kalimantan -->
+                  <path d="M291,126Q288,114 293,102Q298,90 309,94Q320,98 331,102Q342,106 354,104Q366,102 380,98Q394,94 408,80Q422,66 431,56Q440,46 453,46Q466,46 467,57Q468,68 466,79Q464,90 475,100Q486,110 473,118Q460,126 455,140Q450,154 444,165Q438,176 436,189Q434,202 418,207Q402,212 389,205Q376,198 361,199Q346,200 330,194Q314,188 311,175Q308,162 301,150Q294,138 291,126Z" />
+                  <!-- Sulawesi -->
+                  <path d="M505,123Q506,114 517,109Q528,104 544,107Q560,110 577,110Q594,110 604,104Q614,98 613,105Q612,112 596,117Q580,122 563,122Q546,122 533,125Q520,128 521,137Q522,146 534,145Q546,144 562,144Q578,144 579,150Q580,156 566,159Q552,162 547,169Q542,176 549,188Q556,200 558,210Q560,220 552,224Q544,228 539,217Q534,206 528,196Q522,186 520,199Q518,212 518,227Q518,242 508,242Q498,242 499,226Q500,210 493,204Q486,198 487,187Q488,176 493,165Q498,154 501,143Q504,132 505,123Z" />
+                  <path d="M561,229Q562,220 568,221Q574,222 572,232Q570,242 565,240Q560,238 561,229Z" />
+                  <!-- Bali, NTB & NTT -->
+                  <path d="M401,296Q400,292 411,293Q422,294 422,300Q422,306 412,303Q402,300 401,296Z" />
+                  <path d="M428,302Q428,296 436,296Q444,296 443,302Q442,308 435,308Q428,308 428,302Z" />
+                  <path d="M446,303Q446,298 458,296Q470,294 481,296Q492,298 492,303Q492,308 480,309Q468,310 457,309Q446,308 446,303Z" />
+                  <path d="M491,322Q490,318 503,320Q516,322 521,327Q526,332 520,334Q514,336 503,331Q492,326 491,322Z" />
+                  <path d="M506,301Q506,298 521,298Q536,298 553,296Q570,294 574,297Q578,300 565,303Q552,306 536,307Q520,308 513,306Q506,304 506,301Z" />
+                  <path d="M596,295Q596,292 604,293Q612,294 611,297Q610,300 603,299Q596,298 596,295Z" />
+                  <path d="M585,336Q580,334 593,325Q606,316 620,310Q634,304 644,301Q654,298 652,304Q650,310 634,318Q618,326 604,332Q590,338 585,336Z" />
+                  <!-- Kepulauan Maluku -->
+                  <path d="M660,108Q660,94 665,90Q670,86 670,95Q670,104 677,102Q684,100 684,107Q684,114 678,117Q672,120 678,124Q684,128 682,134Q680,140 674,136Q668,132 667,139Q666,146 662,144Q658,142 659,132Q660,122 660,108Z" />
+                  <path d="M631,198Q630,192 642,193Q654,194 653,200Q652,206 642,205Q632,204 631,198Z" />
+                  <path d="M666,193Q666,188 683,188Q700,188 713,192Q726,196 724,201Q722,206 707,203Q692,200 679,199Q666,198 666,193Z" />
+                  <path d="M728,281Q730,274 737,276Q744,278 740,285Q736,292 731,290Q726,288 728,281Z" />
+                  <path d="M793,251Q794,240 800,242Q806,244 805,255Q804,266 798,264Q792,262 793,251Z" />
+                  <!-- Papua & Kepulauan Raja Ampat / Teluk Cenderawasih -->
+                  <path d="M715,135Q714,132 724,132Q734,132 733,135Q732,138 724,138Q716,138 715,135Z" />
+                  <path d="M704,167Q704,164 711,165Q718,166 717,169Q716,172 710,171Q704,170 704,167Z" />
+                  <path d="M822,149Q822,146 829,147Q836,148 835,151Q834,154 828,153Q822,152 822,149Z" />
+                  <path d="M818,164Q818,162 832,163Q846,164 846,166Q846,168 832,167Q818,166 818,164Z" />
+                  <path d="M731,154Q728,148 740,143Q752,138 763,141Q774,144 783,146Q792,148 793,157Q794,166 798,176Q802,186 809,190Q816,194 827,185Q838,176 853,169Q868,162 883,166Q898,170 913,176Q928,182 929,206Q930,230 930,252Q930,274 930,293Q930,312 918,306Q906,300 896,298Q886,296 876,296Q866,296 871,287Q876,278 869,262Q862,246 848,237Q834,228 821,222Q808,216 797,213Q786,210 780,205Q774,200 764,193Q754,186 761,183Q768,180 777,178Q786,176 781,172Q776,168 763,165Q750,162 742,161Q734,160 731,154Z" />
+                </g>
+              </svg>
+
+              <!-- 12 Titik Penanda Lokasi Provinsi Seragam (#F5A623 + Glowing Pulse) -->
+              <div id="indonesia-map-pins" class="indonesia-map-pins">
+                <button type="button"
+                        class="map-pin map-pin--edge-left"
+                        style="left: 3.40%; top: 10.56%;"
+                        aria-label="Titik lokasi area kerja operasional: Aceh"
+                        data-i18n-attr="aria-label:mapPinAcehAria">
+                  <span class="map-pin-pulse" aria-hidden="true"></span>
+                  <span class="map-pin-dot" aria-hidden="true"></span>
+                  <span class="map-pin-tooltip" data-i18n="mapPinAceh" aria-hidden="true">Aceh</span>
+                </button>
+
+                <button type="button"
+                        class="map-pin"
+                        style="left: 9.36%; top: 22.78%;"
+                        aria-label="Titik lokasi area kerja operasional: Sumatera Utara"
+                        data-i18n-attr="aria-label:mapPinSumutAria">
+                  <span class="map-pin-pulse" aria-hidden="true"></span>
+                  <span class="map-pin-dot" aria-hidden="true"></span>
+                  <span class="map-pin-tooltip" data-i18n="mapPinSumut" aria-hidden="true">Sumatera Utara</span>
+                </button>
+
+                <button type="button"
+                        class="map-pin"
+                        style="left: 12.77%; top: 40.56%;"
+                        aria-label="Titik lokasi area kerja operasional: Sumatera Barat"
+                        data-i18n-attr="aria-label:mapPinSumbarAria">
+                  <span class="map-pin-pulse" aria-hidden="true"></span>
+                  <span class="map-pin-dot" aria-hidden="true"></span>
+                  <span class="map-pin-tooltip" data-i18n="mapPinSumbar" aria-hidden="true">Sumatera Barat</span>
+                </button>
+
+                <button type="button"
+                        class="map-pin"
+                        style="left: 20.85%; top: 30.56%;"
+                        aria-label="Titik lokasi area kerja operasional: Kepulauan Riau"
+                        data-i18n-attr="aria-label:mapPinKepriAria">
+                  <span class="map-pin-pulse" aria-hidden="true"></span>
+                  <span class="map-pin-dot" aria-hidden="true"></span>
+                  <span class="map-pin-tooltip" data-i18n="mapPinKepri" aria-hidden="true">Kepulauan Riau</span>
+                </button>
+
+                <button type="button"
+                        class="map-pin"
+                        style="left: 20.64%; top: 52.78%;"
+                        aria-label="Titik lokasi area kerja operasional: Sumatera Selatan"
+                        data-i18n-attr="aria-label:mapPinSumselAria">
+                  <span class="map-pin-pulse" aria-hidden="true"></span>
+                  <span class="map-pin-dot" aria-hidden="true"></span>
+                  <span class="map-pin-tooltip" data-i18n="mapPinSumsel" aria-hidden="true">Sumatera Selatan</span>
+                </button>
+
+                <button type="button"
+                        class="map-pin"
+                        style="left: 27.87%; top: 74.44%;"
+                        aria-label="Titik lokasi area kerja operasional: Jawa Barat"
+                        data-i18n-attr="aria-label:mapPinJabarAria">
+                  <span class="map-pin-pulse" aria-hidden="true"></span>
+                  <span class="map-pin-dot" aria-hidden="true"></span>
+                  <span class="map-pin-tooltip" data-i18n="mapPinJabar" aria-hidden="true">Jawa Barat</span>
+                </button>
+
+                <button type="button"
+                        class="map-pin"
+                        style="left: 38.30%; top: 78.33%;"
+                        aria-label="Titik lokasi area kerja operasional: Jawa Timur"
+                        data-i18n-attr="aria-label:mapPinJatimAria">
+                  <span class="map-pin-pulse" aria-hidden="true"></span>
+                  <span class="map-pin-dot" aria-hidden="true"></span>
+                  <span class="map-pin-tooltip" data-i18n="mapPinJatim" aria-hidden="true">Jawa Timur</span>
+                </button>
+
+                <button type="button"
+                        class="map-pin"
+                        style="left: 43.83%; top: 82.78%;"
+                        aria-label="Titik lokasi area kerja operasional: Bali"
+                        data-i18n-attr="aria-label:mapPinBaliAria">
+                  <span class="map-pin-pulse" aria-hidden="true"></span>
+                  <span class="map-pin-dot" aria-hidden="true"></span>
+                  <span class="map-pin-tooltip" data-i18n="mapPinBali" aria-hidden="true">Bali</span>
+                </button>
+
+                <button type="button"
+                        class="map-pin"
+                        style="left: 48.94%; top: 83.89%;"
+                        aria-label="Titik lokasi area kerja operasional: Nusa Tenggara Barat"
+                        data-i18n-attr="aria-label:mapPinNtbAria">
+                  <span class="map-pin-pulse" aria-hidden="true"></span>
+                  <span class="map-pin-dot" aria-hidden="true"></span>
+                  <span class="map-pin-tooltip" data-i18n="mapPinNtb" aria-hidden="true">Nusa Tenggara Barat</span>
+                </button>
+
+                <button type="button"
+                        class="map-pin"
+                        style="left: 57.66%; top: 83.89%;"
+                        aria-label="Titik lokasi area kerja operasional: Nusa Tenggara Timur"
+                        data-i18n-attr="aria-label:mapPinNttAria">
+                  <span class="map-pin-pulse" aria-hidden="true"></span>
+                  <span class="map-pin-dot" aria-hidden="true"></span>
+                  <span class="map-pin-tooltip" data-i18n="mapPinNtt" aria-hidden="true">Nusa Tenggara Timur</span>
+                </button>
+
+                <button type="button"
+                        class="map-pin"
+                        style="left: 78.30%; top: 41.11%;"
+                        aria-label="Titik lokasi area kerja operasional: Papua Barat Daya"
+                        data-i18n-attr="aria-label:mapPinPbdAria">
+                  <span class="map-pin-pulse" aria-hidden="true"></span>
+                  <span class="map-pin-dot" aria-hidden="true"></span>
+                  <span class="map-pin-tooltip" data-i18n="mapPinPbd" aria-hidden="true">Papua Barat Daya</span>
+                </button>
+
+                <button type="button"
+                        class="map-pin map-pin--edge-right"
+                        style="left: 83.83%; top: 47.22%;"
+                        aria-label="Titik lokasi area kerja operasional: Papua Barat"
+                        data-i18n-attr="aria-label:mapPinPbAria">
+                  <span class="map-pin-pulse" aria-hidden="true"></span>
+                  <span class="map-pin-dot" aria-hidden="true"></span>
+                  <span class="map-pin-tooltip" data-i18n="mapPinPb" aria-hidden="true">Papua Barat</span>
+                </button>
+              </div>
+            </div>
+          </div>
+
+          <!-- Elemen 3: Daftar Teks Nama Area Kerja Operasional (Center-Aligned) -->
+          <p data-i18n="introWorkAreaList" class="work-area-list-text">
+            Aceh, Sumatera Utara, Sumatera Selatan, Sumatera Barat, Kepulauan Riau, Jawa Barat, Jawa Timur, Papua Barat, Papua Barat Daya, Nusa Tenggara Timur, Nusa Tenggara Barat dan Bali
+          </p>
+
+        </div>
+      </section>
+
+      <!-- ======================================================================
            VISI & MISI SECTION (#visi-misi)
            ====================================================================== -->
-      <section id="visi-misi" aria-labelledby="visi-misi-title" class="py-20 md:py-28 bg-[#0A192F] border-b-2 border-[#233554]">
-        <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+      <section id="visi-misi" aria-labelledby="visi-misi-title" class="visi-misi-section py-20 md:py-24 bg-[#0F233D] border-b-2 border-[#233554]">
+        <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
           
-          <!-- Section Header Visi & Misi -->
-          <div class="text-center max-w-3xl mx-auto mb-14 md:mb-16">
-            <div data-i18n="visiMisiBadge" class="inline-block px-3 py-1 rounded bg-[#112240] border border-[#F5A623] text-[#F5A623] font-black text-xs uppercase tracking-widest mb-3">
-              Arah &amp; Komitmen Strategis
-            </div>
-            <h2 id="visi-misi-title" data-i18n="visiMisiTitle" class="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight mb-4">
-              Visi &amp; Misi Kami
-            </h2>
-            <p data-i18n="visiMisiDesc" class="text-base sm:text-lg text-[#E6F1FF] leading-relaxed">
-              Landasan filosofis dan komitmen strategis FKM BKA YWU dalam memperjuangkan kesetaraan, keadilan sosial, dan kedaulatan penyandang disabilitas.
+          <!-- Judul Utama Section ("Visi dan Misi") -->
+          <h2 id="visi-misi-title" data-i18n="visiMisiTitle" class="visi-misi-heading">
+            Visi dan Misi
+          </h2>
+
+          <!-- Bagian Visi -->
+          <div class="visi-block">
+            <h3 data-i18n="visiSubTitle" class="visi-misi-subheading">
+              Visi
+            </h3>
+            <p data-i18n="visiCardText" class="visi-text">
+              Terwujudnya masyarakat yang inklusif, adil, setara, dan berkelanjutan, dengan perempuan, kaum muda, serta penyandang disabilitas memiliki kesempatan yang setara untuk berpartisipasi, memimpin, dan memperoleh hak-haknya dalam pembangunan.
             </p>
           </div>
 
-          <!-- 2 Kolom Seimbang: Visi (Kiri) & Misi (Kanan) -->
-          <div class="grid grid-cols-1 lg:grid-cols-2 gap-8 items-stretch">
-            
-            <!-- Kartu Visi (Sisi Kiri) -->
-            <article class="card-visi" aria-labelledby="visi-card-title">
-              <div>
-                <div class="flex items-center justify-between mb-4">
-                  <span class="inline-flex items-center gap-2 px-3 py-1 rounded-md text-xs font-black uppercase tracking-wider bg-[#F5A623]/20 text-[#F5A623] border border-[#F5A623]/40">
-                    <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                      <path d="M12 4.5C7 4.5 2.73 7.61 1 12c1.73 4.39 6 7.5 11 7.5s9.27-3.11 11-7.5c-1.73-4.39-6-7.5-11-7.5zM12 17c-2.76 0-5-2.24-5-5s2.24-5 5-5 5 2.24 5 5-2.24 5-5 5zm0-8c-1.66 0-3 1.34-3 3s1.34 3 3 3 3-1.34 3-3-1.34-3-3-3z"/>
-                    </svg>
-                    <span data-i18n="visiCardTag">VISI</span>
-                  </span>
-                  <span class="text-xs text-[#E6F1FF]/60 font-semibold tracking-wider uppercase">FKM BKA YWU</span>
-                </div>
-
-                <h3 id="visi-card-title" data-i18n="visiCardHeadline" class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-6">
-                  Masyarakat Inklusif, Adil, Setara &amp; Berkelanjutan
-                </h3>
-              </div>
-
-              <blockquote class="my-auto py-5 sm:py-6 pl-4 sm:pl-6 border-l-4 border-[#F5A623] bg-[#112240]/40 rounded-r-xl">
-                <p data-i18n="visiCardText" class="text-base sm:text-lg md:text-xl font-semibold text-white leading-relaxed">
-                  &ldquo;Terwujudnya masyarakat yang inklusif, adil, setara, dan berkelanjutan, dengan perempuan, kaum muda, serta penyandang disabilitas memiliki kesempatan yang setara untuk berpartisipasi, memimpin, dan memperoleh hak-haknya dalam pembangunan.&rdquo;
-                </p>
-              </blockquote>
-
-              <div class="mt-8 pt-6 border-t border-[#233554] flex items-center justify-between text-xs text-[#E6F1FF]/80">
-                <span class="font-bold flex items-center gap-1.5 text-[#F5A623]">
-                  <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 20 20" aria-hidden="true">
-                    <path fill-rule="evenodd" d="M10 18a8 8 0 100-16 8 8 0 000 16zm3.707-9.293a1 1 0 00-1.414-1.414L9 10.586 7.707 9.293a1 1 0 00-1.414 1.414l2 2a1 1 0 001.414 0l4-4z" clip-rule="evenodd"/>
-                  </svg>
-                  <span data-i18n="visiCardNote">Prinsip No One Left Behind</span>
-                </span>
-                <span class="font-mono text-[#E6F1FF]/60">SDGs Inklusif</span>
-              </div>
-            </article>
-
-            <!-- Kartu Misi (Sisi Kanan) -->
-            <article class="card-misi" aria-labelledby="misi-card-title">
-              <div class="flex items-center justify-between mb-4">
-                <span class="inline-flex items-center gap-2 px-3 py-1 rounded-md text-xs font-black uppercase tracking-wider bg-[#F5A623]/20 text-[#F5A623] border border-[#F5A623]/40">
-                  <svg class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                    <path d="M19 3H5c-1.1 0-2 .9-2 2v14c0 1.1.9 2 2 2h14c1.1 0 2-.9 2-2V5c0-1.1-.9-2-2-2zm-9 14l-5-5 1.41-1.41L10 14.17l7.59-7.59L19 8l-9 9z"/>
-                  </svg>
-                  <span data-i18n="misiCardTag">MISI</span>
-                </span>
-                <span class="text-xs text-[#E6F1FF]/60 font-semibold tracking-wider uppercase">6 Agenda Aksi</span>
-              </div>
-
-              <h3 id="misi-card-title" data-i18n="misiCardHeadline" class="text-2xl sm:text-3xl font-black text-white tracking-tight mb-6">
-                6 Langkah Strategis Gerakan
-              </h3>
-
-              <ol class="space-y-4 sm:space-y-5 flex-grow" aria-label="Daftar 6 Poin Misi FKM BKA YWU">
-                <!-- Misi 1 -->
-                <li class="flex items-start gap-3.5 sm:gap-4">
-                  <span class="w-8 h-8 rounded-lg bg-[#112240] border-2 border-[#F5A623] text-[#F5A623] font-black text-sm flex items-center justify-center flex-shrink-0 shadow-sm" aria-hidden="true">
-                    1
-                  </span>
-                  <p data-i18n="misiItem1" class="text-sm sm:text-base text-[#E6F1FF] leading-relaxed pt-0.5">
-                    Pemberdayaan perempuan dan kaum muda melalui peningkatan kapasitas, kepemimpinan, partisipasi, dan kemandirian dalam kehidupan sosial, ekonomi, dan politik.
-                  </p>
-                </li>
-
-                <!-- Misi 2 -->
-                <li class="flex items-start gap-3.5 sm:gap-4">
-                  <span class="w-8 h-8 rounded-lg bg-[#112240] border-2 border-[#F5A623] text-[#F5A623] font-black text-sm flex items-center justify-center flex-shrink-0 shadow-sm" aria-hidden="true">
-                    2
-                  </span>
-                  <p data-i18n="misiItem2" class="text-sm sm:text-base text-[#E6F1FF] leading-relaxed pt-0.5">
-                    Mendorong inklusi dan pemenuhan hak penyandang disabilitas dalam pendidikan, pekerjaan, pelayanan publik, pengambilan keputusan, dan pembangunan berkelanjutan.
-                  </p>
-                </li>
-
-                <!-- Misi 3 -->
-                <li class="flex items-start gap-3.5 sm:gap-4">
-                  <span class="w-8 h-8 rounded-lg bg-[#112240] border-2 border-[#F5A623] text-[#F5A623] font-black text-sm flex items-center justify-center flex-shrink-0 shadow-sm" aria-hidden="true">
-                    3
-                  </span>
-                  <p data-i18n="misiItem3" class="text-sm sm:text-base text-[#E6F1FF] leading-relaxed pt-0.5">
-                    Memperkuat perlindungan perempuan, anak, dan kelompok rentan dari diskriminasi, kekerasan, serta berbagai bentuk ketidakadilan.
-                  </p>
-                </li>
-
-                <!-- Misi 4 -->
-                <li class="flex items-start gap-3.5 sm:gap-4">
-                  <span class="w-8 h-8 rounded-lg bg-[#112240] border-2 border-[#F5A623] text-[#F5A623] font-black text-sm flex items-center justify-center flex-shrink-0 shadow-sm" aria-hidden="true">
-                    4
-                  </span>
-                  <p data-i18n="misiItem4" class="text-sm sm:text-base text-[#E6F1FF] leading-relaxed pt-0.5">
-                    Melakukan pemantauan dan advokasi SDGs berbasis masyarakat, termasuk pengumpulan data terpilah gender dan disabilitas untuk mendorong kebijakan serta penganggaran yang inklusif.
-                  </p>
-                </li>
-
-                <!-- Misi 5 -->
-                <li class="flex items-start gap-3.5 sm:gap-4">
-                  <span class="w-8 h-8 rounded-lg bg-[#112240] border-2 border-[#F5A623] text-[#F5A623] font-black text-sm flex items-center justify-center flex-shrink-0 shadow-sm" aria-hidden="true">
-                    5
-                  </span>
-                  <p data-i18n="misiItem5" class="text-sm sm:text-base text-[#E6F1FF] leading-relaxed pt-0.5">
-                    Membangun kemitraan dan kolaborasi dengan pemerintah, masyarakat sipil, komunitas, media, dan pemangku kepentingan lainnya untuk mewujudkan pembangunan yang partisipatif dan berkeadilan.
-                  </p>
-                </li>
-
-                <!-- Misi 6 -->
-                <li class="flex items-start gap-3.5 sm:gap-4">
-                  <span class="w-8 h-8 rounded-lg bg-[#112240] border-2 border-[#F5A623] text-[#F5A623] font-black text-sm flex items-center justify-center flex-shrink-0 shadow-sm" aria-hidden="true">
-                    6
-                  </span>
-                  <p data-i18n="misiItem6" class="text-sm sm:text-base text-[#E6F1FF] leading-relaxed pt-0.5">
-                    Mendorong kesiapsiagaan bencana dan ketahanan masyarakat yang inklusif, dengan memastikan perempuan, anak, kaum muda, dan penyandang disabilitas terlibat dalam perencanaan serta pelaksanaan upaya pengurangan risiko bencana.
-                  </p>
-                </li>
-              </ol>
-            </article>
-
+          <!-- Bagian Misi -->
+          <div class="misi-block">
+            <h3 data-i18n="misiSubTitle" class="visi-misi-subheading">
+              Misi
+            </h3>
+            <ol class="misi-list">
+              <li data-i18n="misiItem1">
+                Pemberdayaan perempuan dan kaum muda melalui peningkatan kapasitas, kepemimpinan, partisipasi, dan kemandirian dalam kehidupan sosial, ekonomi, dan politik.
+              </li>
+              <li data-i18n="misiItem2">
+                Mendorong inklusi dan pemenuhan hak penyandang disabilitas dalam pendidikan, pekerjaan, pelayanan publik, pengambilan keputusan, dan pembangunan berkelanjutan.
+              </li>
+              <li data-i18n="misiItem3">
+                Memperkuat perlindungan perempuan, anak, dan kelompok rentan dari diskriminasi, kekerasan, serta berbagai bentuk ketidakadilan.
+              </li>
+              <li data-i18n="misiItem4">
+                Melakukan pemantauan dan advokasi SDGs berbasis masyarakat, termasuk pengumpulan data terpilah gender dan disabilitas untuk mendorong kebijakan serta penganggaran yang inklusif.
+              </li>
+              <li data-i18n="misiItem5">
+                Membangun kemitraan dan kolaborasi dengan pemerintah, masyarakat sipil, komunitas, media, dan pemangku kepentingan lainnya untuk mewujudkan pembangunan yang partisipatif dan berkeadilan.
+              </li>
+              <li data-i18n="misiItem6">
+                Mendorong kesiapsiagaan bencana dan ketahanan masyarakat yang inklusif, dengan memastikan perempuan, anak, kaum muda, dan penyandang disabilitas terlibat dalam perencanaan serta pelaksanaan upaya pengurangan risiko bencana.
+              </li>
+            </ol>
           </div>
+
         </div>
       </section>
 
@@ -467,14 +585,11 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <!-- Section Header -->
-        <div class="text-center max-w-3xl mx-auto mb-14 md:mb-16">
-          <div data-i18n="galleryBadge" class="inline-block px-3 py-1 rounded bg-[#112240] border border-[#F5A623] text-[#F5A623] font-black text-xs uppercase tracking-widest mb-3">
-            Galeri Kegiatan
-          </div>
-          <h2 id="galeri-title" data-i18n="galleryTitle" class="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight mb-4">
-            Dokumentasi &amp; Kegiatan Terbaru
+        <div class="text-center max-w-3xl mx-auto mb-12 md:mb-14">
+          <h2 id="galeri-title" data-i18n="galleryTitle" class="gallery-heading">
+            Dokumentasi dan Kegiatan Terbaru
           </h2>
-          <p data-i18n="galleryDesc" class="text-base sm:text-lg text-[#E6F1FF] leading-relaxed">
+          <p data-i18n="galleryDesc" class="gallery-desc">
             Ikuti momen keseruan dan wawasan terbaru dari kegiatan kami langsung di Instagram.
           </p>
         </div>
@@ -723,14 +838,11 @@
       <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <!-- Section Header -->
-        <div class="text-center max-w-3xl mx-auto mb-16">
-          <div data-i18n="impactBadge" class="inline-block px-3 py-1 rounded bg-[#0A192F] border border-[#F5A623] text-[#F5A623] font-black text-xs uppercase tracking-widest mb-3">
-            Pencapaian Nyata
-          </div>
-          <h2 id="dampak-title" data-i18n="impactTitle" class="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight mb-4">
+        <div class="text-center max-w-3xl mx-auto mb-12 md:mb-14">
+          <h2 id="dampak-title" data-i18n="impactTitle" class="impact-heading">
             Dampak yang Terus Bertumbuh
           </h2>
-          <p data-i18n="impactDesc" class="text-base sm:text-lg text-[#E6F1FF] leading-relaxed">
+          <p data-i18n="impactDesc" class="impact-desc">
             Statistik pencapaian program pendampingan, vokasi adaptif, dan pemberdayaan inklusif FKM BKA YWU.
           </p>
         </div>
@@ -886,236 +998,125 @@
     </section>
 
     <!-- ========================================================================
-         PARTNERS & STRATEGIC COLLABORATION SECTION (Accessible Marquee)
+         PARTNERS & STRATEGIC COLLABORATION SECTION (Accessible Marquee - 16 Logos)
          ======================================================================== -->
     <section id="mitra" aria-labelledby="mitra-title" class="py-16 md:py-24 bg-[#0A192F] border-b-2 border-[#233554] overflow-hidden">
       <!-- Section Header (Symmetrical & Centered) -->
       <div class="text-center max-w-3xl mx-auto mb-10 sm:mb-12 px-4 sm:px-6 lg:px-8">
-        <h2 id="mitra-title" data-i18n="partnersTitle" class="text-3xl sm:text-4xl md:text-5xl font-black text-white tracking-tight mb-4">
-          Mitra & Pendukung Strategis
+        <h2 id="mitra-title" data-i18n="partnersTitle" class="partners-heading">
+          Mitra dan Pendukung Strategis
         </h2>
-        <p data-i18n="partnersDesc" class="text-base sm:text-lg text-[#E6F1FF] leading-relaxed mb-6">
+        <p data-i18n="partnersDesc" class="partners-desc">
           Bergerak bersama berbagai lembaga internasional dan nasional dalam mendorong pemenuhan hak, kesetaraan gender, dan kemandirian wirausaha disabilitas.
         </p>
-
-        <!-- View Mode Switcher Controls -->
-        <div class="flex flex-wrap items-center justify-center gap-3">
-          <div class="inline-flex p-1 rounded-xl bg-[#112240] border border-[#233554] shadow-md" role="tablist" aria-label="Pilihan mode tampilan logo mitra">
-            <button id="view-mode-grid" 
-                    type="button" 
-                    role="tab" 
-                    aria-selected="true" 
-                    aria-controls="partners-grid-view" 
-                    class="view-toggle-btn active flex items-center gap-2 px-4 py-2 rounded-lg text-xs sm:text-sm font-bold transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F5A623]">
-              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <rect x="3" y="3" width="7" height="7" rx="1.5" stroke-width="2"/>
-                <rect x="14" y="3" width="7" height="7" rx="1.5" stroke-width="2"/>
-                <rect x="14" y="14" width="7" height="7" rx="1.5" stroke-width="2"/>
-                <rect x="3" y="14" width="7" height="7" rx="1.5" stroke-width="2"/>
-              </svg>
-              <span data-i18n="partnersViewGrid">Semua Logo (Grid)</span>
-            </button>
-            <button id="view-mode-marquee" 
-                    type="button" 
-                    role="tab" 
-                    aria-selected="false" 
-                    aria-controls="partners-marquee-view" 
-                    class="view-toggle-btn flex items-center gap-2 px-4 py-2 rounded-lg text-xs sm:text-sm font-bold text-[#E6F1FF] hover:text-white transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F5A623]">
-              <svg class="w-4 h-4 flex-shrink-0" fill="none" stroke="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M13 5l7 7-7 7M5 5l7 7-7 7"/>
-              </svg>
-              <span data-i18n="partnersViewMarquee">Animasi Berjalan</span>
-            </button>
-          </div>
-
-          <!-- Marquee Pause/Play Button (aktif saat mode marquee) -->
-          <button id="btn-pause-marquee" 
-                  type="button" 
-                  class="hidden inline-flex items-center gap-2 px-3.5 py-2 rounded-xl bg-[#112240] hover:bg-[#233554] border border-[#233554] hover:border-[#F5A623] text-xs sm:text-sm font-bold text-[#E6F1FF] hover:text-[#F5A623] transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-[#F5A623]" 
-                  aria-label="Jeda animasi logo mitra">
-            <svg id="icon-pause" class="w-4 h-4 flex-shrink-0" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M6 4h4v16H6V4zm8 0h4v16h-4V4z"/>
-            </svg>
-            <svg id="icon-play" class="w-4 h-4 flex-shrink-0 hidden" fill="currentColor" viewBox="0 0 24 24" aria-hidden="true">
-              <path d="M8 5v14l11-7z"/>
-            </svg>
-            <span id="marquee-btn-text" data-i18n="marqueePause">Jeda Animasi</span>
-          </button>
-        </div>
       </div>
 
-      <!-- VIEW 1: Responsive Grid (Semua 16 Logo Terlihat Sekaligus dalam 4-6 Kolom Desktop) -->
-      <div id="partners-grid-view" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8" role="region" aria-label="Daftar lengkap 16 logo mitra kolaborasi strategis dalam format kisi">
-        <div class="grid grid-cols-2 sm:grid-cols-3 md:grid-cols-4 lg:grid-cols-6 gap-4 sm:gap-5">
-          <!-- 1. Purposeful - Global Resilience Fund -->
-          <div class="partner-grid-card" tabindex="0" aria-label="Mitra: Purposeful - Global Resilience Fund">
-            <img src="partners1.jpeg" alt="Logo Purposeful - Global Resilience Fund" loading="lazy" />
-          </div>
-          <!-- 2. FRIDA | The Young Feminist Fund -->
-          <div class="partner-grid-card" tabindex="0" aria-label="Mitra: FRIDA | The Young Feminist Fund">
-            <img src="partners2.jpeg" alt="Logo FRIDA | The Young Feminist Fund" loading="lazy" />
-          </div>
-          <!-- 3. Komnas Perempuan -->
-          <div class="partner-grid-card" tabindex="0" aria-label="Mitra: Komisi Nasional Anti Kekerasan terhadap Perempuan (Komnas Perempuan)">
-            <img src="partners3.jpeg" alt="Logo Komnas Perempuan" loading="lazy" />
-          </div>
-          <!-- 4. Women's Fund Asia -->
-          <div class="partner-grid-card" tabindex="0" aria-label="Mitra: Women's Fund Asia (WFA)">
-            <img src="partners4.jpeg" alt="Logo Women's Fund Asia" loading="lazy" />
-          </div>
-          <!-- 5. L'Oréal Fund for Women -->
-          <div class="partner-grid-card" tabindex="0" aria-label="Mitra: L'Oréal Fund for Women">
-            <img src="partners5.jpeg" alt="Logo L'Oréal Fund for Women" loading="lazy" />
-          </div>
-          <!-- 6. Global Fund for Women -->
-          <div class="partner-grid-card" tabindex="0" aria-label="Mitra: Global Fund for Women">
-            <img src="partners6.jpeg" alt="Logo Global Fund for Women" loading="lazy" />
-          </div>
-          <!-- 7. Disability Rights Fund & DRAF -->
-          <div class="partner-grid-card" tabindex="0" aria-label="Mitra: Disability Rights Fund (DRF) & DRAF">
-            <img src="partners7.jpeg" alt="Logo Disability Rights Fund & DRAF" loading="lazy" />
-          </div>
-          <!-- 8. GEDA -->
-          <div class="partner-grid-card" tabindex="0" aria-label="Mitra: GEDA - Gender + Environment Data Alliance">
-            <img src="partners8.jpeg" alt="Logo GEDA - Gender + Environment Data Alliance" loading="lazy" />
-          </div>
-          <!-- 9. Zero Project Award Winner -->
-          <div class="partner-grid-card" tabindex="0" aria-label="Mitra: Zero Project Award Winner 2018">
-            <img src="partners9.jpeg" alt="Logo Zero Project Award Winner" loading="lazy" />
-          </div>
-          <!-- 10. Wahana Inklusif Indonesia (YWU) -->
-          <div class="partner-grid-card" tabindex="0" aria-label="Mitra: Wahana Inklusif Indonesia (YWU)">
-            <img src="partners10.jpeg" alt="Logo Wahana Inklusif Indonesia (YWU)" loading="lazy" />
-          </div>
-          <!-- 11. Paragon Corp -->
-          <div class="partner-grid-card" tabindex="0" aria-label="Mitra: Paragon Corp">
-            <img src="partners11.jpeg" alt="Logo Paragon Corp" loading="lazy" />
-          </div>
-          <!-- 12. Women's Major Group -->
-          <div class="partner-grid-card" tabindex="0" aria-label="Mitra: Women's Major Group">
-            <img src="partners12.jpeg" alt="Logo Women's Major Group" loading="lazy" />
-          </div>
-          <!-- 13. Center for Disaster Philanthropy -->
-          <div class="partner-grid-card" tabindex="0" aria-label="Mitra: Center for Disaster Philanthropy">
-            <img src="partners13.jpeg" alt="Logo Center for Disaster Philanthropy" loading="lazy" />
-          </div>
-          <!-- 14. UN ESCAP -->
-          <div class="partner-grid-card" tabindex="0" aria-label="Mitra: UN ESCAP - Economic and Social Commission for Asia and the Pacific">
-            <img src="partners14.jpeg" alt="Logo UN ESCAP - Economic and Social Commission for Asia and the Pacific" loading="lazy" />
-          </div>
-          <!-- 15. #women2030 -->
-          <div class="partner-grid-card" tabindex="0" aria-label="Mitra: #women2030">
-            <img src="partners15.jpeg" alt="Logo #women2030" loading="lazy" />
-          </div>
-          <!-- 16. Global Call to Action Against Poverty -->
-          <div class="partner-grid-card" tabindex="0" aria-label="Mitra: Global Call to Action Against Poverty (GCAP)">
-            <img src="partners16.jpeg" alt="Logo Global Call to Action Against Poverty (GCAP)" loading="lazy" />
-          </div>
-        </div>
-      </div>
-
-      <!-- VIEW 2: Infinite Marquee Slider (Lengkap 16 Logo x 2 Set = 32 Logo untuk Transisi Sempurna) -->
-      <div id="partners-marquee-view" class="marquee-container hidden" aria-label="Daftar logo mitra kolaborasi strategis berputar kontinu">
-        <div id="marquee-track" class="marquee-track py-4" role="region" aria-label="Logo mitra berputar kontinu">
+      <!-- Infinite Marquee Slider (Lengkap 16 Logo x 2 Grup untuk Animasi Kontinu Tanpa Putus) -->
+      <div id="partners-marquee-view" class="marquee-container" role="region" aria-label="Daftar 16 logo mitra dan pendukung strategis bergerak kontinu">
+        <div id="marquee-track" class="marquee-track py-4">
           
-          <!-- Set 1 (16 Mitra Lengkap) -->
-          <div class="partner-card" tabindex="0" aria-label="Mitra: Purposeful - Global Resilience Fund">
-            <img src="partners1.jpeg" alt="Logo Purposeful - Global Resilience Fund" loading="lazy" />
-          </div>
-          <div class="partner-card" tabindex="0" aria-label="Mitra: FRIDA | The Young Feminist Fund">
-            <img src="partners2.jpeg" alt="Logo FRIDA | The Young Feminist Fund" loading="lazy" />
-          </div>
-          <div class="partner-card" tabindex="0" aria-label="Mitra: Komisi Nasional Anti Kekerasan terhadap Perempuan (Komnas Perempuan)">
-            <img src="partners3.jpeg" alt="Logo Komnas Perempuan" loading="lazy" />
-          </div>
-          <div class="partner-card" tabindex="0" aria-label="Mitra: Women's Fund Asia (WFA)">
-            <img src="partners4.jpeg" alt="Logo Women's Fund Asia" loading="lazy" />
-          </div>
-          <div class="partner-card" tabindex="0" aria-label="Mitra: L'Oréal Fund for Women">
-            <img src="partners5.jpeg" alt="Logo L'Oréal Fund for Women" loading="lazy" />
-          </div>
-          <div class="partner-card" tabindex="0" aria-label="Mitra: Global Fund for Women">
-            <img src="partners6.jpeg" alt="Logo Global Fund for Women" loading="lazy" />
-          </div>
-          <div class="partner-card" tabindex="0" aria-label="Mitra: Disability Rights Fund (DRF) & DRAF">
-            <img src="partners7.jpeg" alt="Logo Disability Rights Fund & DRAF" loading="lazy" />
-          </div>
-          <div class="partner-card" tabindex="0" aria-label="Mitra: GEDA - Gender + Environment Data Alliance">
-            <img src="partners8.jpeg" alt="Logo GEDA - Gender + Environment Data Alliance" loading="lazy" />
-          </div>
-          <div class="partner-card" tabindex="0" aria-label="Mitra: Zero Project Award Winner 2018">
-            <img src="partners9.jpeg" alt="Logo Zero Project Award Winner" loading="lazy" />
-          </div>
-          <div class="partner-card" tabindex="0" aria-label="Mitra: Wahana Inklusif Indonesia (YWU)">
-            <img src="partners10.jpeg" alt="Logo Wahana Inklusif Indonesia (YWU)" loading="lazy" />
-          </div>
-          <div class="partner-card" tabindex="0" aria-label="Mitra: Paragon Corp">
-            <img src="partners11.jpeg" alt="Logo Paragon Corp" loading="lazy" />
-          </div>
-          <div class="partner-card" tabindex="0" aria-label="Mitra: Women's Major Group">
-            <img src="partners12.jpeg" alt="Logo Women's Major Group" loading="lazy" />
-          </div>
-          <div class="partner-card" tabindex="0" aria-label="Mitra: Center for Disaster Philanthropy">
-            <img src="partners13.jpeg" alt="Logo Center for Disaster Philanthropy" loading="lazy" />
-          </div>
-          <div class="partner-card" tabindex="0" aria-label="Mitra: UN ESCAP - Economic and Social Commission for Asia and the Pacific">
-            <img src="partners14.jpeg" alt="Logo UN ESCAP - Economic and Social Commission for Asia and the Pacific" loading="lazy" />
-          </div>
-          <div class="partner-card" tabindex="0" aria-label="Mitra: #women2030">
-            <img src="partners15.jpeg" alt="Logo #women2030" loading="lazy" />
-          </div>
-          <div class="partner-card" tabindex="0" aria-label="Mitra: Global Call to Action Against Poverty (GCAP)">
-            <img src="partners16.jpeg" alt="Logo Global Call to Action Against Poverty (GCAP)" loading="lazy" />
-          </div>
+          <!-- Grup 1: 16 Logo Mitra Utama (Aksesibel untuk Keyboard & Screen Reader) -->
+          <ul class="marquee-group list-none m-0 p-0" aria-label="Daftar 16 mitra strategis FKM BKA YWU">
+            <li class="partner-card" tabindex="0" aria-label="Mitra 1: Purposeful - Global Resilience Fund">
+              <img src="partners1.jpeg" alt="Logo Purposeful - Global Resilience Fund" decoding="async" />
+            </li>
+            <li class="partner-card" tabindex="0" aria-label="Mitra 2: FRIDA | The Young Feminist Fund">
+              <img src="partners2.jpeg" alt="Logo FRIDA | The Young Feminist Fund" decoding="async" />
+            </li>
+            <li class="partner-card" tabindex="0" aria-label="Mitra 3: Komisi Nasional Anti Kekerasan terhadap Perempuan (Komnas Perempuan)">
+              <img src="partners3.jpeg" alt="Logo Komnas Perempuan" decoding="async" />
+            </li>
+            <li class="partner-card" tabindex="0" aria-label="Mitra 4: Women's Fund Asia (WFA)">
+              <img src="partners4.jpeg" alt="Logo Women's Fund Asia" decoding="async" />
+            </li>
+            <li class="partner-card" tabindex="0" aria-label="Mitra 5: L'Oréal Fund for Women">
+              <img src="partners5.jpeg" alt="Logo L'Oréal Fund for Women" decoding="async" />
+            </li>
+            <li class="partner-card" tabindex="0" aria-label="Mitra 6: Global Fund for Women">
+              <img src="partners6.jpeg" alt="Logo Global Fund for Women" decoding="async" />
+            </li>
+            <li class="partner-card" tabindex="0" aria-label="Mitra 7: Disability Rights Fund (DRF) &amp; DRAF">
+              <img src="partners7.jpeg" alt="Logo Disability Rights Fund &amp; DRAF" decoding="async" />
+            </li>
+            <li class="partner-card" tabindex="0" aria-label="Mitra 8: GEDA - Gender + Environment Data Alliance">
+              <img src="partners8.jpeg" alt="Logo GEDA - Gender + Environment Data Alliance" decoding="async" />
+            </li>
+            <li class="partner-card" tabindex="0" aria-label="Mitra 9: Zero Project Award Winner 2018">
+              <img src="partners9.jpeg" alt="Logo Zero Project Award Winner" decoding="async" />
+            </li>
+            <li class="partner-card" tabindex="0" aria-label="Mitra 10: Wahana Inklusif Indonesia (YWU)">
+              <img src="partners10.jpeg" alt="Logo Wahana Inklusif Indonesia (YWU)" decoding="async" />
+            </li>
+            <li class="partner-card" tabindex="0" aria-label="Mitra 11: Paragon Corp">
+              <img src="partners11.jpeg" alt="Logo Paragon Corp" decoding="async" />
+            </li>
+            <li class="partner-card" tabindex="0" aria-label="Mitra 12: Women's Major Group">
+              <img src="partners12.jpeg" alt="Logo Women's Major Group" decoding="async" />
+            </li>
+            <li class="partner-card" tabindex="0" aria-label="Mitra 13: Center for Disaster Philanthropy">
+              <img src="partners13.jpeg" alt="Logo Center for Disaster Philanthropy" decoding="async" />
+            </li>
+            <li class="partner-card" tabindex="0" aria-label="Mitra 14: UN ESCAP - Economic and Social Commission for Asia and the Pacific">
+              <img src="partners14.jpeg" alt="Logo UN ESCAP - Economic and Social Commission for Asia and the Pacific" decoding="async" />
+            </li>
+            <li class="partner-card" tabindex="0" aria-label="Mitra 15: #women2030">
+              <img src="partners15.jpeg" alt="Logo #women2030" decoding="async" />
+            </li>
+            <li class="partner-card" tabindex="0" aria-label="Mitra 16: Global Call to Action Against Poverty (GCAP)">
+              <img src="partners16.jpeg" alt="Logo Global Call to Action Against Poverty (GCAP)" decoding="async" />
+            </li>
+          </ul>
 
-          <!-- Set 2 (Duplikasi Lengkap 16 Mitra untuk Seamless Infinite Loop) -->
-          <div class="partner-card" tabindex="0" aria-label="Mitra: Purposeful - Global Resilience Fund">
-            <img src="partners1.jpeg" alt="Logo Purposeful - Global Resilience Fund" loading="lazy" />
-          </div>
-          <div class="partner-card" tabindex="0" aria-label="Mitra: FRIDA | The Young Feminist Fund">
-            <img src="partners2.jpeg" alt="Logo FRIDA | The Young Feminist Fund" loading="lazy" />
-          </div>
-          <div class="partner-card" tabindex="0" aria-label="Mitra: Komisi Nasional Anti Kekerasan terhadap Perempuan (Komnas Perempuan)">
-            <img src="partners3.jpeg" alt="Logo Komnas Perempuan" loading="lazy" />
-          </div>
-          <div class="partner-card" tabindex="0" aria-label="Mitra: Women's Fund Asia (WFA)">
-            <img src="partners4.jpeg" alt="Logo Women's Fund Asia" loading="lazy" />
-          </div>
-          <div class="partner-card" tabindex="0" aria-label="Mitra: L'Oréal Fund for Women">
-            <img src="partners5.jpeg" alt="Logo L'Oréal Fund for Women" loading="lazy" />
-          </div>
-          <div class="partner-card" tabindex="0" aria-label="Mitra: Global Fund for Women">
-            <img src="partners6.jpeg" alt="Logo Global Fund for Women" loading="lazy" />
-          </div>
-          <div class="partner-card" tabindex="0" aria-label="Mitra: Disability Rights Fund (DRF) & DRAF">
-            <img src="partners7.jpeg" alt="Logo Disability Rights Fund & DRAF" loading="lazy" />
-          </div>
-          <div class="partner-card" tabindex="0" aria-label="Mitra: GEDA - Gender + Environment Data Alliance">
-            <img src="partners8.jpeg" alt="Logo GEDA - Gender + Environment Data Alliance" loading="lazy" />
-          </div>
-          <div class="partner-card" tabindex="0" aria-label="Mitra: Zero Project Award Winner 2018">
-            <img src="partners9.jpeg" alt="Logo Zero Project Award Winner" loading="lazy" />
-          </div>
-          <div class="partner-card" tabindex="0" aria-label="Mitra: Wahana Inklusif Indonesia (YWU)">
-            <img src="partners10.jpeg" alt="Logo Wahana Inklusif Indonesia (YWU)" loading="lazy" />
-          </div>
-          <div class="partner-card" tabindex="0" aria-label="Mitra: Paragon Corp">
-            <img src="partners11.jpeg" alt="Logo Paragon Corp" loading="lazy" />
-          </div>
-          <div class="partner-card" tabindex="0" aria-label="Mitra: Women's Major Group">
-            <img src="partners12.jpeg" alt="Logo Women's Major Group" loading="lazy" />
-          </div>
-          <div class="partner-card" tabindex="0" aria-label="Mitra: Center for Disaster Philanthropy">
-            <img src="partners13.jpeg" alt="Logo Center for Disaster Philanthropy" loading="lazy" />
-          </div>
-          <div class="partner-card" tabindex="0" aria-label="Mitra: UN ESCAP - Economic and Social Commission for Asia and the Pacific">
-            <img src="partners14.jpeg" alt="Logo UN ESCAP - Economic and Social Commission for Asia and the Pacific" loading="lazy" />
-          </div>
-          <div class="partner-card" tabindex="0" aria-label="Mitra: #women2030">
-            <img src="partners15.jpeg" alt="Logo #women2030" loading="lazy" />
-          </div>
-          <div class="partner-card" tabindex="0" aria-label="Mitra: Global Call to Action Against Poverty (GCAP)">
-            <img src="partners16.jpeg" alt="Logo Global Call to Action Against Poverty (GCAP)" loading="lazy" />
+          <!-- Grup 2: Duplikasi Visual 16 Mitra untuk Seamless Infinite Loop (Disembunyikan dari Screen Reader & Tab) -->
+          <div class="marquee-group" aria-hidden="true" inert>
+            <div class="partner-card">
+              <img src="partners1.jpeg" alt="" decoding="async" />
+            </div>
+            <div class="partner-card">
+              <img src="partners2.jpeg" alt="" decoding="async" />
+            </div>
+            <div class="partner-card">
+              <img src="partners3.jpeg" alt="" decoding="async" />
+            </div>
+            <div class="partner-card">
+              <img src="partners4.jpeg" alt="" decoding="async" />
+            </div>
+            <div class="partner-card">
+              <img src="partners5.jpeg" alt="" decoding="async" />
+            </div>
+            <div class="partner-card">
+              <img src="partners6.jpeg" alt="" decoding="async" />
+            </div>
+            <div class="partner-card">
+              <img src="partners7.jpeg" alt="" decoding="async" />
+            </div>
+            <div class="partner-card">
+              <img src="partners8.jpeg" alt="" decoding="async" />
+            </div>
+            <div class="partner-card">
+              <img src="partners9.jpeg" alt="" decoding="async" />
+            </div>
+            <div class="partner-card">
+              <img src="partners10.jpeg" alt="" decoding="async" />
+            </div>
+            <div class="partner-card">
+              <img src="partners11.jpeg" alt="" decoding="async" />
+            </div>
+            <div class="partner-card">
+              <img src="partners12.jpeg" alt="" decoding="async" />
+            </div>
+            <div class="partner-card">
+              <img src="partners13.jpeg" alt="" decoding="async" />
+            </div>
+            <div class="partner-card">
+              <img src="partners14.jpeg" alt="" decoding="async" />
+            </div>
+            <div class="partner-card">
+              <img src="partners15.jpeg" alt="" decoding="async" />
+            </div>
+            <div class="partner-card">
+              <img src="partners16.jpeg" alt="" decoding="async" />
+            </div>
           </div>
 
         </div>
