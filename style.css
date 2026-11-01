@@ -132,8 +132,10 @@ body {
 }
 
 #hero .hero-tagline {
-  font-size: 16px;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 28px;
   font-weight: 600;
+  line-height: 1.3;
   text-transform: none;
   color: #e67e22;
   border: none;
@@ -141,6 +143,7 @@ body {
   padding: 0;
   margin-top: 0;
   margin-bottom: 24px;
+  text-wrap: balance;
 }
 
 #hero .hero-heading {
@@ -186,6 +189,17 @@ body {
   font-family: 'Noto Sans', sans-serif;
 }
 
+#pengenalan .intro-grid {
+  align-items: start;
+}
+
+#pengenalan .intro-text-col {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-self: start;
+}
+
 #pengenalan .intro-heading {
   font-family: 'Noto Sans', sans-serif;
   text-transform: uppercase;
@@ -195,14 +209,8 @@ body {
   letter-spacing: 0.5px;
   line-height: 1.2;
   margin-top: 0;
-  margin-bottom: 20px;
+  margin-bottom: 12px;
   text-wrap: balance;
-}
-
-@media (min-width: 1024px) {
-  #pengenalan .intro-heading {
-    font-size: 32px;
-  }
 }
 
 #pengenalan .intro-desc {
@@ -212,9 +220,252 @@ body {
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.85);
   letter-spacing: 0.2px;
-  margin: 0;
+  margin-top: 0;
+  margin-bottom: 16px;
   max-width: 60ch;
   text-wrap: pretty;
+}
+
+#pengenalan .intro-desc:last-child {
+  margin-bottom: 0;
+}
+
+/* 5c. Standalone Full-Width Section: Area Kerja Operasional (#area-kerja) */
+#area-kerja,
+#area-kerja .work-area-heading,
+#area-kerja .work-area-list-text {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+#area-kerja .work-area-heading {
+  font-family: 'Noto Sans', sans-serif;
+  text-align: center;
+  text-transform: uppercase;
+  font-size: 28px;
+  font-weight: 800;
+  color: #E67E22;
+  line-height: 1.25;
+  letter-spacing: 0.5px;
+  margin-block-start: 0;
+  margin-block-end: 24px;
+  text-wrap: balance;
+}
+
+#area-kerja .work-area-map-wrapper {
+  max-inline-size: 920px;
+  margin-inline: auto;
+  margin-block-end: 24px;
+  container-type: inline-size;
+}
+
+#area-kerja .indonesia-map-stage {
+  position: relative;
+  inline-size: 100%;
+  aspect-ratio: 940 / 360;
+  border-radius: 0.75rem;
+  background: radial-gradient(ellipse at 50% 50%, #0F233D 0%, #0A192F 100%);
+  border: 1.5px solid #233554;
+  box-shadow: 0 20px 40px -15px rgba(0, 0, 0, 0.55);
+  overflow: visible;
+}
+
+#area-kerja .indonesia-map-svg {
+  display: block;
+  inline-size: 100%;
+  block-size: 100%;
+  border-radius: 0.75rem;
+  overflow: clip;
+}
+
+#area-kerja .indonesia-map-svg .map-grid-lines line {
+  stroke: rgba(255, 255, 255, 0.045);
+  stroke-width: 1;
+}
+
+#area-kerja .indonesia-map-svg .map-land path {
+  fill: rgba(255, 255, 255, 0.11);
+  stroke: rgba(255, 255, 255, 0.25);
+  stroke-width: 1.2;
+  stroke-linejoin: round;
+}
+
+#area-kerja .indonesia-map-pins {
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+}
+
+#area-kerja .map-pin {
+  --tip-x: -50%;
+  position: absolute;
+  min-inline-size: 28px;
+  min-block-size: 28px;
+  padding: 0;
+  margin: 0;
+  border: none;
+  background: transparent;
+  cursor: pointer;
+  pointer-events: auto;
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  translate: -50% -50%;
+  z-index: 2;
+  -webkit-tap-highlight-color: transparent;
+}
+
+@media (pointer: coarse) {
+  #area-kerja .map-pin {
+    min-inline-size: 32px;
+    min-block-size: 32px;
+  }
+}
+
+#area-kerja .map-pin--edge-left {
+  --tip-x: -18%;
+}
+
+#area-kerja .map-pin--edge-right {
+  --tip-x: -78%;
+}
+
+#area-kerja .map-pin:hover,
+#area-kerja .map-pin:focus,
+#area-kerja .map-pin:focus-visible {
+  z-index: 25;
+}
+
+@property --pin-delay {
+  syntax: "<time>";
+  inherits: true;
+  initial-value: 0s;
+}
+
+#area-kerja .indonesia-map-pins > .map-pin {
+  --stagger-time: 0.28s;
+  --pin-delay: calc(var(--sibling-index, 1) * var(--stagger-time));
+  --pin-delay: calc(sibling-index() * var(--stagger-time));
+}
+
+#area-kerja .map-pin-pulse {
+  position: absolute;
+  inline-size: 11px;
+  block-size: 11px;
+  border-radius: 9999px;
+  background-color: rgba(245, 166, 35, 0.45);
+  box-shadow: 0 0 10px rgba(245, 166, 35, 0.72);
+  pointer-events: none;
+  scale: 1;
+  animation: map-pin-glow-pulse 3.4s ease-out infinite;
+  animation-delay: var(--pin-delay);
+}
+
+@keyframes map-pin-glow-pulse {
+  0% {
+    scale: 0.9;
+    opacity: 0.85;
+  }
+  70% {
+    scale: 2.7;
+    opacity: 0;
+  }
+  100% {
+    scale: 2.7;
+    opacity: 0;
+  }
+}
+
+#area-kerja .map-pin-dot {
+  position: relative;
+  inline-size: 8.5px;
+  block-size: 8.5px;
+  border-radius: 9999px;
+  background-color: var(--color-accent, #F5A623);
+  border: 1.5px solid #0A192F;
+  box-shadow: 0 0 8px rgba(245, 166, 35, 0.9);
+  scale: 1;
+  transition: scale 0.18s ease, background-color 0.18s ease, box-shadow 0.18s ease;
+  pointer-events: none;
+}
+
+@container (min-width: 640px) {
+  #area-kerja .map-pin-pulse {
+    inline-size: 14px;
+    block-size: 14px;
+  }
+
+  #area-kerja .map-pin-dot {
+    inline-size: 11px;
+    block-size: 11px;
+    border-width: 2px;
+  }
+}
+
+#area-kerja .map-pin:hover .map-pin-dot,
+#area-kerja .map-pin:focus .map-pin-dot,
+#area-kerja .map-pin:focus-visible .map-pin-dot {
+  scale: 1.35;
+  background-color: #FFFFFF;
+  box-shadow: 0 0 0 2.5px var(--color-accent, #F5A623), 0 0 12px rgba(245, 166, 35, 0.95);
+}
+
+#area-kerja .map-pin:focus-visible {
+  border-radius: 9999px;
+  outline: 2.5px solid var(--color-accent, #F5A623);
+  outline-offset: 2px;
+}
+
+#area-kerja .map-pin-tooltip {
+  position: absolute;
+  bottom: calc(100% + 4px);
+  left: 50%;
+  translate: var(--tip-x) 4px;
+  white-space: nowrap;
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 0.8125rem; /* 13px */
+  font-weight: 700;
+  line-height: 1.3;
+  letter-spacing: 0.01em;
+  color: #FFFFFF;
+  background-color: #0A192F;
+  border: 1.5px solid var(--color-accent, #F5A623);
+  border-radius: 0.375rem;
+  padding: 0.3rem 0.65rem;
+  box-shadow: 0 8px 18px rgba(0, 0, 0, 0.55);
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: auto;
+  transition: opacity 0.16s ease, translate 0.16s ease, visibility 0.16s ease;
+}
+
+/* Invisible hover bridge so pointer can move over tooltip (WCAG 1.4.13 Hoverable) */
+#area-kerja .map-pin-tooltip::before {
+  content: '';
+  position: absolute;
+  left: 0;
+  right: 0;
+  top: 100%;
+  height: 8px;
+}
+
+#area-kerja .map-pin:is(:hover, :focus, :focus-visible):not(.is-dismissed) .map-pin-tooltip {
+  opacity: 1;
+  visibility: visible;
+  translate: var(--tip-x) 0;
+}
+
+#area-kerja .work-area-list-text {
+  font-family: 'Noto Sans', sans-serif;
+  text-align: center;
+  font-size: 1rem; /* 16px - menghormati preferensi ukuran teks pengguna (WCAG 1.4.4) */
+  font-weight: 400;
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
+  max-inline-size: 74ch;
+  margin-inline: auto;
+  margin-block-start: 0;
+  margin-block-end: 0;
+  text-wrap: balance;
 }
 
 #pengenalan .intro-image {
@@ -428,25 +679,73 @@ body {
   box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--color-accent);
 }
 
-/* 7b. Visi & Misi Cards */
-.card-visi,
-.card-misi {
-  background-color: #0F233D;
-  border: 2px solid #233554;
-  border-radius: 1rem;
-  padding: 2rem 2.25rem;
-  display: flex;
-  flex-direction: column;
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+/* 7b. Visi & Misi Section (Noto Sans, Centered Heading, Pure Ordered List) */
+#visi-misi,
+#visi-misi .visi-misi-heading,
+#visi-misi .visi-misi-subheading,
+#visi-misi .visi-text,
+#visi-misi .misi-list {
+  font-family: 'Noto Sans', sans-serif;
 }
 
-.card-visi:hover,
-.card-visi:focus-within,
-.card-misi:hover,
-.card-misi:focus-within {
-  border-color: var(--color-accent);
-  transform: translateY(-4px);
-  box-shadow: 0 12px 28px rgba(0, 0, 0, 0.5), 0 0 0 1px var(--color-accent);
+#visi-misi .visi-misi-heading {
+  font-family: 'Noto Sans', sans-serif;
+  text-align: center;
+  font-size: 28px;
+  font-weight: 800;
+  color: #E67E22;
+  line-height: 1.25;
+  margin-top: 0;
+  margin-bottom: 32px;
+  text-wrap: balance;
+}
+
+#visi-misi .visi-misi-subheading {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 22px;
+  font-weight: 700;
+  color: #F5A623;
+  line-height: 1.35;
+  margin-top: 0;
+  margin-bottom: 12px;
+}
+
+#visi-misi .visi-text {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+  margin-top: 0;
+  margin-bottom: 28px;
+  text-wrap: pretty;
+}
+
+#visi-misi .misi-list {
+  font-family: 'Noto Sans', sans-serif;
+  list-style-type: decimal;
+  list-style-position: outside;
+  padding-left: 1.5rem;
+  margin: 0;
+  font-size: 16px;
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+}
+
+#visi-misi .misi-list li {
+  padding-left: 0.375rem;
+  margin-bottom: 14px;
+  text-wrap: pretty;
+}
+
+#visi-misi .misi-list li:last-child {
+  margin-bottom: 0;
+}
+
+#visi-misi .misi-list li::marker {
+  font-weight: 600;
+  color: rgba(255, 255, 255, 0.9);
 }
 
 .icon-box {
@@ -461,6 +760,36 @@ body {
   color: var(--color-accent);
   margin-bottom: 1.5rem;
   flex-shrink: 0;
+}
+
+/* 7b. Impact Counter Section Typography & Cards */
+#dampak .impact-heading,
+#dampak .impact-desc {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+#dampak .impact-heading {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1.75rem; /* 28px - konsisten dengan hierarki judul section & responsif terhadap root font-size */
+  font-weight: 800;
+  color: var(--color-accent, #F5A623);
+  line-height: 1.25;
+  margin-top: 0;
+  margin-bottom: 12px;
+  text-wrap: balance;
+}
+
+#dampak .impact-desc {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1rem; /* 16px - konsisten dengan sub-deskripsi section & responsif terhadap root font-size */
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 68ch;
+  margin-inline: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-wrap: pretty;
 }
 
 .card-impact {
@@ -479,35 +808,77 @@ body {
   box-shadow: 0 10px 25px -5px rgba(0, 0, 0, 0.4);
 }
 
-/* 7b. Partners Marquee Carousel (Accessible Running Logos) */
+/* 7b. Partners Section Typography & Marquee Carousel (Accessible Running Logos) */
+#mitra,
+#mitra .partners-heading,
+#mitra .partners-desc {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+#mitra .partners-heading {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1.75rem; /* 28px - konsisten dengan section utama & responsif terhadap root font-size */
+  font-weight: 800;
+  color: #E67E22;
+  line-height: 1.25;
+  margin-top: 0;
+  margin-bottom: 12px;
+  text-wrap: balance;
+}
+
+#mitra .partners-desc {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1rem; /* 16px - konsisten dengan body section utama & responsif terhadap root font-size */
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.85);
+  max-width: 68ch;
+  margin-inline: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-wrap: pretty;
+}
+
 .marquee-container {
   overflow: hidden;
   position: relative;
   width: 100%;
-  mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
-  -webkit-mask-image: linear-gradient(to right, transparent, black 8%, black 92%, transparent);
+  -webkit-mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
+  mask-image: linear-gradient(to right, transparent 0%, black 8%, black 92%, transparent 100%);
 }
 
 .marquee-track {
   display: flex;
   width: max-content;
-  gap: 1.5rem;
-  animation: marquee-scroll 48s linear infinite;
   align-items: center;
+  translate: 0 0;
+  will-change: translate;
+  animation: marquee-scroll 40s linear infinite;
+
+  @media (prefers-reduced-motion: reduce) {
+    animation-duration: 85s;
+  }
+}
+
+.marquee-group {
+  display: flex;
+  align-items: center;
+  gap: 1.5rem;
+  padding-right: 1.5rem;
+  flex-shrink: 0;
 }
 
 .marquee-track:hover,
-.marquee-track:focus-within,
-.marquee-track.is-paused {
-  animation-play-state: paused !important;
+.marquee-track:focus-within {
+  animation-play-state: paused;
 }
 
 @keyframes marquee-scroll {
   0% {
-    transform: translateX(0);
+    translate: 0 0;
   }
   100% {
-    transform: translateX(-50%);
+    translate: -50% 0;
   }
 }
 
@@ -516,20 +887,26 @@ body {
   align-items: center;
   justify-content: center;
   height: 5.5rem;
-  min-width: 11.5rem;
+  width: 12rem;
   padding: 0.75rem 1.25rem;
   background-color: #FFFFFF;
   border-radius: 0.75rem;
   border: 2px solid #233554;
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
+  translate: 0 0;
+  transition: translate 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
   flex-shrink: 0;
 }
 
 .partner-card:hover {
-  transform: translateY(-3px);
+  translate: 0 -3px;
   border-color: var(--color-accent);
   box-shadow: 0 8px 20px rgba(245, 166, 35, 0.2);
+}
+
+.partner-card:focus-visible {
+  outline: none;
+  box-shadow: 0 0 0 3px #0A192F, 0 0 0 5px #F5A623;
 }
 
 .partner-card img {
@@ -540,49 +917,13 @@ body {
   object-fit: contain;
 }
 
-/* 7c. Partners Responsive Grid & View Switcher */
-.partner-grid-card {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 5.5rem;
-  width: 100%;
-  padding: 0.75rem 1rem;
-  background-color: #FFFFFF;
-  border-radius: 0.75rem;
-  border: 2px solid #233554;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.25);
-  transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
-}
-
-.partner-grid-card:hover {
-  transform: translateY(-3px);
-  border-color: var(--color-accent);
-  box-shadow: 0 8px 20px rgba(245, 166, 35, 0.2);
-}
-
-.partner-grid-card:focus-visible,
-.partner-card:focus-visible {
-  outline: none;
-  box-shadow: 0 0 0 3px #0A192F, 0 0 0 5px #F5A623;
-}
-
-.partner-grid-card img {
-  max-height: 3.5rem;
-  max-width: 100%;
-  width: auto;
-  height: auto;
-  object-fit: contain;
-}
-
-.view-toggle-btn.active {
-  background-color: #F5A623 !important;
-  color: #0A192F !important;
-  box-shadow: 0 2px 8px rgba(245, 166, 35, 0.35);
-}
-
 /* 8. Forced Colors Mode (Windows High Contrast Support) */
 @media (forced-colors: active) {
+  .marquee-container {
+    -webkit-mask-image: none;
+    mask-image: none;
+  }
+
   :where(a, button, input, select, textarea, [tabindex="0"]):focus-visible,
   .btn-primary:focus-visible,
   #hero .btn-primary:focus-visible {
@@ -598,25 +939,50 @@ body {
   .card-misi,
   .card-impact,
   .partner-card,
-  .partner-grid-card,
   .gallery-card,
   .gallery-action-btn,
+  #area-kerja .indonesia-map-stage,
+  #area-kerja .map-pin-tooltip,
   #pengenalan .intro-image,
   dialog#privacy-modal,
   dialog#terms-modal {
     border: 2px solid ButtonText !important;
   }
+
+  #area-kerja .indonesia-map-svg .map-land path {
+    fill: Canvas !important;
+    stroke: CanvasText !important;
+  }
+
+  #area-kerja .map-pin-dot {
+    background-color: Highlight !important;
+    border: 2px solid CanvasText !important;
+  }
 }
 
-/* 9. Reduced Motion Support */
+/* 9. Reduced Motion Support (Case-by-case non-essential transition & pulse dampening) */
 @media (prefers-reduced-motion: reduce) {
-  *,
-  *::before,
-  *::after {
-    animation-duration: 0.001ms !important;
-    animation-iteration-count: 1 !important;
-    transition-duration: 0.001ms !important;
-    scroll-behavior: auto !important;
+  html {
+    scroll-behavior: auto;
+  }
+
+  #area-kerja .map-pin-pulse {
+    animation: none !important;
+    scale: 1.45;
+    opacity: 0.35;
+  }
+
+  .card-pillar,
+  .card-impact,
+  .partner-card,
+  .gallery-card,
+  .gallery-card img,
+  .gallery-action-btn,
+  .btn-primary,
+  .btn-hero-outline,
+  #area-kerja .map-pin-dot,
+  #area-kerja .map-pin-tooltip {
+    transition: none;
   }
 }
 
@@ -634,7 +1000,36 @@ dialog#terms-modal::backdrop {
   backdrop-filter: blur(4px);
 }
 
-/* 11. Gallery Cards & Interactive Grid */
+/* 11. Gallery Section Typography, Cards & Interactive Grid */
+#galeri .gallery-heading,
+#galeri .gallery-desc {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+#galeri .gallery-heading {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1.75rem; /* 28px - konsisten dengan hierarki judul section & responsif terhadap root font-size */
+  font-weight: 800;
+  color: var(--color-accent, #F5A623);
+  line-height: 1.25;
+  margin-top: 0;
+  margin-bottom: 12px;
+  text-wrap: balance;
+}
+
+#galeri .gallery-desc {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1rem; /* 16px - konsisten dengan sub-deskripsi section & responsif terhadap root font-size */
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+  max-width: 68ch;
+  margin-inline: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-wrap: pretty;
+}
+
 .gallery-card {
   background-color: #0F233D;
   border: 1px solid #233554;
@@ -690,5 +1085,4 @@ dialog#terms-modal::backdrop {
   outline: none;
   box-shadow: 0 0 0 3px #0F233D, 0 0 0 5px #F5A623;
 }
-
 
