@@ -71,13 +71,14 @@
       <div class="flex items-center gap-2 sm:gap-3.5">
         
         <!-- Desktop Smooth Scroll Navigation Menu -->
-        <nav id="desktop-nav" aria-label="Navigasi Utama Situs" class="hidden md:flex items-center gap-1 lg:gap-2">
-          <a href="#hero" data-i18n="navHome" class="px-3 py-2 text-base font-bold text-white hover:text-[#F5A623] transition-colors rounded-lg">Beranda</a>
-          <a href="#tentang" data-i18n="navAbout" class="px-3 py-2 text-base font-bold text-white hover:text-[#F5A623] transition-colors rounded-lg">Tentang Kami</a>
-          <a href="#galeri" data-i18n="navGallery" class="px-3 py-2 text-base font-bold text-white hover:text-[#F5A623] transition-colors rounded-lg">Galeri</a>
-          <a href="#dampak" data-i18n="navImpact" class="px-3 py-2 text-base font-bold text-white hover:text-[#F5A623] transition-colors rounded-lg">Dampak</a>
-          <a href="#mitra" data-i18n="navPartners" class="px-3 py-2 text-base font-bold text-white hover:text-[#F5A623] transition-colors rounded-lg">Mitra</a>
-          <a href="#kontak" data-i18n="navContact" class="px-3 py-2 text-base font-bold text-white hover:text-[#F5A623] transition-colors rounded-lg">Kontak</a>
+        <nav id="desktop-nav" aria-label="Navigasi Utama Situs" class="hidden md:flex items-center gap-0.5 lg:gap-2">
+          <a href="#hero" data-i18n="navHome" class="px-2 lg:px-3 py-2 text-sm lg:text-base font-bold text-white hover:text-[#F5A623] transition-colors rounded-lg whitespace-nowrap">Beranda</a>
+          <a href="#tentang" data-i18n="navAbout" class="px-2 lg:px-3 py-2 text-sm lg:text-base font-bold text-white hover:text-[#F5A623] transition-colors rounded-lg whitespace-nowrap">Tentang Kami</a>
+          <a href="#kegiatan" data-i18n="navActivities" class="px-2 lg:px-3 py-2 text-sm lg:text-base font-bold text-white hover:text-[#F5A623] transition-colors rounded-lg whitespace-nowrap">Kegiatan</a>
+          <a href="#galeri" data-i18n="navGallery" class="px-2 lg:px-3 py-2 text-sm lg:text-base font-bold text-white hover:text-[#F5A623] transition-colors rounded-lg whitespace-nowrap">Galeri</a>
+          <a href="#dampak" data-i18n="navImpact" class="px-2 lg:px-3 py-2 text-sm lg:text-base font-bold text-white hover:text-[#F5A623] transition-colors rounded-lg whitespace-nowrap">Dampak</a>
+          <a href="#mitra" data-i18n="navPartners" class="px-2 lg:px-3 py-2 text-sm lg:text-base font-bold text-white hover:text-[#F5A623] transition-colors rounded-lg whitespace-nowrap">Mitra</a>
+          <a href="#kontak" data-i18n="navContact" class="px-2 lg:px-3 py-2 text-sm lg:text-base font-bold text-white hover:text-[#F5A623] transition-colors rounded-lg whitespace-nowrap">Kontak</a>
         </nav>
 
         <!-- Language Switcher Pill Button (Theme-Aligned: Vibrant Yellow / Deep Navy) -->
@@ -111,6 +112,7 @@
       <a href="#hero" data-i18n="navHome" class="px-4 py-3 rounded-lg text-lg font-bold text-white hover:bg-[#0A192F] hover:text-[#F5A623]">Beranda</a>
       <a href="#tentang" data-i18n="navAbout" class="px-4 py-3 rounded-lg text-lg font-bold text-white hover:bg-[#0A192F] hover:text-[#F5A623]">Tentang Kami</a>
       <a href="#visi-misi" data-i18n="navVisiMisi" class="pl-8 py-2 rounded-lg text-base font-bold text-[#E6F1FF] hover:bg-[#0A192F] hover:text-[#F5A623] flex items-center gap-2">↳ <span>Visi &amp; Misi</span></a>
+      <a href="#kegiatan" data-i18n="navActivities" class="px-4 py-3 rounded-lg text-lg font-bold text-white hover:bg-[#0A192F] hover:text-[#F5A623]">Kegiatan</a>
       <a href="#galeri" data-i18n="navGallery" class="px-4 py-3 rounded-lg text-lg font-bold text-white hover:bg-[#0A192F] hover:text-[#F5A623]">Galeri</a>
       <a href="#dampak" data-i18n="navImpact" class="px-4 py-3 rounded-lg text-lg font-bold text-white hover:bg-[#0A192F] hover:text-[#F5A623]">Dampak</a>
       <a href="#mitra" data-i18n="navPartners" class="px-4 py-3 rounded-lg text-lg font-bold text-white hover:bg-[#0A192F] hover:text-[#F5A623]">Mitra</a>
@@ -248,72 +250,36 @@
             </p>
           </div>
 
-          <!-- 3 Columns / Cards Grid (Simetris: FKM, BKA, YWU) -->
+          <!-- 3 Columns / Cards Grid (3 Pilar Utama) -->
           <div class="pilar-grid grid grid-cols-1 md:grid-cols-3 gap-6 lg:gap-8">
             
-            <!-- Kartu 1: Pilar FKM -->
-            <article class="card-pillar rounded-xl" aria-labelledby="pilar-fkm-title">
-              <div class="icon-box">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" role="img" aria-label="Ikon Pilar FKM - Forum Komunikasi Masyarakat" data-i18n-attr="aria-label:pilar1IconLabel">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M17 20h5v-2a3 3 0 00-5.356-1.857M17 20H7m10 0v-2c0-.656-.126-1.283-.356-1.857M7 20H2v-2a3 3 0 015.356-1.857M7 20v-2c0-.656.126-1.283.356-1.857m0 0a5.002 5.002 0 019.288 0M15 7a3 3 0 11-6 0 3 3 0 016 0zm6 3a2 2 0 11-4 0 2 2 0 014 0zM7 10a2 2 0 11-4 0 2 2 0 014 0z"></path>
-                </svg>
-              </div>
-              
-              <header class="card-pillar-header">
-                <span data-i18n="pilar1Badge" class="inline-block px-2.5 py-0.5 rounded text-xs font-bold uppercase tracking-wider bg-[#F5A623]/15 text-[#F5A623] border border-[#F5A623]/40 mb-2.5">
-                  Pilar 01
-                </span>
-                <h3 id="pilar-fkm-title" data-i18n="pilar1Title" class="card-pillar-title">
-                  Pilar FKM (Forum Komunikasi Masyarakat)
-                </h3>
-              </header>
-              
+            <!-- Kartu 1 -->
+            <article class="card-pillar rounded-xl" aria-labelledby="pilar-1-title">
+              <h3 id="pilar-1-title" data-i18n="pilar1Title" class="card-pillar-title">
+                Inklusi dan Pemenuhan Hak Penyandang Disabilitas
+              </h3>
               <p data-i18n="pilar1Desc" class="card-pillar-desc">
-                Wadah advokasi dan konsolidasi hak-hak penyandang disabilitas. Mengawal implementasi regulasi pemenuhan hak disabilitas, audit aksesibilitas ruang publik, serta mengedukasi masyarakat luas tentang kesetaraan hakiki.
+                Mendorong kesetaraan, aksesibilitas, perlindungan hak, serta partisipasi bermakna penyandang disabilitas, khususnya perempuan dan kaum muda, dalam kehidupan sosial dan pembangunan.
               </p>
             </article>
 
-            <!-- Kartu 2: Pilar BKA -->
-            <article class="card-pillar rounded-xl" aria-labelledby="pilar-bka-title">
-              <div class="icon-box">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" role="img" aria-label="Ikon Pilar BKA - Bimbingan Keahlian Adaptif" data-i18n-attr="aria-label:pilar2IconLabel">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M12 6.253v13m0-13C10.832 5.477 9.246 5 7.5 5S4.168 5.477 3 6.253v13C4.168 18.477 5.754 18 7.5 18s3.332.477 4.5 1.253m0-13C13.168 5.477 14.754 5 16.5 5c1.747 0 3.332.477 4.5 1.253v13C19.832 18.477 18.247 18 16.5 18c-1.746 0-3.332.477-4.5 1.253"></path>
-                </svg>
-              </div>
-
-              <header class="card-pillar-header">
-                <span data-i18n="pilar2Badge" class="inline-block px-2.5 py-0.5 rounded text-xs font-bold uppercase tracking-wider bg-[#F5A623]/15 text-[#F5A623] border border-[#F5A623]/40 mb-2.5">
-                  Pilar 02
-                </span>
-                <h3 id="pilar-bka-title" data-i18n="pilar2Title" class="card-pillar-title">
-                  Pilar BKA (Bimbingan Keahlian Adaptif)
-                </h3>
-              </header>
-
+            <!-- Kartu 2 -->
+            <article class="card-pillar rounded-xl" aria-labelledby="pilar-2-title">
+              <h3 id="pilar-2-title" data-i18n="pilar2Title" class="card-pillar-title">
+                Pemberdayaan Perempuan dan Kepemimpinan Kaum Muda
+              </h3>
               <p data-i18n="pilar2Desc" class="card-pillar-desc">
-                Pusat bimbingan keahlian dan pelatihan vokasi adaptif berbasis teknologi asistif. Menyelenggarakan penguatan kapabilitas kerja, simulasi kesiapsiagaan kebencanaan inklusif, serta pendampingan keterampilan yang ramah ragam disabilitas.
+                Memperkuat kapasitas, kemandirian, kepemimpinan, dan peran perempuan serta kaum muda dengan disabilitas dalam pengambilan keputusan, pemberdayaan ekonomi, dan advokasi masyarakat.
               </p>
             </article>
 
-            <!-- Kartu 3: Pilar YWU -->
-            <article class="card-pillar rounded-xl" aria-labelledby="pilar-ywu-title">
-              <div class="icon-box">
-                <svg class="w-7 h-7" fill="none" stroke="currentColor" viewBox="0 0 24 24" role="img" aria-label="Ikon Pilar YWU - Yasa Wahana Utama" data-i18n-attr="aria-label:pilar3IconLabel">
-                  <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2.2" d="M16 11V7a4 4 0 00-8 0v4M5 9h14l1 12H4L5 9z"></path>
-                </svg>
-              </div>
-
-              <header class="card-pillar-header">
-                <span data-i18n="pilar3Badge" class="inline-block px-2.5 py-0.5 rounded text-xs font-bold uppercase tracking-wider bg-[#F5A623]/15 text-[#F5A623] border border-[#F5A623]/40 mb-2.5">
-                  Pilar 03
-                </span>
-                <h3 id="pilar-ywu-title" data-i18n="pilar3Title" class="card-pillar-title">
-                  Pilar YWU (Yasa Wahana Utama)
-                </h3>
-              </header>
-
+            <!-- Kartu 3 -->
+            <article class="card-pillar rounded-xl" aria-labelledby="pilar-3-title">
+              <h3 id="pilar-3-title" data-i18n="pilar3Title" class="card-pillar-title">
+                Advokasi Kebijakan dan Pemantauan SDGs yang Inklusif
+              </h3>
               <p data-i18n="pilar3Desc" class="card-pillar-desc">
-                Wadah pengembangan kemandirian ekonomi dan inkubasi wirausaha inklusif disabilitas. Memfasilitasi produksi karya bernilai komersial, pendampingan pengembangan usaha, serta perluasan akses jejaring pasar yang berdaya saing.
+                Mendorong kebijakan publik yang responsif gender dan disabilitas melalui pemantauan SDGs, pengumpulan data berbasis masyarakat, penguatan jejaring, serta dialog dengan pemerintah dan pemangku kepentingan.
               </p>
             </article>
 
@@ -334,7 +300,7 @@
 
           <!-- Elemen 2: Animasi SVG Peta Indonesia Modern (Center-Aligned) -->
           <div class="work-area-map-wrapper">
-            <div class="indonesia-map-stage" role="group" aria-label="Peta interaktif 12 provinsi area kerja operasional FKM BKA YWU" data-i18n-attr="aria-label:introMapGroupAria">
+            <div class="indonesia-map-stage" role="group" aria-label="Peta interaktif 13 provinsi area kerja operasional FKM BKA YWU" data-i18n-attr="aria-label:introMapGroupAria">
               <svg class="indonesia-map-svg" viewBox="0 0 940 360" fill="none" xmlns="http://www.w3.org/2000/svg" aria-hidden="true">
                 <!-- Garis Grid Kartografi Halus & Garis Khatulistiwa -->
                 <g class="map-grid-lines">
@@ -392,12 +358,12 @@
                 </g>
               </svg>
 
-              <!-- 12 Titik Penanda Lokasi Provinsi Seragam (#F5A623 + Glowing Pulse) -->
+              <!-- 13 Titik Penanda Lokasi Provinsi Seragam (#F5A623 + Glowing Pulse) -->
               <div id="indonesia-map-pins" class="indonesia-map-pins">
                 <button type="button"
                         class="map-pin map-pin--edge-left"
                         style="left: 3.40%; top: 10.56%;"
-                        aria-label="Titik lokasi area kerja operasional: Aceh"
+                        aria-label="Titik lokasi area kerja operasional di Provinsi Aceh"
                         data-i18n-attr="aria-label:mapPinAcehAria">
                   <span class="map-pin-pulse" aria-hidden="true"></span>
                   <span class="map-pin-dot" aria-hidden="true"></span>
@@ -407,7 +373,7 @@
                 <button type="button"
                         class="map-pin"
                         style="left: 9.36%; top: 22.78%;"
-                        aria-label="Titik lokasi area kerja operasional: Sumatera Utara"
+                        aria-label="Titik lokasi area kerja operasional di Provinsi Sumatera Utara"
                         data-i18n-attr="aria-label:mapPinSumutAria">
                   <span class="map-pin-pulse" aria-hidden="true"></span>
                   <span class="map-pin-dot" aria-hidden="true"></span>
@@ -417,7 +383,7 @@
                 <button type="button"
                         class="map-pin"
                         style="left: 12.77%; top: 40.56%;"
-                        aria-label="Titik lokasi area kerja operasional: Sumatera Barat"
+                        aria-label="Titik lokasi area kerja operasional di Provinsi Sumatera Barat"
                         data-i18n-attr="aria-label:mapPinSumbarAria">
                   <span class="map-pin-pulse" aria-hidden="true"></span>
                   <span class="map-pin-dot" aria-hidden="true"></span>
@@ -427,7 +393,7 @@
                 <button type="button"
                         class="map-pin"
                         style="left: 20.85%; top: 30.56%;"
-                        aria-label="Titik lokasi area kerja operasional: Kepulauan Riau"
+                        aria-label="Titik lokasi area kerja operasional di Provinsi Kepulauan Riau"
                         data-i18n-attr="aria-label:mapPinKepriAria">
                   <span class="map-pin-pulse" aria-hidden="true"></span>
                   <span class="map-pin-dot" aria-hidden="true"></span>
@@ -437,7 +403,7 @@
                 <button type="button"
                         class="map-pin"
                         style="left: 20.64%; top: 52.78%;"
-                        aria-label="Titik lokasi area kerja operasional: Sumatera Selatan"
+                        aria-label="Titik lokasi area kerja operasional di Provinsi Sumatera Selatan"
                         data-i18n-attr="aria-label:mapPinSumselAria">
                   <span class="map-pin-pulse" aria-hidden="true"></span>
                   <span class="map-pin-dot" aria-hidden="true"></span>
@@ -447,7 +413,7 @@
                 <button type="button"
                         class="map-pin"
                         style="left: 27.87%; top: 74.44%;"
-                        aria-label="Titik lokasi area kerja operasional: Jawa Barat"
+                        aria-label="Titik lokasi area kerja operasional di Provinsi Jawa Barat"
                         data-i18n-attr="aria-label:mapPinJabarAria">
                   <span class="map-pin-pulse" aria-hidden="true"></span>
                   <span class="map-pin-dot" aria-hidden="true"></span>
@@ -457,7 +423,7 @@
                 <button type="button"
                         class="map-pin"
                         style="left: 38.30%; top: 78.33%;"
-                        aria-label="Titik lokasi area kerja operasional: Jawa Timur"
+                        aria-label="Titik lokasi area kerja operasional di Provinsi Jawa Timur"
                         data-i18n-attr="aria-label:mapPinJatimAria">
                   <span class="map-pin-pulse" aria-hidden="true"></span>
                   <span class="map-pin-dot" aria-hidden="true"></span>
@@ -467,7 +433,7 @@
                 <button type="button"
                         class="map-pin"
                         style="left: 43.83%; top: 82.78%;"
-                        aria-label="Titik lokasi area kerja operasional: Bali"
+                        aria-label="Titik lokasi area kerja operasional di Provinsi Bali"
                         data-i18n-attr="aria-label:mapPinBaliAria">
                   <span class="map-pin-pulse" aria-hidden="true"></span>
                   <span class="map-pin-dot" aria-hidden="true"></span>
@@ -477,7 +443,7 @@
                 <button type="button"
                         class="map-pin"
                         style="left: 48.94%; top: 83.89%;"
-                        aria-label="Titik lokasi area kerja operasional: Nusa Tenggara Barat"
+                        aria-label="Titik lokasi area kerja operasional di Provinsi Nusa Tenggara Barat"
                         data-i18n-attr="aria-label:mapPinNtbAria">
                   <span class="map-pin-pulse" aria-hidden="true"></span>
                   <span class="map-pin-dot" aria-hidden="true"></span>
@@ -486,8 +452,18 @@
 
                 <button type="button"
                         class="map-pin"
+                        style="left: 54.10%; top: 63.06%;"
+                        aria-label="Titik lokasi area kerja operasional di Provinsi Sulawesi Selatan"
+                        data-i18n-attr="aria-label:mapPinSulselAria">
+                  <span class="map-pin-pulse" aria-hidden="true"></span>
+                  <span class="map-pin-dot" aria-hidden="true"></span>
+                  <span class="map-pin-tooltip" data-i18n="mapPinSulsel" aria-hidden="true">Sulawesi Selatan</span>
+                </button>
+
+                <button type="button"
+                        class="map-pin"
                         style="left: 57.66%; top: 83.89%;"
-                        aria-label="Titik lokasi area kerja operasional: Nusa Tenggara Timur"
+                        aria-label="Titik lokasi area kerja operasional di Provinsi Nusa Tenggara Timur"
                         data-i18n-attr="aria-label:mapPinNttAria">
                   <span class="map-pin-pulse" aria-hidden="true"></span>
                   <span class="map-pin-dot" aria-hidden="true"></span>
@@ -497,7 +473,7 @@
                 <button type="button"
                         class="map-pin"
                         style="left: 78.30%; top: 41.11%;"
-                        aria-label="Titik lokasi area kerja operasional: Papua Barat Daya"
+                        aria-label="Titik lokasi area kerja operasional di Provinsi Papua Barat Daya"
                         data-i18n-attr="aria-label:mapPinPbdAria">
                   <span class="map-pin-pulse" aria-hidden="true"></span>
                   <span class="map-pin-dot" aria-hidden="true"></span>
@@ -507,7 +483,7 @@
                 <button type="button"
                         class="map-pin map-pin--edge-right"
                         style="left: 83.83%; top: 47.22%;"
-                        aria-label="Titik lokasi area kerja operasional: Papua Barat"
+                        aria-label="Titik lokasi area kerja operasional di Provinsi Papua Barat"
                         data-i18n-attr="aria-label:mapPinPbAria">
                   <span class="map-pin-pulse" aria-hidden="true"></span>
                   <span class="map-pin-dot" aria-hidden="true"></span>
@@ -519,7 +495,7 @@
 
           <!-- Elemen 3: Daftar Teks Nama Area Kerja Operasional (Center-Aligned) -->
           <p data-i18n="introWorkAreaList" class="work-area-list-text">
-            Aceh, Sumatera Utara, Sumatera Selatan, Sumatera Barat, Kepulauan Riau, Jawa Barat, Jawa Timur, Papua Barat, Papua Barat Daya, Nusa Tenggara Timur, Nusa Tenggara Barat dan Bali
+            Aceh, Sumatera Utara, Sumatera Selatan, Sumatera Barat, Kepulauan Riau, Jawa Barat, Jawa Timur, Sulawesi Selatan, Papua Barat, Papua Barat Daya, Nusa Tenggara Timur, Nusa Tenggara Barat dan Bali
           </p>
 
         </div>
@@ -577,6 +553,120 @@
       </section>
 
     </div>
+
+    <!-- ========================================================================
+         KEGIATAN KAMI SECTION (#kegiatan)
+         ======================================================================== -->
+    <section id="kegiatan" aria-labelledby="kegiatan-title" class="kegiatan-section py-20 md:py-24 bg-[#112240] border-b-2 border-[#233554]">
+      <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
+
+        <!-- Section Header -->
+        <div class="text-center max-w-3xl mx-auto mb-12 md:mb-14">
+          <h2 id="kegiatan-title" data-i18n="activitiesTitle" class="kegiatan-heading">
+            KEGIATAN KAMI
+          </h2>
+          <p data-i18n="activitiesDesc" class="kegiatan-desc">
+            Rangkaian program dan aktivitas strategis FKM BKA YWU dalam mewujudkan inklusi dan kesetaraan.
+          </p>
+        </div>
+
+        <!-- 5 Activity Cards Grid -->
+        <div class="kegiatan-grid">
+
+          <!-- Kartu 1 -->
+          <article class="kegiatan-card rounded-xl" aria-labelledby="kegiatan-card-1-title">
+            <img src="kegiatan 5.jpeg"
+                 alt="Sosialisasi kebencanaan dan simulasi PRB inklusif untuk perempuan muda"
+                 data-i18n-attr="alt:activity1ImgAlt"
+                 width="1280"
+                 height="959"
+                 loading="lazy"
+                 decoding="async"
+                 class="kegiatan-card-img" />
+            <h3 id="kegiatan-card-1-title" data-i18n="activity1Title" class="kegiatan-card-title">
+              Pengurangan Risiko Bencana Inklusif
+            </h3>
+            <p data-i18n="activity1Desc" class="kegiatan-card-desc">
+              Pelatihan kesiapsiagaan, simulasi evakuasi, SOP PRB inklusif, serta aksesibilitas fasilitas publik.
+            </p>
+          </article>
+
+          <!-- Kartu 2 -->
+          <article class="kegiatan-card rounded-xl" aria-labelledby="kegiatan-card-2-title">
+            <img src="kegiatan 2.jpeg"
+                 alt="Dokumentasi kegiatan pemberdayaan dan pertemuan komunitas Young Women Unit"
+                 data-i18n-attr="alt:activity2ImgAlt"
+                 width="1600"
+                 height="1200"
+                 loading="lazy"
+                 decoding="async"
+                 class="kegiatan-card-img" />
+            <h3 id="kegiatan-card-2-title" data-i18n="activity2Title" class="kegiatan-card-title">
+              Pemberdayaan Perempuan dan Kaum Muda dengan Disabilitas
+            </h3>
+            <p data-i18n="activity2Desc" class="kegiatan-card-desc">
+              Pembentukan unit YWU, kepemimpinan perempuan muda, kegiatan inklusi, dan kampanye publik.
+            </p>
+          </article>
+
+          <!-- Kartu 3 -->
+          <article class="kegiatan-card rounded-xl" aria-labelledby="kegiatan-card-3-title">
+            <img src="kegiatan 6.jpeg"
+                 alt="Partisipasi FKM BKA YWU dalam forum advokasi hak dan konferensi iklim Our Voice Count"
+                 data-i18n-attr="alt:activity3ImgAlt"
+                 width="781"
+                 height="781"
+                 loading="lazy"
+                 decoding="async"
+                 class="kegiatan-card-img kegiatan-card-img--collage" />
+            <h3 id="kegiatan-card-3-title" data-i18n="activity3Title" class="kegiatan-card-title">
+              Advokasi Kebijakan dan Hak Penyandang Disabilitas
+            </h3>
+            <p data-i18n="activity3Desc" class="kegiatan-card-desc">
+              FGD, penyusunan rancangan peraturan wali kota, konsultasi pemerintah, serta advokasi pemenuhan hak.
+            </p>
+          </article>
+
+          <!-- Kartu 4 -->
+          <article class="kegiatan-card rounded-xl" aria-labelledby="kegiatan-card-4-title">
+            <img src="kegiatan 7.jpg"
+                 alt="Kegiatan penguatan kapasitas dan dukungan fasilitas bagi perempuan dengan disabilitas"
+                 data-i18n-attr="alt:activity4ImgAlt"
+                 width="672"
+                 height="841"
+                 loading="lazy"
+                 decoding="async"
+                 class="kegiatan-card-img kegiatan-card-img--stage" />
+            <h3 id="kegiatan-card-4-title" data-i18n="activity4Title" class="kegiatan-card-title">
+              Pemantauan SDGs dan Pembangunan Inklusif
+            </h3>
+            <p data-i18n="activity4Desc" class="kegiatan-card-desc">
+              Penguatan kapasitas, pengumpulan data, dialog kebijakan, dan advokasi SDGs yang responsif gender dan disabilitas.
+            </p>
+          </article>
+
+          <!-- Kartu 5 -->
+          <article class="kegiatan-card rounded-xl" aria-labelledby="kegiatan-card-5-title">
+            <img src="kegiatan 8.jpeg"
+                 alt="Pameran stan produk wirausaha disabilitas pada Festival QRIS"
+                 data-i18n-attr="alt:activity5ImgAlt"
+                 width="672"
+                 height="841"
+                 loading="lazy"
+                 decoding="async"
+                 class="kegiatan-card-img kegiatan-card-img--booth" />
+            <h3 id="kegiatan-card-5-title" data-i18n="activity5Title" class="kegiatan-card-title">
+              Kewirausahaan Sosial dan Kemandirian Ekonomi
+            </h3>
+            <p data-i18n="activity5Desc" class="kegiatan-card-desc">
+              Pelatihan kewirausahaan serta pengembangan usaha seperti kerajinan sandal pandan, token papua, dan produk Goodi Bag dari canvas.
+            </p>
+          </article>
+
+        </div>
+
+      </div>
+    </section>
 
     <!-- ========================================================================
          GALLERY / INSTAGRAM SECTION (#galeri)
