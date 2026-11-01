@@ -342,7 +342,7 @@ body {
 }
 
 #area-kerja .indonesia-map-pins > .map-pin {
-  --stagger-time: 0.28s;
+  --stagger-time: 0.26s;
   --pin-delay: calc(var(--sibling-index, 1) * var(--stagger-time));
   --pin-delay: calc(sibling-index() * var(--stagger-time));
 }
@@ -356,7 +356,7 @@ body {
   box-shadow: 0 0 10px rgba(245, 166, 35, 0.72);
   pointer-events: none;
   scale: 1;
-  animation: map-pin-glow-pulse 3.4s ease-out infinite;
+  animation: map-pin-glow-pulse 3.6s ease-out infinite;
   animation-delay: var(--pin-delay);
 }
 
@@ -461,7 +461,7 @@ body {
   font-weight: 400;
   line-height: 1.6;
   color: rgba(255, 255, 255, 0.9);
-  max-inline-size: 74ch;
+  max-inline-size: 76ch;
   margin-inline: auto;
   margin-block-start: 0;
   margin-block-end: 0;
@@ -602,7 +602,7 @@ body {
 #pilar-kami .pilar-section-heading {
   font-family: 'Noto Sans', sans-serif;
   text-transform: uppercase;
-  font-size: 28px;
+  font-size: 1.75rem; /* 28px - menghormati preferensi ukuran teks pengguna (WCAG 1.4.4) */
   font-weight: 800;
   color: #E67E22;
   line-height: 1.2;
@@ -614,7 +614,7 @@ body {
 
 #pilar-kami .pilar-section-desc {
   font-family: 'Noto Sans', sans-serif;
-  font-size: 16px;
+  font-size: 1rem; /* 16px - menghormati preferensi ukuran teks pengguna (WCAG 1.4.4) */
   font-weight: 400;
   line-height: 1.7;
   color: rgba(255, 255, 255, 0.85);
@@ -627,47 +627,54 @@ body {
   background-color: #0F233D;
   border: 2px solid var(--color-border);
   border-radius: 0.75rem;
-  padding: 2rem;
+  padding: 1.5rem;
   display: flex;
   flex-direction: column;
   transition: transform 0.2s ease, border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 @media (min-width: 768px) {
-  @supports (grid-template-rows: subgrid) {
-    .pilar-grid {
-      grid-template-rows: repeat(3, auto);
-    }
+  .card-pillar {
+    padding: 1.5rem 1.75rem;
+  }
 
-    .pilar-grid > .card-pillar {
-      display: grid;
-      grid-row: span 3;
-      grid-template-rows: subgrid;
-      row-gap: 0;
-    }
+  .pilar-grid {
+    grid-template-rows: auto 1fr;
+  }
+
+  .pilar-grid > .card-pillar {
+    display: grid;
+    grid-row: span 2;
+    /* Same-cascade fallback: ignored when subgrid is supported. */
+    grid-template-rows: auto 1fr;
+    grid-template-rows: subgrid;
+    row-gap: 0;
   }
 }
 
-.card-pillar-header {
-  margin-bottom: 0.875rem;
-}
-
-.card-pillar-title {
+#pilar-kami .card-pillar-title {
   font-family: 'Noto Sans', sans-serif;
-  font-size: 19px;
+  font-size: 1.125rem; /* 18px (mobile) */
   font-weight: 700;
-  line-height: 1.35;
-  color: #FFFFFF;
-  margin: 0;
+  line-height: 1.4;
+  color: #F5A623;
+  margin-block-start: 0;
+  margin-block-end: 12px;
   text-wrap: balance;
 }
 
-.card-pillar-desc {
+@media (min-width: 768px) {
+  #pilar-kami .card-pillar-title {
+    font-size: 1.25rem; /* 20px (desktop) */
+  }
+}
+
+#pilar-kami .card-pillar-desc {
   font-family: 'Noto Sans', sans-serif;
-  font-size: 15px;
+  font-size: 0.9375rem; /* 15px */
   font-weight: 400;
-  line-height: 1.65;
-  color: rgba(255, 255, 255, 0.85);
+  line-height: 1.6;
+  color: rgba(255, 255, 255, 0.9);
   margin: 0;
   text-wrap: pretty;
 }
@@ -746,20 +753,6 @@ body {
 #visi-misi .misi-list li::marker {
   font-weight: 600;
   color: rgba(255, 255, 255, 0.9);
-}
-
-.icon-box {
-  width: 4.25rem;
-  height: 4.25rem;
-  border-radius: 0.75rem;
-  background-color: rgba(245, 166, 35, 0.12);
-  border: 2px solid var(--color-accent);
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  color: var(--color-accent);
-  margin-bottom: 1.5rem;
-  flex-shrink: 0;
 }
 
 /* 7b. Impact Counter Section Typography & Cards */
@@ -941,6 +934,8 @@ body {
   .partner-card,
   .gallery-card,
   .gallery-action-btn,
+  .kegiatan-card,
+  .kegiatan-card-img,
   #area-kerja .indonesia-map-stage,
   #area-kerja .map-pin-tooltip,
   #pengenalan .intro-image,
@@ -978,6 +973,8 @@ body {
   .gallery-card,
   .gallery-card img,
   .gallery-action-btn,
+  .kegiatan-card,
+  .kegiatan-card-img,
   .btn-primary,
   .btn-hero-outline,
   #area-kerja .map-pin-dot,
@@ -1085,3 +1082,172 @@ dialog#terms-modal::backdrop {
   outline: none;
   box-shadow: 0 0 0 3px #0F233D, 0 0 0 5px #F5A623;
 }
+
+/* 12. Kegiatan Kami Section (#kegiatan) & Anchor Scroll Offset */
+#tentang,
+#visi-misi,
+#kegiatan,
+#galeri,
+#dampak,
+#mitra,
+#kontak {
+  scroll-margin-top: 5.5rem;
+}
+
+#kegiatan,
+#kegiatan .kegiatan-heading,
+#kegiatan .kegiatan-desc,
+#kegiatan .kegiatan-card,
+#kegiatan .kegiatan-card-title,
+#kegiatan .kegiatan-card-desc {
+  font-family: 'Noto Sans', sans-serif;
+}
+
+#kegiatan .kegiatan-heading {
+  font-family: 'Noto Sans', sans-serif;
+  text-transform: uppercase;
+  font-size: 1.75rem; /* 28px - menghormati preferensi ukuran teks pengguna (WCAG 1.4.4) */
+  font-weight: 800;
+  color: #E67E22;
+  text-align: center;
+  line-height: 1.25;
+  letter-spacing: 0.5px;
+  margin-top: 0;
+  margin-bottom: 12px;
+  text-wrap: balance;
+}
+
+#kegiatan .kegiatan-desc {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1rem; /* 16px - menghormati preferensi ukuran teks pengguna (WCAG 1.4.4) */
+  font-weight: 400;
+  line-height: 1.7;
+  color: rgba(255, 255, 255, 0.9);
+  text-align: center;
+  max-inline-size: 68ch;
+  margin-inline: auto;
+  margin-top: 0;
+  margin-bottom: 0;
+  text-wrap: pretty;
+}
+
+.kegiatan-grid {
+  display: grid;
+  grid-template-columns: minmax(0, 1fr);
+  gap: 1.5rem;
+}
+
+.kegiatan-card {
+  background-color: #0F233D;
+  border: 1.5px solid #233554;
+  border-radius: 0.75rem;
+  padding: 1.25rem;
+  display: flex;
+  flex-direction: column;
+  translate: 0 0;
+  transition: translate 0.25s ease, border-color 0.25s ease, box-shadow 0.25s ease;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.22);
+}
+
+.kegiatan-card:hover {
+  border-color: var(--color-accent);
+  translate: 0 -4px;
+  box-shadow: 0 12px 24px -4px rgba(245, 166, 35, 0.16), 0 4px 8px -2px rgba(0, 0, 0, 0.3);
+}
+
+@media (min-width: 768px) {
+  .kegiatan-grid {
+    grid-template-columns: repeat(4, minmax(0, 1fr));
+    column-gap: 1.5rem;
+    row-gap: 0;
+  }
+
+  .kegiatan-grid > .kegiatan-card {
+    padding: 1.5rem;
+    grid-column: span 2;
+    display: grid;
+    grid-row: span 3;
+    /* Same-cascade fallback: ignored when subgrid is supported. */
+    grid-template-rows: auto auto 1fr;
+    grid-template-rows: subgrid;
+    row-gap: 0;
+  }
+
+  .kegiatan-grid > .kegiatan-card:nth-child(n+3) {
+    margin-block-start: 1.5rem;
+  }
+
+  .kegiatan-grid > .kegiatan-card:nth-child(5) {
+    grid-column: 2 / span 2;
+  }
+}
+
+@media (min-width: 1024px) {
+  .kegiatan-grid {
+    grid-template-columns: repeat(6, minmax(0, 1fr));
+    column-gap: 1.75rem;
+    row-gap: 0;
+  }
+
+  .kegiatan-grid > .kegiatan-card:nth-child(3) {
+    grid-column: span 2;
+    margin-block-start: 0;
+  }
+
+  .kegiatan-grid > .kegiatan-card:nth-child(4) {
+    grid-column: 2 / span 2;
+    margin-block-start: 1.75rem;
+  }
+
+  .kegiatan-grid > .kegiatan-card:nth-child(5) {
+    grid-column: 4 / span 2;
+    margin-block-start: 1.75rem;
+  }
+}
+
+#kegiatan .kegiatan-card-img {
+  display: block;
+  width: 100%;
+  height: auto;
+  aspect-ratio: 4 / 3;
+  object-fit: cover;
+  object-position: center;
+  border-radius: 12px;
+  border: 1px solid #233554;
+  margin-block-end: 1.125rem;
+}
+
+#kegiatan .kegiatan-card-img--collage {
+  object-position: center 20%;
+}
+
+#kegiatan .kegiatan-card-img--stage {
+  object-position: center 14%;
+}
+
+#kegiatan .kegiatan-card-img--booth {
+  object-position: center 12%;
+}
+
+#kegiatan .kegiatan-card-title {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 1.25rem; /* 20px - menghormati preferensi ukuran teks pengguna (WCAG 1.4.4) */
+  font-weight: 700;
+  color: #F5A623;
+  line-height: 1.4;
+  margin-top: 0;
+  margin-bottom: 8px;
+  text-wrap: balance;
+}
+
+#kegiatan .kegiatan-card-desc {
+  font-family: 'Noto Sans', sans-serif;
+  font-size: 0.9375rem; /* 15px - menghormati preferensi ukuran teks pengguna (WCAG 1.4.4) */
+  font-weight: 400;
+  color: rgba(255, 255, 255, 0.9);
+  line-height: 1.6;
+  margin: 0;
+  text-wrap: pretty;
+}
+
+
