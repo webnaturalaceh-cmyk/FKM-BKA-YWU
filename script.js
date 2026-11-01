@@ -46,6 +46,34 @@
       introSectionLabel: "Tentang FKM BKA YWU",
       introTitle: "FKM BKA YWU",
       introDesc: "FKM BKA YWU merupakan forum komunikasi masyarakat berkebutuhan khusus yang berfokus pada advokasi hak-hak perempuan muda serta perempuan penyandang disabilitas.",
+      introPillarDesc: "Gerakan ini didorong oleh tiga pilar strategis yang menggerakkan seluruh program FKM BKA YWU dalam mewujudkan kesetaraan hak, kapabilitas vokasi, dan kemandirian wirausaha disabilitas.",
+      introWorkAreaTitle: "AREA KERJA OPERASIONAL",
+      introWorkAreaList: "Aceh, Sumatera Utara, Sumatera Selatan, Sumatera Barat, Kepulauan Riau, Jawa Barat, Jawa Timur, Papua Barat, Papua Barat Daya, Nusa Tenggara Timur, Nusa Tenggara Barat dan Bali",
+      introMapGroupAria: "Peta interaktif 12 provinsi area kerja operasional FKM BKA YWU",
+      mapPinAceh: "Aceh",
+      mapPinAcehAria: "Titik lokasi area kerja operasional: Aceh",
+      mapPinSumut: "Sumatera Utara",
+      mapPinSumutAria: "Titik lokasi area kerja operasional: Sumatera Utara",
+      mapPinSumbar: "Sumatera Barat",
+      mapPinSumbarAria: "Titik lokasi area kerja operasional: Sumatera Barat",
+      mapPinKepri: "Kepulauan Riau",
+      mapPinKepriAria: "Titik lokasi area kerja operasional: Kepulauan Riau",
+      mapPinSumsel: "Sumatera Selatan",
+      mapPinSumselAria: "Titik lokasi area kerja operasional: Sumatera Selatan",
+      mapPinJabar: "Jawa Barat",
+      mapPinJabarAria: "Titik lokasi area kerja operasional: Jawa Barat",
+      mapPinJatim: "Jawa Timur",
+      mapPinJatimAria: "Titik lokasi area kerja operasional: Jawa Timur",
+      mapPinBali: "Bali",
+      mapPinBaliAria: "Titik lokasi area kerja operasional: Bali",
+      mapPinNtb: "Nusa Tenggara Barat",
+      mapPinNtbAria: "Titik lokasi area kerja operasional: Nusa Tenggara Barat",
+      mapPinNtt: "Nusa Tenggara Timur",
+      mapPinNttAria: "Titik lokasi area kerja operasional: Nusa Tenggara Timur",
+      mapPinPbd: "Papua Barat Daya",
+      mapPinPbdAria: "Titik lokasi area kerja operasional: Papua Barat Daya",
+      mapPinPb: "Papua Barat",
+      mapPinPbAria: "Titik lokasi area kerja operasional: Papua Barat",
       introImgAlt: "Aktivitas siaran radio anggota FKM BKA YWU perempuan disabilitas",
 
       // About (3 Pillars)
@@ -69,15 +97,10 @@
       aboutNavPillPilar: "3 Pilar Utama",
       aboutNavPillVisi: "Visi & Misi",
       navVisiMisi: "Visi & Misi",
-      visiMisiBadge: "Arah & Komitmen Strategis",
-      visiMisiTitle: "Visi & Misi Kami",
-      visiMisiDesc: "Landasan filosofis dan komitmen strategis FKM BKA YWU dalam memperjuangkan kesetaraan, keadilan sosial, dan kedaulatan penyandang disabilitas.",
-      visiCardTag: "VISI",
-      visiCardHeadline: "Masyarakat Inklusif, Adil, Setara & Berkelanjutan",
+      visiMisiTitle: "Visi dan Misi",
+      visiSubTitle: "Visi",
       visiCardText: "Terwujudnya masyarakat yang inklusif, adil, setara, dan berkelanjutan, dengan perempuan, kaum muda, serta penyandang disabilitas memiliki kesempatan yang setara untuk berpartisipasi, memimpin, dan memperoleh hak-haknya dalam pembangunan.",
-      visiCardNote: "Prinsip No One Left Behind",
-      misiCardTag: "MISI",
-      misiCardHeadline: "6 Langkah Strategis Gerakan",
+      misiSubTitle: "Misi",
       misiItem1: "Pemberdayaan perempuan dan kaum muda melalui peningkatan kapasitas, kepemimpinan, partisipasi, dan kemandirian dalam kehidupan sosial, ekonomi, dan politik.",
       misiItem2: "Mendorong inklusi dan pemenuhan hak penyandang disabilitas dalam pendidikan, pekerjaan, pelayanan publik, pengambilan keputusan, dan pembangunan berkelanjutan.",
       misiItem3: "Memperkuat perlindungan perempuan, anak, dan kelompok rentan dari diskriminasi, kekerasan, serta berbagai bentuk ketidakadilan.",
@@ -87,7 +110,7 @@
 
       // Gallery / Instagram
       galleryBadge: "Galeri Kegiatan",
-      galleryTitle: "Dokumentasi & Kegiatan Terbaru",
+      galleryTitle: "Dokumentasi dan Kegiatan Terbaru",
       galleryDesc: "Ikuti momen keseruan dan wawasan terbaru dari kegiatan kami langsung di Instagram.",
       galleryBadgePost: "Postingan",
       galleryBadgeReels: "Reels Video",
@@ -120,7 +143,7 @@
 
       // Partners
       partnersBadge: "Jaringan & Kolaborasi",
-      partnersTitle: "Mitra & Pendukung Strategis",
+      partnersTitle: "Mitra dan Pendukung Strategis",
       partnersDesc: "Bergerak bersama berbagai lembaga internasional dan nasional dalam mendorong pemenuhan hak, kesetaraan gender, dan kemandirian wirausaha disabilitas.",
       partnersViewGrid: "Semua Logo (Grid)",
       partnersViewMarquee: "Animasi Berjalan",
@@ -193,6 +216,34 @@
       introSectionLabel: "About FKM BKA YWU",
       introTitle: "FKM BKA YWU",
       introDesc: "FKM BKA YWU is a special-needs community communication forum focusing on advocating for the rights of young women and women with disabilities.",
+      introPillarDesc: "This movement is driven by three strategic pillars that power all FKM BKA YWU programs in realizing equal rights, vocational capabilities, and entrepreneurial self-reliance for persons with disabilities.",
+      introWorkAreaTitle: "OPERATIONAL WORK AREAS",
+      introWorkAreaList: "Aceh, North Sumatra, South Sumatra, West Sumatra, Riau Islands, West Java, East Java, West Papua, Southwest Papua, East Nusa Tenggara, West Nusa Tenggara, and Bali",
+      introMapGroupAria: "Interactive map of FKM BKA YWU's 12 operational work area provinces",
+      mapPinAceh: "Aceh",
+      mapPinAcehAria: "Operational work area pin: Aceh",
+      mapPinSumut: "North Sumatra",
+      mapPinSumutAria: "Operational work area pin: North Sumatra",
+      mapPinSumbar: "West Sumatra",
+      mapPinSumbarAria: "Operational work area pin: West Sumatra",
+      mapPinKepri: "Riau Islands",
+      mapPinKepriAria: "Operational work area pin: Riau Islands",
+      mapPinSumsel: "South Sumatra",
+      mapPinSumselAria: "Operational work area pin: South Sumatra",
+      mapPinJabar: "West Java",
+      mapPinJabarAria: "Operational work area pin: West Java",
+      mapPinJatim: "East Java",
+      mapPinJatimAria: "Operational work area pin: East Java",
+      mapPinBali: "Bali",
+      mapPinBaliAria: "Operational work area pin: Bali",
+      mapPinNtb: "West Nusa Tenggara",
+      mapPinNtbAria: "Operational work area pin: West Nusa Tenggara",
+      mapPinNtt: "East Nusa Tenggara",
+      mapPinNttAria: "Operational work area pin: East Nusa Tenggara",
+      mapPinPbd: "Southwest Papua",
+      mapPinPbdAria: "Operational work area pin: Southwest Papua",
+      mapPinPb: "West Papua",
+      mapPinPbAria: "Operational work area pin: West Papua",
       introImgAlt: "Radio broadcasting activity by FKM BKA YWU members, women with disabilities",
 
       // About (3 Pillars)
@@ -216,15 +267,10 @@
       aboutNavPillPilar: "3 Core Pillars",
       aboutNavPillVisi: "Vision & Mission",
       navVisiMisi: "Vision & Mission",
-      visiMisiBadge: "Strategic Direction & Commitment",
-      visiMisiTitle: "Our Vision & Mission",
-      visiMisiDesc: "The philosophical foundation and strategic commitments of FKM BKA YWU in championing social justice, gender equality, and rights fulfillment for persons with disabilities.",
-      visiCardTag: "VISION",
-      visiCardHeadline: "An Inclusive, Just, Equal & Sustainable Society",
+      visiMisiTitle: "Vision and Mission",
+      visiSubTitle: "Vision",
       visiCardText: "Realizing an inclusive, just, equitable, and sustainable society where women, young people, and persons with disabilities have equal opportunities to participate, lead, and fulfill their rights in development.",
-      visiCardNote: "No One Left Behind Principle",
-      misiCardTag: "MISSION",
-      misiCardHeadline: "6 Strategic Action Pathways",
+      misiSubTitle: "Mission",
       misiItem1: "Empowering women and young people by strengthening capacity, leadership, participation, and independence in social, economic, and political life.",
       misiItem2: "Advancing inclusion and the fulfillment of rights for persons with disabilities across education, employment, public services, decision-making, and sustainable development.",
       misiItem3: "Strengthening protections for women, children, and vulnerable groups against discrimination, violence, and all forms of injustice.",
@@ -234,7 +280,7 @@
 
       // Gallery / Instagram
       galleryBadge: "Activity Gallery",
-      galleryTitle: "Latest Documentation & Activities",
+      galleryTitle: "Latest Documentation and Activities",
       galleryDesc: "Follow exciting moments and latest insights from our activities directly on Instagram.",
       galleryBadgePost: "Post",
       galleryBadgeReels: "Reels Video",
@@ -267,7 +313,7 @@
 
       // Partners
       partnersBadge: "Network & Collaboration",
-      partnersTitle: "Partners & Strategic Supporters",
+      partnersTitle: "Partners and Strategic Supporters",
       partnersDesc: "Collaborating alongside international and national organizations to champion disability rights fulfillment, gender equality, and entrepreneurial self-reliance.",
       partnersViewGrid: "All Logos (Grid)",
       partnersViewMarquee: "Continuous Slider",
@@ -610,82 +656,37 @@
   }
 
   /* ==========================================================================
-     6. Partners Section Controller (Grid vs Marquee View & Pause/Play)
+     6. Work Area Interactive Indonesia Map (Stagger Fallback & Escape Dismiss)
      ========================================================================== */
-  function initPartnersViewSwitcher() {
-    const btnGrid = document.getElementById('view-mode-grid');
-    const btnMarquee = document.getElementById('view-mode-marquee');
-    const gridView = document.getElementById('partners-grid-view');
-    const marqueeView = document.getElementById('partners-marquee-view');
-    const btnPause = document.getElementById('btn-pause-marquee');
-    const marqueeTrack = document.getElementById('marquee-track');
-    const iconPause = document.getElementById('icon-pause');
-    const iconPlay = document.getElementById('icon-play');
-    const marqueeBtnText = document.getElementById('marquee-btn-text');
+  function initWorkAreaMap() {
+    const pinList = document.getElementById('indonesia-map-pins');
+    if (!pinList) return;
 
-    if (!btnGrid || !btnMarquee || !gridView || !marqueeView) return;
+    const pins = [...pinList.children];
 
-    let isPaused = false;
-
-    function setView(mode) {
-      if (mode === 'marquee') {
-        gridView.classList.add('hidden');
-        marqueeView.classList.remove('hidden');
-
-        btnGrid.classList.remove('active');
-        btnGrid.setAttribute('aria-selected', 'false');
-        btnGrid.classList.add('text-[#E6F1FF]');
-
-        btnMarquee.classList.add('active');
-        btnMarquee.setAttribute('aria-selected', 'true');
-        btnMarquee.classList.remove('text-[#E6F1FF]');
-
-        if (btnPause) btnPause.classList.remove('hidden');
-      } else {
-        gridView.classList.remove('hidden');
-        marqueeView.classList.add('hidden');
-
-        btnGrid.classList.add('active');
-        btnGrid.setAttribute('aria-selected', 'true');
-        btnGrid.classList.remove('text-[#E6F1FF]');
-
-        btnMarquee.classList.remove('active');
-        btnMarquee.setAttribute('aria-selected', 'false');
-        btnMarquee.classList.add('text-[#E6F1FF]');
-
-        if (btnPause) btnPause.classList.add('hidden');
-      }
-    }
-
-    btnGrid.addEventListener('click', () => setView('grid'));
-    btnMarquee.addEventListener('click', () => setView('marquee'));
-
-    // Pause / Play Button Control
-    if (btnPause && marqueeTrack) {
-      btnPause.addEventListener('click', () => {
-        isPaused = !isPaused;
-        const dict = i18nData[currentLang] || i18nData.id;
-
-        if (isPaused) {
-          marqueeTrack.classList.add('is-paused');
-          if (iconPause) iconPause.classList.add('hidden');
-          if (iconPlay) iconPlay.classList.remove('hidden');
-          if (marqueeBtnText) marqueeBtnText.textContent = dict.marqueePlay;
-          btnPause.setAttribute('aria-label', dict.marqueeBtnLabelPlay);
-        } else {
-          marqueeTrack.classList.remove('is-paused');
-          if (iconPause) iconPause.classList.remove('hidden');
-          if (iconPlay) iconPlay.classList.add('hidden');
-          if (marqueeBtnText) marqueeBtnText.textContent = dict.marqueePause;
-          btnPause.setAttribute('aria-label', dict.marqueeBtnLabelPause);
-        }
+    // Fallback for browsers without native CSS sibling-index() support
+    if (typeof CSS !== 'undefined' && typeof CSS.supports === 'function' &&
+        !CSS.supports('animation-delay: calc(sibling-index() * 0.1s)')) {
+      pins.forEach((el, index) => {
+        el.style.setProperty('--sibling-index', index + 1);
       });
     }
 
-    // Default: if user prefers reduced motion, always use grid view
-    if (prefersReducedMotion) {
-      setView('grid');
-    }
+    // WCAG 1.4.13 Dismissible: allow Escape key to dismiss active hover/focus tooltip
+    pins.forEach((pin) => {
+      pin.addEventListener('mouseleave', () => pin.classList.remove('is-dismissed'));
+      pin.addEventListener('blur', () => pin.classList.remove('is-dismissed'));
+    });
+
+    document.addEventListener('keydown', (e) => {
+      if (e.key === 'Escape') {
+        pins.forEach((pin) => {
+          if (pin.matches(':hover, :focus, :focus-visible')) {
+            pin.classList.add('is-dismissed');
+          }
+        });
+      }
+    });
   }
 
   // Initialize on DOM load
@@ -695,6 +696,6 @@
     initAccessibleScroll();
     initImpactCounters();
     initLegalModals();
-    initPartnersViewSwitcher();
+    initWorkAreaMap();
   });
 })();
