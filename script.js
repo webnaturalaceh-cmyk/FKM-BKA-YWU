@@ -15,7 +15,7 @@
   const i18nData = {
     id: {
       htmlLang: "id",
-      pageTitle: "The Bold Inclusivity | FKM BKA YWU",
+      pageTitle: "FKM BKA YWU",
       metaDescription: "Landing page resmi FKM BKA YWU bertema The Bold Inclusivity. Berfokus pada aksesibilitas tinggi (WCAG 2.1 AA) dan pemenuhan hak penyandang disabilitas.",
       
       // Header & Navigation
@@ -34,26 +34,56 @@
       menuClose: "Tutup menu navigasi",
 
       // Hero Section
-      heroTagline: "MISI KITA, KEKUATAN BERSAMA",
-      heroTitle: "MENEMBUS BATAS, MEWUJUDKAN AKSES SETARA UNTUK SEMUA",
-      heroDesc: "Membangun ruang inklusif di mana setiap individu memiliki kesempatan yang sama untuk bertumbuh, berkarya, dan berdaya tanpa sekat.",
+      heroTagline: "Misi Kita, Kekuatan Bersama",
+      heroTitle: "Menembus batas, mewujudkan akses setara untuk semua",
+      heroDesc: "Membangun ruang inklusif di mana setiap individu memiliki kesempatan yang sama untuk bertumbuh, berkarya, dan berdaya tanpa sekat",
       heroCtaJoin: "Gabung Komunitas",
+      heroCtaJoinAria: "Gabung komunitas FKM BKA YWU melalui halaman Instagram resmi (terbuka di tab baru)",
       heroCtaSupport: "Dukung Kami",
       heroImgAlt: "Aksi kebersamaan dan saling bantu para perempuan berhijab dalam kegiatan inklusi dan pemberdayaan FKM BKA YWU",
 
+      // Intro Sub-Section (Pengenalan FKM BKA YWU)
+      introSectionLabel: "Tentang FKM BKA YWU",
+      introTitle: "FKM BKA YWU",
+      introDesc: "FKM BKA YWU merupakan forum komunikasi masyarakat berkebutuhan khusus yang berfokus pada advokasi hak-hak perempuan muda serta perempuan penyandang disabilitas.",
+      introImgAlt: "Aktivitas siaran radio anggota FKM BKA YWU perempuan disabilitas",
+
       // About (3 Pillars)
       aboutBadge: "Fondasi Gerakan",
-      aboutTitle: "3 Pilar Utama Kami",
+      aboutTitle: "3 PILAR UTAMA KAMI",
       aboutDesc: "Tiga pilar strategis yang menggerakkan seluruh program FKM BKA YWU dalam mewujudkan kesetaraan hak, kapabilitas vokasi, dan kemandirian wirausaha disabilitas.",
       pilar1Badge: "Pilar 01",
-      pilar1Title: "FKM (Forum Komunikasi Masyarakat)",
+      pilar1IconLabel: "Ikon Pilar FKM - Forum Komunikasi Masyarakat",
+      pilar1Title: "Pilar FKM (Forum Komunikasi Masyarakat)",
       pilar1Desc: "Wadah advokasi dan konsolidasi hak-hak penyandang disabilitas. Mengawal implementasi regulasi pemenuhan hak disabilitas, audit aksesibilitas ruang publik, serta mengedukasi masyarakat luas tentang kesetaraan hakiki.",
       pilar2Badge: "Pilar 02",
-      pilar2Title: "BKA (Bina Karya Adaptif)",
-      pilar2Desc: "Pusat pelatihan vokasi adaptif dan penguatan kapabilitas keahlian kerja berbasis teknologi asistif. Menyelenggarakan simulasi evakuasi kebencanaan mandiri serta workshop ergonomis yang ramah ragam disabilitas.",
+      pilar2IconLabel: "Ikon Pilar BKA - Bimbingan Keahlian Adaptif",
+      pilar2Title: "Pilar BKA (Bimbingan Keahlian Adaptif)",
+      pilar2Desc: "Pusat bimbingan keahlian dan pelatihan vokasi adaptif berbasis teknologi asistif. Menyelenggarakan penguatan kapabilitas kerja, simulasi kesiapsiagaan kebencanaan inklusif, serta pendampingan keterampilan yang ramah ragam disabilitas.",
       pilar3Badge: "Pilar 03",
-      pilar3Title: "YWU (Yayasan Wirausaha Unggul)",
-      pilar3Desc: "Inkubasi bisnis sosial dan pembinaan wirausaha mandiri disabilitas. Memfasilitasi produksi kerajinan bernilai komersial, pendampingan legalitas izin usaha, serta menghubungkan karya teman disabilitas ke pasar digital.",
+      pilar3IconLabel: "Ikon Pilar YWU - Yasa Wahana Utama",
+      pilar3Title: "Pilar YWU (Yasa Wahana Utama)",
+      pilar3Desc: "Wadah pengembangan kemandirian ekonomi dan inkubasi wirausaha inklusif disabilitas. Memfasilitasi produksi karya bernilai komersial, pendampingan pengembangan usaha, serta perluasan akses jejaring pasar yang berdaya saing.",
+
+      // Visi & Misi
+      aboutNavPillPilar: "3 Pilar Utama",
+      aboutNavPillVisi: "Visi & Misi",
+      navVisiMisi: "Visi & Misi",
+      visiMisiBadge: "Arah & Komitmen Strategis",
+      visiMisiTitle: "Visi & Misi Kami",
+      visiMisiDesc: "Landasan filosofis dan komitmen strategis FKM BKA YWU dalam memperjuangkan kesetaraan, keadilan sosial, dan kedaulatan penyandang disabilitas.",
+      visiCardTag: "VISI",
+      visiCardHeadline: "Masyarakat Inklusif, Adil, Setara & Berkelanjutan",
+      visiCardText: "Terwujudnya masyarakat yang inklusif, adil, setara, dan berkelanjutan, dengan perempuan, kaum muda, serta penyandang disabilitas memiliki kesempatan yang setara untuk berpartisipasi, memimpin, dan memperoleh hak-haknya dalam pembangunan.",
+      visiCardNote: "Prinsip No One Left Behind",
+      misiCardTag: "MISI",
+      misiCardHeadline: "6 Langkah Strategis Gerakan",
+      misiItem1: "Pemberdayaan perempuan dan kaum muda melalui peningkatan kapasitas, kepemimpinan, partisipasi, dan kemandirian dalam kehidupan sosial, ekonomi, dan politik.",
+      misiItem2: "Mendorong inklusi dan pemenuhan hak penyandang disabilitas dalam pendidikan, pekerjaan, pelayanan publik, pengambilan keputusan, dan pembangunan berkelanjutan.",
+      misiItem3: "Memperkuat perlindungan perempuan, anak, dan kelompok rentan dari diskriminasi, kekerasan, serta berbagai bentuk ketidakadilan.",
+      misiItem4: "Melakukan pemantauan dan advokasi SDGs berbasis masyarakat, termasuk pengumpulan data terpilah gender dan disabilitas untuk mendorong kebijakan serta penganggaran yang inklusif.",
+      misiItem5: "Membangun kemitraan dan kolaborasi dengan pemerintah, masyarakat sipil, komunitas, media, dan pemangku kepentingan lainnya untuk mewujudkan pembangunan yang partisipatif dan berkeadilan.",
+      misiItem6: "Mendorong kesiapsiagaan bencana dan ketahanan masyarakat yang inklusif, dengan memastikan perempuan, anak, kaum muda, dan penyandang disabilitas terlibat dalam perencanaan serta pelaksanaan upaya pengurangan risiko bencana.",
 
       // Gallery / Instagram
       galleryBadge: "Galeri Kegiatan",
@@ -73,30 +103,39 @@
       impactBadge: "Pencapaian Nyata",
       impactTitle: "Dampak yang Terus Bertumbuh",
       impactDesc: "Statistik pencapaian program pendampingan, vokasi adaptif, dan pemberdayaan inklusif FKM BKA YWU.",
-      impactStat1Title: "Jumlah UMKM Binaan",
-      impactStat1Desc: "Usaha mikro berbasis disabilitas yang berproduksi aktif dan terhubung ke pasar komersial.",
-      impactStat2Title: "Anggota Komunitas",
-      impactStat2Desc: "Sahabat disabilitas, pendamping keluarga, dan relawan profesional yang bergerak aktif.",
-      impactStat3Title: "Program Selesai",
-      impactStat3Desc: "Pelatihan vokasi adaptif, klinik legalitas usaha, audit aksesibilitas, dan advokasi sosial.",
+      impactStat1Title: "Pelatihan & Pembekalan PRB",
+      impactStat1Desc: "Pelatihan pengurangan risiko bencana yang inklusif.",
+      impactStat2Title: "Simulasi Evakuasi",
+      impactStat2Desc: "Kegiatan simulasi evakuasi bencana ramah disabilitas.",
+      impactStat3Title: "Peserta Disabilitas Pelatihan",
+      impactStat3Desc: "Penyandang disabilitas yang telah mengikuti pelatihan.",
+      impactStat4Title: "Peserta Simulasi Evakuasi",
+      impactStat4Desc: "Peserta aktif yang mengikuti simulasi evakuasi.",
+      impactStat5Title: "Fasilitas Publik Dinilai",
+      impactStat5Desc: "Fasilitas publik yang telah diaudit aksesibilitasnya.",
+      impactStat6Title: "Webinar Inklusi",
+      impactStat6Desc: "Sesi edukasi dan advokasi inklusi secara daring.",
+      impactStat7Title: "Kegiatan Berkelanjutan",
+      impactStat7Desc: "Rangkaian program dan kegiatan sejak tahun 2014.",
 
       // Partners
       partnersBadge: "Jaringan & Kolaborasi",
       partnersTitle: "Mitra & Pendukung Strategis",
       partnersDesc: "Bergerak bersama berbagai lembaga internasional dan nasional dalam mendorong pemenuhan hak, kesetaraan gender, dan kemandirian wirausaha disabilitas.",
+      partnersViewGrid: "Semua Logo (Grid)",
+      partnersViewMarquee: "Animasi Berjalan",
       marqueePause: "Jeda Animasi",
       marqueePlay: "Putar Animasi",
       marqueeBtnLabelPause: "Jeda animasi logo mitra",
       marqueeBtnLabelPlay: "Putar animasi logo mitra",
 
       // Footer
-      footerDesc: "Gerakan independen yang mewadahi advokasi kesetaraan hak, peningkatan keahlian kerja, dan inkubasi UMKM disabilitas.",
+      footerDesc: "Forum kesetaraan masyarakat berkeadilan kolaboratif adaptif yasa wahana utama",
       footerContactTitle: "Kontak Resmi",
       footerEmailLabel: "Email:",
       footerPhoneLabel: "Telepon / WhatsApp:",
       footerAddressTitle: "Alamat",
       footerAddressText: "Jl. Gunung Sibayak Glugu Darat II, Medan Timur",
-      footerAddressNote: "*Aksesibel kursi roda dan ramah pemandu taktil.",
       footerSocialTitle: "Media Sosial",
       footerSocialDesc: "Ikuti informasi dan agenda terbaru FKM BKA YWU di kanal resmi kami:",
       footerCopyright: "© 2026 FKM BKA YWU. Seluruh Hak Cipta Dilindungi.",
@@ -123,7 +162,7 @@
     },
     en: {
       htmlLang: "en",
-      pageTitle: "The Bold Inclusivity | FKM BKA YWU",
+      pageTitle: "FKM BKA YWU",
       metaDescription: "Official landing page of FKM BKA YWU themed The Bold Inclusivity. Focusing on high accessibility (WCAG 2.1 AA) and the fulfillment of disability rights.",
 
       // Header & Navigation
@@ -142,26 +181,56 @@
       menuClose: "Close navigation menu",
 
       // Hero Section
-      heroTagline: "OUR MISSION, UNITED STRENGTH",
-      heroTitle: "BREAKING BOUNDARIES, REALIZING EQUAL ACCESS FOR ALL",
-      heroDesc: "Building an inclusive space where every individual has equal opportunities to grow, create, and thrive without barriers.",
+      heroTagline: "Our Mission, United Strength",
+      heroTitle: "Breaking boundaries, realizing equal access for all",
+      heroDesc: "Building an inclusive space where every individual has equal opportunities to grow, create, and thrive without barriers",
       heroCtaJoin: "Join Community",
+      heroCtaJoinAria: "Join community of FKM BKA YWU via the official Instagram page (opens in a new tab)",
       heroCtaSupport: "Support Us",
       heroImgAlt: "Togetherness and mutual assistance of women wearing hijabs in FKM BKA YWU inclusion and empowerment activities",
 
+      // Intro Sub-Section (About FKM BKA YWU)
+      introSectionLabel: "About FKM BKA YWU",
+      introTitle: "FKM BKA YWU",
+      introDesc: "FKM BKA YWU is a special-needs community communication forum focusing on advocating for the rights of young women and women with disabilities.",
+      introImgAlt: "Radio broadcasting activity by FKM BKA YWU members, women with disabilities",
+
       // About (3 Pillars)
       aboutBadge: "Movement Foundation",
-      aboutTitle: "Our 3 Core Pillars",
+      aboutTitle: "OUR 3 CORE PILLARS",
       aboutDesc: "Three strategic pillars driving all FKM BKA YWU programs toward equal rights, vocational capabilities, and entrepreneurship independence for people with disabilities.",
       pilar1Badge: "Pillar 01",
-      pilar1Title: "FKM (Community Communication Forum)",
+      pilar1IconLabel: "Pillar FKM Icon - Community Communication Forum",
+      pilar1Title: "Pillar FKM (Forum Komunikasi Masyarakat)",
       pilar1Desc: "A dedicated platform for advocating and consolidating disability rights. Overseeing the enforcement of disability regulations, conducting public space accessibility audits, and educating the wider public on genuine equality.",
       pilar2Badge: "Pillar 02",
-      pilar2Title: "BKA (Adaptive Vocational Development)",
-      pilar2Desc: "A vocational training and skill-enhancement hub powered by assistive technologies. Organizing self-reliance disaster evacuation simulations and disability-inclusive ergonomic workshops.",
+      pilar2IconLabel: "Pillar BKA Icon - Adaptive Skill Guidance",
+      pilar2Title: "Pillar BKA (Bimbingan Keahlian Adaptif)",
+      pilar2Desc: "An adaptive skill guidance and assistive-technology vocational training center. Organizing workforce capability building, inclusive disaster preparedness simulations, and disability-friendly skill mentoring.",
       pilar3Badge: "Pillar 03",
-      pilar3Title: "YWU (Excellence Entrepreneurship Foundation)",
-      pilar3Desc: "A social business incubation center supporting independent disability entrepreneurs. Facilitating commercially viable handicraft production, legal business licensing assistance, and digital market access.",
+      pilar3IconLabel: "Pillar YWU Icon - Yasa Wahana Utama",
+      pilar3Title: "Pillar YWU (Yasa Wahana Utama)",
+      pilar3Desc: "An economic empowerment hub and inclusive disability entrepreneurship incubator. Facilitating commercially viable craft production, business growth mentoring, and competitive market network expansion.",
+
+      // Visi & Misi
+      aboutNavPillPilar: "3 Core Pillars",
+      aboutNavPillVisi: "Vision & Mission",
+      navVisiMisi: "Vision & Mission",
+      visiMisiBadge: "Strategic Direction & Commitment",
+      visiMisiTitle: "Our Vision & Mission",
+      visiMisiDesc: "The philosophical foundation and strategic commitments of FKM BKA YWU in championing social justice, gender equality, and rights fulfillment for persons with disabilities.",
+      visiCardTag: "VISION",
+      visiCardHeadline: "An Inclusive, Just, Equal & Sustainable Society",
+      visiCardText: "Realizing an inclusive, just, equitable, and sustainable society where women, young people, and persons with disabilities have equal opportunities to participate, lead, and fulfill their rights in development.",
+      visiCardNote: "No One Left Behind Principle",
+      misiCardTag: "MISSION",
+      misiCardHeadline: "6 Strategic Action Pathways",
+      misiItem1: "Empowering women and young people by strengthening capacity, leadership, participation, and independence in social, economic, and political life.",
+      misiItem2: "Advancing inclusion and the fulfillment of rights for persons with disabilities across education, employment, public services, decision-making, and sustainable development.",
+      misiItem3: "Strengthening protections for women, children, and vulnerable groups against discrimination, violence, and all forms of injustice.",
+      misiItem4: "Conducting community-based SDG monitoring and advocacy, including disaggregated data collection by gender and disability to drive inclusive policies and budgeting.",
+      misiItem5: "Building partnerships and collaborations with government, civil society, local communities, media, and key stakeholders to advance participatory and equitable development.",
+      misiItem6: "Promoting inclusive disaster preparedness and community resilience by ensuring women, children, youth, and persons with disabilities actively shape and execute disaster risk reduction initiatives.",
 
       // Gallery / Instagram
       galleryBadge: "Activity Gallery",
@@ -181,30 +250,39 @@
       impactBadge: "Real Impact",
       impactTitle: "Ever-Growing Impact",
       impactDesc: "Achievement statistics across mentoring, adaptive vocational training, and inclusive empowerment initiatives by FKM BKA YWU.",
-      impactStat1Title: "Supported MSMEs",
-      impactStat1Desc: "Disability-led micro-enterprises actively producing goods and connected to commercial markets.",
-      impactStat2Title: "Community Members",
-      impactStat2Desc: "Persons with disabilities, family companions, and dedicated professional volunteers actively engaged.",
-      impactStat3Title: "Completed Programs",
-      impactStat3Desc: "Adaptive vocational workshops, business legality clinics, accessibility audits, and social advocacy campaigns.",
+      impactStat1Title: "DRR Training & Briefing",
+      impactStat1Desc: "Inclusive disaster risk reduction training.",
+      impactStat2Title: "Evacuation Simulations",
+      impactStat2Desc: "Disability-friendly disaster evacuation drills.",
+      impactStat3Title: "Disabled Training Participants",
+      impactStat3Desc: "Persons with disabilities who have participated in training.",
+      impactStat4Title: "Evacuation Drill Participants",
+      impactStat4Desc: "Active participants who joined evacuation simulations.",
+      impactStat5Title: "Public Facilities Assessed",
+      impactStat5Desc: "Public facilities audited for accessibility.",
+      impactStat6Title: "Inclusion Webinars",
+      impactStat6Desc: "Online inclusion education and advocacy sessions.",
+      impactStat7Title: "Sustainable Activities",
+      impactStat7Desc: "Series of programs and activities conducted since 2014.",
 
       // Partners
       partnersBadge: "Network & Collaboration",
       partnersTitle: "Partners & Strategic Supporters",
       partnersDesc: "Collaborating alongside international and national organizations to champion disability rights fulfillment, gender equality, and entrepreneurial self-reliance.",
+      partnersViewGrid: "All Logos (Grid)",
+      partnersViewMarquee: "Continuous Slider",
       marqueePause: "Pause Animation",
       marqueePlay: "Play Animation",
       marqueeBtnLabelPause: "Pause partner logos animation",
       marqueeBtnLabelPlay: "Play partner logos animation",
 
       // Footer
-      footerDesc: "An independent movement championing equal rights advocacy, vocational workforce capabilities, and MSME incubation for persons with disabilities.",
+      footerDesc: "Forum kesetaraan masyarakat berkeadilan kolaboratif adaptif yasa wahana utama",
       footerContactTitle: "Official Contacts",
       footerEmailLabel: "Email:",
       footerPhoneLabel: "Phone / WhatsApp:",
       footerAddressTitle: "Address",
       footerAddressText: "Jl. Gunung Sibayak Glugu Darat II, Medan Timur",
-      footerAddressNote: "*Wheelchair accessible and tactile guide friendly.",
       footerSocialTitle: "Social Media",
       footerSocialDesc: "Stay connected with the latest updates and programs from FKM BKA YWU on our official channels:",
       footerCopyright: "© 2026 FKM BKA YWU. All Rights Reserved.",
@@ -531,6 +609,85 @@
     setupModal('terms-link', 'terms-modal', 'close-terms-modal', 'close-terms-btn-bottom');
   }
 
+  /* ==========================================================================
+     6. Partners Section Controller (Grid vs Marquee View & Pause/Play)
+     ========================================================================== */
+  function initPartnersViewSwitcher() {
+    const btnGrid = document.getElementById('view-mode-grid');
+    const btnMarquee = document.getElementById('view-mode-marquee');
+    const gridView = document.getElementById('partners-grid-view');
+    const marqueeView = document.getElementById('partners-marquee-view');
+    const btnPause = document.getElementById('btn-pause-marquee');
+    const marqueeTrack = document.getElementById('marquee-track');
+    const iconPause = document.getElementById('icon-pause');
+    const iconPlay = document.getElementById('icon-play');
+    const marqueeBtnText = document.getElementById('marquee-btn-text');
+
+    if (!btnGrid || !btnMarquee || !gridView || !marqueeView) return;
+
+    let isPaused = false;
+
+    function setView(mode) {
+      if (mode === 'marquee') {
+        gridView.classList.add('hidden');
+        marqueeView.classList.remove('hidden');
+
+        btnGrid.classList.remove('active');
+        btnGrid.setAttribute('aria-selected', 'false');
+        btnGrid.classList.add('text-[#E6F1FF]');
+
+        btnMarquee.classList.add('active');
+        btnMarquee.setAttribute('aria-selected', 'true');
+        btnMarquee.classList.remove('text-[#E6F1FF]');
+
+        if (btnPause) btnPause.classList.remove('hidden');
+      } else {
+        gridView.classList.remove('hidden');
+        marqueeView.classList.add('hidden');
+
+        btnGrid.classList.add('active');
+        btnGrid.setAttribute('aria-selected', 'true');
+        btnGrid.classList.remove('text-[#E6F1FF]');
+
+        btnMarquee.classList.remove('active');
+        btnMarquee.setAttribute('aria-selected', 'false');
+        btnMarquee.classList.add('text-[#E6F1FF]');
+
+        if (btnPause) btnPause.classList.add('hidden');
+      }
+    }
+
+    btnGrid.addEventListener('click', () => setView('grid'));
+    btnMarquee.addEventListener('click', () => setView('marquee'));
+
+    // Pause / Play Button Control
+    if (btnPause && marqueeTrack) {
+      btnPause.addEventListener('click', () => {
+        isPaused = !isPaused;
+        const dict = i18nData[currentLang] || i18nData.id;
+
+        if (isPaused) {
+          marqueeTrack.classList.add('is-paused');
+          if (iconPause) iconPause.classList.add('hidden');
+          if (iconPlay) iconPlay.classList.remove('hidden');
+          if (marqueeBtnText) marqueeBtnText.textContent = dict.marqueePlay;
+          btnPause.setAttribute('aria-label', dict.marqueeBtnLabelPlay);
+        } else {
+          marqueeTrack.classList.remove('is-paused');
+          if (iconPause) iconPause.classList.remove('hidden');
+          if (iconPlay) iconPlay.classList.add('hidden');
+          if (marqueeBtnText) marqueeBtnText.textContent = dict.marqueePause;
+          btnPause.setAttribute('aria-label', dict.marqueeBtnLabelPause);
+        }
+      });
+    }
+
+    // Default: if user prefers reduced motion, always use grid view
+    if (prefersReducedMotion) {
+      setView('grid');
+    }
+  }
+
   // Initialize on DOM load
   document.addEventListener('DOMContentLoaded', () => {
     initLanguageSwitcher();
@@ -538,5 +695,6 @@
     initAccessibleScroll();
     initImpactCounters();
     initLegalModals();
+    initPartnersViewSwitcher();
   });
 })();
