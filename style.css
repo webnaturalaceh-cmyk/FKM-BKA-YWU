@@ -846,10 +846,10 @@ body {
   align-items: center;
   translate: 0 0;
   will-change: translate;
-  animation: marquee-scroll 42.5s linear infinite;
+  animation: marquee-scroll 45s linear infinite;
 
   @media (prefers-reduced-motion: reduce) {
-    animation-duration: 90s;
+    animation-duration: 95s;
   }
 }
 
